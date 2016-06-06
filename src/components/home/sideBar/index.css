@@ -1,0 +1,48 @@
+.nav-header {
+  padding: 33px 25px;
+  background: url("../../../images/header-profile.png") no-repeat; }
+
+.img-circle {
+  border-radius: 50%; }
+
+img {
+  vertical-align: middle;
+  border: none;
+  height: 50px;
+  width: 50px; }
+
+.nav-side {
+  margin-right: 0px; }
+
+.nav-header a {
+  color: #DFE4ED; }
+
+.clear {
+  display: block;
+  overflow: hidden; }
+
+.nav-header .text-muted {
+  color: #8095a8; }
+
+.m-t-xs {
+  margin-top: 5px; }
+
+.block {
+  display: block; }
+
+.navbar-static-side {
+  background: #2f4050;
+  height: 100%; }
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid\9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent; }
+
+/*# sourceMappingURL=index.css.map */

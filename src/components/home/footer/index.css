@@ -1,0 +1,17 @@
+.footer {
+  background: none repeat scroll 0 0 #fff;
+  border-top: 1px solid #e7eaec;
+  overflow: hidden;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  height: 36px;
+  margin-bottom: 0px; }
+
+.pull-right {
+  float: right !important; }
+
+.pull-right a {
+  color: #337ab7;
+  text-decoration: none; }
+
+/*# sourceMappingURL=index.css.map */
