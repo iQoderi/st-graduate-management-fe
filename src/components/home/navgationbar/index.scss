@@ -1,0 +1,46 @@
+.navbar-header {
+  width: 60%;
+}
+.nav{
+  margin-right: 25px;
+}
+.btn-primary {
+  background-color: #1ab394;
+  border-color: #1ab394;
+  color: #FFF;
+}
+.btn {
+  border-radius: 3px;
+}
+.minimalize-styl-2 {
+  padding: 4px 12px;
+  margin: 14px 5px 5px 30px;
+  font-size: 14px;
+  float: left;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e7eaec!important;
+  box-sizing: border-box;
+}
+
+.nav.navbar-right>li>a {
+  color: #999c9e;
+}
+
+.nav.navbar-top-links a {
+  font-size: 14px;
+}
+.navbar-top-links li a {
+  padding: 20px 10px;
+  min-height: 50px;
+}
+.nav li>a {
+  display: block;
+}
+.navbar-top-links li {
+  display: inline-block;
+}
+.nav>li {
+  position: relative;
+}

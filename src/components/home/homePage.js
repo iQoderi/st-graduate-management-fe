@@ -2,13 +2,26 @@
  * Created by everyun on 16/5/14.
  */
 import  React from 'react';
-
-const Home=React.createClass({
-  render:function(){
+import NavgaionBar from './navgationbar'
+import SideBar from  './sideBar';
+import Content from './content';
+import Footer from './footer/index';
+require('./home.css');
+const Home = React.createClass({
+  render: function () {
     return (
-      <h1>
-        Home
-      </h1>
+      <div className="home-wrapper">
+        <div className="sideBar">
+          <SideBar/>
+        </div>
+        <div className="home-content">
+          <div className="row border-bottom">
+            <NavgaionBar/>
+            <Content/>
+            <Footer/>
+          </div>
+        </div>
+      </div>
     )
   }
 });

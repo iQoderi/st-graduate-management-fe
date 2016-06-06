@@ -1,0 +1,36 @@
+.HomePage {
+  width: 100%;
+}
+
+.home-wrapper {
+  width: 100%;
+}
+
+.home-wrapper .sideBar {
+  float: left;
+  width: 220px;
+  position: fixed;
+  left: 0;
+  top: 0px;
+  height: 100%;
+  background: #cccccc;
+  min-height: 1000px;
+}
+
+body.canvas-menu .navbar-static-side, body.fixed-sidebar .navbar-static-side {
+  width: 220px;
+  z-index: 2001;
+  height: 100%;
+}
+
+.home-content {
+  padding-left: 220px;
+}
+
+.J_menuItem{
+  background:#2f4050;
+}
+.navActive{
+  background: #222;
+  border-left: 5px solid #1ab394;
+}

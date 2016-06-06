@@ -6,8 +6,8 @@ import React from 'react';
 const RegBox=React.createClass({
   render: function () {
     return (
-      <h1>
-        registeredBox
+      <h1 style={{color:'#FFF'}}>
+       注册页面
       </h1>
     )
   }

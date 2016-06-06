@@ -1,0 +1,19 @@
+.nav li>a {
+  display: block;
+}
+.nav>li>a {
+  color: #a7b1c2;
+  font-weight: 600;
+  padding: 14px 20px 14px 25px;
+}
+
+.nav>li>a i {
+  margin-right: 6px;
+}
+
+
+
+.navActive{
+  background: #222;
+  border-left: 5px solid #1ab394;
+}

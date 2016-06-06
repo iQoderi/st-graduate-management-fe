@@ -11,8 +11,7 @@ let yeomanImage = require('../images/yeoman.png');
 class AppComponent extends React.Component {
   render() {
     return (
-      <div className="index">
-        <h1>数学与统计学院毕业生管理系统</h1>
+      <div className="app-wrapper">
         {this.props.children}
       </div>
     );

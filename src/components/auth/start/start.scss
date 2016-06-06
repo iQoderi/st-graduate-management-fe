@@ -1,0 +1,53 @@
+.auth-box {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.auth-box .ibig-logo {
+  width: 20%;
+  margin-left: 40%;
+  margin-top: 50%;
+  margin-bottom: 4%;
+}
+
+.start-form {
+  background: transparent;
+  button {
+    padding: 0;
+    a {
+      display: block;
+      color: #fff;
+      padding: 10px 0;
+    }
+  }
+}
+
+.b-btn {
+  background: #4c72d3;
+  border: 1px solid #4c72d3;
+}
+.w-btn {
+  display: inline-block;
+  width: 280px;
+}
+
+.g-btn {
+  background: #2cad93;
+  border: 1px solid #2cad93;
+  border-top: 0;
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 0;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+  a{
+    text-decoration: none;
+  }
+}

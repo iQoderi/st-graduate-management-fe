@@ -1,23 +1,13 @@
-*{
-  margin: 0;
-  padding: 0;
-}
 html,body{
   width: 100%;
-  overflow-x: hidden;
+  height: 100%;
 }
 
-.BMap{
-  width: 100%;
-  height: 500px;
-}
-
-#list,#hotel{
-  position: absolute;
+#app{
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
-  color: #49484b;
-  text-align: center;
-  margin-top: 45px;
+}
+.app-wrapper{
+  width: 100%;
+  height: 100%;
 }
