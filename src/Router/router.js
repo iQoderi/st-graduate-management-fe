@@ -4,16 +4,27 @@
  */
 import React from 'react';
 import App from '../components/GraduateApp';
+
 import AuthBox from  '../components/auth/auth';
 import AuthStart from  '../components/auth/start/start';
 import AuthLogin from  '../components/auth/login/login';
 import AuthReg from  '../components/auth/registered/registeredBox';
-import Home from '../components/home/homePage';
-import {Router, Route, hashHistory, IndexRoute, browserHistory} from 'react-router';
-import Content from '../components/home/content/index';
+import ForgetPassBox from '../components/auth/forgetPass';
 
-const RouterApp=React.createClass({
-  render:function () {
+import {Router, Route, hashHistory, IndexRoute, browserHistory} from 'react-router';
+
+import Home from '../components/home/homePage';
+import PersonalCenter from  '../components/home/content/personal';
+import ImportExcelBox from  '../components/home/content/importExcel';
+import ExportExcelBox from  '../components/home/content/exportExcel';
+import AdminList from  '../components/home/content/adminList';
+import AddAdmin from  '../components/home/content/addAdmin';
+import QueryMsg from  '../components/home/content/queryStudent';
+
+
+
+const RouterApp = React.createClass({
+  render: function () {
     return (
       <Router history={hashHistory}>
         <Route path="/" component={App}>
@@ -21,21 +32,20 @@ const RouterApp=React.createClass({
             <Route path="start" component={AuthStart}/>
             <Route path="login" component={AuthLogin}/>
             <Route path="register" component={AuthReg}/>
+            <Route path="forgetPass" component={ForgetPassBox}/>
           </Route>
-          <Router>
-            <Route path="home" component={Home}>
-              <Route path="personal" compoent={Content}/>
-              <Route path="importMsg" compoent={Content}/>
-              <Route path="exportMsg" compoent={Content}/>
-              <Route path="queryMsg" compoent={Content}/>
-              <Route path="adminList" compoent={Content}/>
-              <Route path="addAdmin" compoent={Content}/>
-            </Route>
-          </Router>
+          <Route path="/home" component={Home}>
+            <Route path="personal" component={PersonalCenter}/>
+            <Route path="importMsg" component={ImportExcelBox}/>
+            <Route path="exportMsg" component={ExportExcelBox}/>
+            <Route path="queryMsg" component={QueryMsg}/>
+            <Route path="adminList" component={AdminList}/>
+            <Route path="addAdmin" component={AddAdmin}/>
+          </Route>
         </Route>
       </Router>
     )
   }
 });
 
-export default RouterApp;
+export  default RouterApp;

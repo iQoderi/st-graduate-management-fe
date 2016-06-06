@@ -4,7 +4,6 @@
 import  React from 'react';
 import NavgaionBar from './navgationbar'
 import SideBar from  './sideBar';
-import Content from './content';
 import Footer from './footer/index';
 require('./home.css');
 const Home = React.createClass({
@@ -17,7 +16,9 @@ const Home = React.createClass({
         <div className="home-content">
           <div className="row border-bottom">
             <NavgaionBar/>
-            <Content/>
+            <div className="home-inline-content">
+              {this.props.children}
+            </div>
             <Footer/>
           </div>
         </div>

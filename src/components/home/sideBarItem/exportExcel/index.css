@@ -9,8 +9,11 @@
 .nav > li > a i {
   margin-right: 6px; }
 
-.navActive {
+.sideBar .nav > li > .navActive {
   background: #222;
   border-left: 5px solid #1ab394; }
 
+.sideBar .nav > li>a:hover{
+  background: #222222;
+}
 /*# sourceMappingURL=index.css.map */
