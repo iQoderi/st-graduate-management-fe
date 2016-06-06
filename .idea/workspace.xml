@@ -1,34 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f964d0d3-88ff-4195-a261-3cc0c8b37916" name="Default" comment="主体页面完善">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/auth/SendEmailSuccess/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/auth/SendEmailSuccess/index.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/home/content/addAdmin/addAdminForm/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/home/content/addAdmin/addAdminForm/index.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+    <list default="true" id="f964d0d3-88ff-4195-a261-3cc0c8b37916" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Router/router.js" afterPath="$PROJECT_DIR$/src/Router/router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/content/addAdmin/index.js" afterPath="$PROJECT_DIR$/src/components/home/content/addAdmin/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/content/addAdmin/index.scss" afterPath="$PROJECT_DIR$/src/components/home/content/addAdmin/index.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/content/adminList/ListTable/index.js" afterPath="$PROJECT_DIR$/src/components/home/content/adminList/ListTable/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/content/adminList/ListTable/index.scss" afterPath="$PROJECT_DIR$/src/components/home/content/adminList/ListTable/index.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/content/adminList/index.js" afterPath="$PROJECT_DIR$/src/components/home/content/adminList/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/content/adminList/index.scss" afterPath="$PROJECT_DIR$/src/components/home/content/adminList/index.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/content/importExcel/index.js" afterPath="$PROJECT_DIR$/src/components/home/content/importExcel/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/content/importExcel/index.scss" afterPath="$PROJECT_DIR$/src/components/home/content/importExcel/index.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/content/personal/index.js" afterPath="$PROJECT_DIR$/src/components/home/content/personal/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/content/personal/index.scss" afterPath="$PROJECT_DIR$/src/components/home/content/personal/index.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/home.css" afterPath="$PROJECT_DIR$/src/components/home/home.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/home.css.map" afterPath="$PROJECT_DIR$/src/components/home/home.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/home.scss" afterPath="$PROJECT_DIR$/src/components/home/home.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/sideBar/index.js" afterPath="$PROJECT_DIR$/src/components/home/sideBar/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/sideBarItem/exportExcel/index.css" afterPath="$PROJECT_DIR$/src/components/home/sideBarItem/exportExcel/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/sideBarItem/exportExcel/index.css.map" afterPath="$PROJECT_DIR$/src/components/home/sideBarItem/exportExcel/index.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/reset.css" afterPath="$PROJECT_DIR$/src/styles/reset.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/reset.scss" afterPath="$PROJECT_DIR$/src/styles/reset.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.html" afterPath="$PROJECT_DIR$/test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/assets/app.js" afterPath="$PROJECT_DIR$/dist/assets/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/assets/app.js.map" afterPath="$PROJECT_DIR$/dist/assets/app.js.map" />
     </list>
     <ignored path="st-graduate-management-fe.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -488,7 +464,7 @@
       <workItem from="1465189339713" duration="965000" />
       <workItem from="1465191708883" duration="2667000" />
       <workItem from="1465201724596" duration="6722000" />
-      <workItem from="1465222811779" duration="9314000" />
+      <workItem from="1465222811779" duration="9412000" />
     </task>
     <task id="LOCAL-00001" summary="homepage 主题界面完成">
       <created>1465191509086</created>
@@ -497,11 +473,18 @@
       <option name="project" value="LOCAL" />
       <updated>1465191509086</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="主体页面完善">
+      <created>1465232267438</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1465232267438</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76077000" />
+    <option name="totallyTimeSpent" value="76175000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="66" y="52" width="1299" height="715" extended-state="0" />
@@ -513,7 +496,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32744783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3483146" sideWeight="0.49296874" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3494364" sideWeight="0.49296874" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -556,7 +539,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="homepage 主题界面完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="homepage 主题界面完成" />
+    <MESSAGE value="主体页面完善" />
+    <option name="LAST_COMMIT_MESSAGE" value="主体页面完善" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
