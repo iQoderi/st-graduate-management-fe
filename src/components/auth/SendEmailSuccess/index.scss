@@ -1,0 +1,36 @@
+header .brand {
+  float: left;
+  color: #313639;
+  font-size: 20px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+.form-container .form-behavior {
+  overflow: hidden;
+  margin-bottom: 75px;
+}
+.divider {
+  text-align: center;
+}
+.divider:before, .divider:after {
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  height: 1px;
+  background-color: #BABFC3;
+  margin: 0 0 0 -50%;
+}
+
+.form-container .form-behavior span {
+  font-size: 24px;
+}
+.divider span {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 8px 40px;
+}
+
+.divider:after {
+  margin: 0 -50% 0 0%;
+}

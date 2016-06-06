@@ -3,12 +3,12 @@
  */
 import React from  'react';
 
-
+require('./index.css');
 const PersonalCenter=React.createClass({
   render:function () {
     return (
-      <div>
-        <h1>个人中心</h1>
+      <div className="personal-wrapper">
+        
       </div>
     )
   }

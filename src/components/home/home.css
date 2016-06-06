@@ -28,4 +28,7 @@ body.canvas-menu .navbar-static-side, body.fixed-sidebar .navbar-static-side {
 .home-inline-content {
   min-height: 960px; }
 
+.normal-btn {
+  width: 100px; }
+
 /*# sourceMappingURL=home.css.map */

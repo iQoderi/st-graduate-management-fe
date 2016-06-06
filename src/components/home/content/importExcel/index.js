@@ -9,8 +9,9 @@ require('./index.css');
 const ImportExcelBox=React.createClass({
   render:function () {
     return (
-      <div>
-        <h1>导入excel</h1>
+      <div className="importDevice">
+        <input type="file" className="excel-file ng-isolate-scope" accept=".xls,.xlsx" multiple=""/>
+          <span className="addexcel-tips">点击或者拖拽文件到此处</span>
       </div>
     )
   }

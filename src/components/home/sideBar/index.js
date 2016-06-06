@@ -34,8 +34,8 @@ const SideBar = React.createClass({
           <AddAdminItem/>
           <AdminListItem/>
           <SearchItem/>
-          <ExportExcelItem/>
           <ImportExcelItem/>
+          <ExportExcelItem/>
         </ul>
       </nav>
     )

@@ -30,7 +30,12 @@ a, ins {
   text-decoration: none; }
 
 a:hover {
-  text-decoration: none;
-}
-/**/
+  text-decoration: none; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
 /*# sourceMappingURL=reset.css.map */

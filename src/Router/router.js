@@ -10,6 +10,7 @@ import AuthStart from  '../components/auth/start/start';
 import AuthLogin from  '../components/auth/login/login';
 import AuthReg from  '../components/auth/registered/registeredBox';
 import ForgetPassBox from '../components/auth/forgetPass';
+import SendEmailSuccess from '../components/auth/SendEmailSuccess';
 
 import {Router, Route, hashHistory, IndexRoute, browserHistory} from 'react-router';
 
@@ -34,6 +35,7 @@ const RouterApp = React.createClass({
             <Route path="register" component={AuthReg}/>
             <Route path="forgetPass" component={ForgetPassBox}/>
           </Route>
+          <Route path="/registration/success" component={SendEmailSuccess}/>
           <Route path="/home" component={Home}>
             <Route path="personal" component={PersonalCenter}/>
             <Route path="importMsg" component={ImportExcelBox}/>
