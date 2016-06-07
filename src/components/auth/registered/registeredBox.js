@@ -3,31 +3,31 @@
  */
 import React from 'react';
 import {Link} from 'react-router';
-var yeoman = require('../../../images/yeoman.png');
+import AuthTit from '../authTitle';
 
 
 const RegBox=React.createClass({
   render: function () {
     return (
-      <div className="auth-box">
-        <img className="ibig-logo" src={yeoman}/>
-        <div className="auth-form login-form">
-          <h3 className="title">注册</h3>
-          <input type="text"
-                 className="input w-input"
-                 placeholder="请输入邮箱账号"/>
+      <div>
+        <AuthTit title="立即注册"/>
+        <div className="form-inner">
+          <form className="form-float-label" accept-charset="UTF-8">
+            <div className="form-group">
+              <input className="form-control" autofocus="autofocus" placeholder="邮箱" type="email"/>
+            </div>
 
-          <input type="password"
-                 className="input w-input"
-                 placeholder="请输入密码"/>
-
-          <button className="btn w-btn b-btn">
-            立即注册
-          </button>
-
-          <div className="status">
-            <Link to="auth/forgetPass">忘记密码</Link>
-            <Link to="auth/login">已有账号</Link>
+            <div className="form-group">
+              <input className="form-control" autocomplete="off" placeholder="密码" type="password"/>
+            </div>
+            <div className="form-group action">
+              <button className="btn btn-block login-btn">注册</button>
+            </div>
+          </form>
+          <div className="help-section">
+            <span className="btn-alternative">
+              <Link to="/auth/login">我是老用户,要登陆</Link>
+            </span>
           </div>
         </div>
       </div>

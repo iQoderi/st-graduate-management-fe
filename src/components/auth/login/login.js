@@ -3,9 +3,9 @@
  * Created by everyun on 16/5/14.
  */
 import React from 'react';
+import AuthTit from '../authTitle';
 import {Link} from 'react-router';
 require('./loginBox.css');
-var yeoman = require('../../../images/yeoman.png');
 
 const LoginBox = React.createClass({
   getInitialState: function () {
@@ -36,30 +36,27 @@ const LoginBox = React.createClass({
   },
   render: function () {
     return (
-      <div className="auth-box">
-        <img className="ibig-logo" src={yeoman}/>
-        <div className="auth-form login-form">
-          <h3 className="title">登录</h3>
-          <input type="text"
-                 className="input w-input"
-                 onChange={this.handelInput}
-                 value={this.state.username}
-                 placeholder="请输入手机号/邮箱账号"/>
+      <div>
+        <AuthTit title="登陆"/>
+        <div className="form-inner">
+          <form className="form-float-label"  accept-charset="UTF-8">
+            <div className="form-group">
+              <input className="form-control" autofocus="autofocus" placeholder="邮箱" type="email"/>
+            </div>
 
-          <input type="password"
-                 className="input w-input"
-                 onChange={this.handelInput}
-                 value={this.state.password}
-                 placeholder="请输入密码"/>
-
-          <button className="btn w-btn b-btn"
-                  onClick={this.handleLogin}>
-            登录
-          </button>
-
-          <div className="status">
-            <Link to="auth/forgetPass">忘记密码</Link>
-            <Link to="auth/register">立即注册</Link>
+            <div className="form-group">
+              <input className="form-control" autocomplete="off" placeholder="密码" type="password"/>
+            </div>
+            <div className="form-group action">
+              <button className="btn btn-block login-btn">登录</button>
+            </div>
+          </form>
+          <div className="help-section">
+            <span className="btn-alternative">
+              <Link to="/auth/register">注册</Link>
+            </span>
+            <Link to="/auth/forgetPass">忘记密码</Link>
+            <Link to="/auth/reSendEmail">重新发送激活邮件</Link>
           </div>
         </div>
       </div>

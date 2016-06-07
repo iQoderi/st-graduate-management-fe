@@ -3,25 +3,27 @@
  */
 import  React from 'react';
 require('./start.css');
-var yeoman = require('../../../images/yeoman.png');
-
+import AuthTit from '../authTitle';
+import ReadMore from '../ReadMore';
 import {Link} from 'react-router';
 const AuthStart = React.createClass({
   render: function () {
     return (
-      <div className="auth-box">
-        <img className="ibig-logo" src={yeoman}/>
-        <div className="auth-form start-form">
-          <button className="btn w-btn b-btn">
-            <Link to="/auth/register">
-              注册
-            </Link>
-          </button>
-          <button className="btn w-btn g-btn">
-            <Link to="auth/login">
-              登录
-            </Link>
-          </button>
+      <div>
+        <AuthTit title="注册登陆"/>
+        <div className="form-inner">
+          <form className="form-float-label" accept-charset="UTF-8">
+            <div className="form-group action">
+              <Link className="btn btn-block login-btn" to="/auth/login">登录</Link>
+            </div>
+          </form>
+          <div className="help-section">
+            <span className="btn-alternative">
+              <Link to="/auth/register">注册</Link>
+            </span>
+            <Link to="/auth/forgetPass">忘记密码</Link>
+            <Link to="/auth/reSendEmail">重新发送激活邮件</Link>
+          </div>
         </div>
       </div>
     )

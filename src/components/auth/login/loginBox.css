@@ -1,41 +1,29 @@
-.title {
-  width: 280px;
-  margin: 20px auto;
-  line-height: 60px;
-  border-bottom: 1px solid #dededf;
-  color: #a2a2a2;
-  font-size: 16px; }
+.form-group input[type='email'], .form-group input[type='password'] {
+  padding: 16px 20px;
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #BABFC3;
+  background-color: #fff;
+  position: relative;
+  z-index: 2; }
 
-h3 {
-  font-weight: normal; }
-
-.input {
-  border-radius: 4px;
-  color: #000;
-  font-size: 14px;
-  padding: 10px 14px;
+.login-btn {
+  padding: 16px 20px;
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
   border: none;
-  border: 1px solid #dededf;
-  outline: none;
-  margin-bottom: 20px; }
+  font-size: 18px;
+  background: #E2644C;
+  color: #FFFFFF; }
 
-.w-input {
-  display: inline-block;
-  width: 250px; }
-
-input {
-  line-height: normal; }
-
-.status a {
-  cursor: pointer;
-  color: #2583f6;
-  font-size: 14px;
-  padding-right: 5px; }
-
-.status a:first-child {
-  border-right: 1px solid #2583f6; }
-
-a {
-  text-decoration: none; }
+.help-section a {
+  display: block;
+  line-height: 22px;
+  color: #505556;
+  cursor: pointer; }
 
 /*# sourceMappingURL=loginBox.css.map */
