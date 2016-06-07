@@ -3,6 +3,7 @@
  * Created by qoder on 16-6-4.
  */
 import React from 'react';
+
 import App from '../components/GraduateApp';
 
 import AuthBox from  '../components/auth/auth';
@@ -14,6 +15,7 @@ import SendEmailSuccess from '../components/auth/SendEmailSuccess';
 import SendNewEmail from '../components/auth/reSendEmail';
 import {Router, Route, hashHistory, IndexRoute, browserHistory} from 'react-router';
 
+import CompleteMsg from  '../components/auth/completeMsg';
 import Home from '../components/home/homePage';
 import PersonalCenter from  '../components/home/content/personal';
 import ImportExcelBox from  '../components/home/content/importExcel';
@@ -36,6 +38,7 @@ const RouterApp = React.createClass({
             <Route path="reSendEmail" component={SendNewEmail}/>
           </Route>
           <Route path="/registration/success" component={SendEmailSuccess}/>
+          <Route path="/user/CompleteMsg" component={CompleteMsg}/>
           <Route path="/home" component={Home}>
             <Route path="personal" component={PersonalCenter}/>
             <Route path="importMsg" component={ImportExcelBox}/>

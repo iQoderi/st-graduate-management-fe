@@ -1,4 +1,4 @@
-.form-group input[type='email'], .form-group input[type='password'] {
+.form-inner .form-group input[type='email'], .form-inner .form-group input[type='password'] {
   padding: 16px 20px;
   display: block;
   width: 100%;

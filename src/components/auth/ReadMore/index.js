@@ -15,6 +15,7 @@ const ReadMore = React.createClass({
           <img src={NEULogo}/>
         </a>
         <a href="http://www.neuq.edu.cn">
+          
           <img src={NEUQLogo}/>
         </a>
       </div>
