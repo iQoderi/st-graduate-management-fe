@@ -9,46 +9,10 @@
   width: 50%;
   height: 60px;
   line-height: 60px;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 25%;
   text-align: center;
   color: #666666;
 }
-
-.auth-box {
-  width: 320px;
-  margin: 0 auto;
-  .ibig-logo {
-    width: 20%;
-    margin-left: 40%;
-    margin-top: 60%;
-    margin-bottom: 4%;
-  }
-  .ibig-logo-H5 {
-    width: 20%;
-    margin-left: 40%;
-    padding-top: 40%;
-    margin-bottom: 20%;
-    display: none;
-  }
-  .ismall-logo {
-    width: 16%;
-    margin-left: 42%;
-    margin-top: 40%;
-  }
-
-}
-
-.auth-form {
-  position: relative;
-  width: 100%;
-  margin-top: 40px;
-  padding-bottom: 30px;
-  text-align: center;
-  background: white;
-  border-radius: 6px;
-  box-shadow: white;
-}
-
 
