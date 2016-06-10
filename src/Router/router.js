@@ -14,6 +14,7 @@ import ForgetPassBox from '../components/auth/forgetPass';
 import SendEmailSuccess from '../components/auth/SendEmailSuccess';
 import SendNewEmail from '../components/auth/reSendEmail';
 import {Router, Route, hashHistory, IndexRoute, browserHistory} from 'react-router';
+import ResetPass from  '../components/auth/resetPass';
 
 import CompleteMsg from  '../components/auth/completeMsg';
 import Home from '../components/home/homePage';
@@ -23,7 +24,6 @@ import ExportExcelBox from  '../components/home/content/exportExcel';
 import AdminList from  '../components/home/content/adminList';
 import AddAdmin from  '../components/home/content/addAdmin';
 import QueryMsg from  '../components/home/content/queryStudent';
-
 
 const RouterApp = React.createClass({
   render: function () {
@@ -35,6 +35,7 @@ const RouterApp = React.createClass({
             <Route path="login" component={AuthLogin}/>
             <Route path="register" component={AuthReg}/>
             <Route path="forgetPass" component={ForgetPassBox}/>
+            <Route path="resetPass" component={ResetPass}/>
             <Route path="reSendEmail" component={SendNewEmail}/>
           </Route>
           <Route path="/registration/success" component={SendEmailSuccess}/>

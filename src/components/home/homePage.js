@@ -3,6 +3,7 @@
  */
 import  React from 'react';
 import NavgaionBar from './navgationbar'
+import Loading from '../tools/loading';
 import SideBar from  './sideBar';
 import Footer from './footer/index';
 require('./home.css');
