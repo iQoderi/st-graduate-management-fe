@@ -4,9 +4,10 @@
 require('normalize.css/normalize.css');
 require('styles/App.css');
 
-import React from 'react';
+import React, {propType} from 'react';
 import TopTips from './tools/topTips';
 import Loading2 from './tools/loading2';
+
 
 class AppComponent extends React.Component {
   render() {
@@ -18,7 +19,6 @@ class AppComponent extends React.Component {
   }
 }
 
-AppComponent.defaultProps = {
-};
+AppComponent.defaultProps = {};
 
 export default AppComponent;

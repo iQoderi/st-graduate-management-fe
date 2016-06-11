@@ -12,7 +12,7 @@ const TopTips = React.createClass({
       </span>
     )
   }
-
+  
 });
 
 export  default TopTips;
