@@ -3,14 +3,22 @@
  */
 import {SHOW_TIPS, HIDE_TIPS} from '../actions/consts';
 
-export default function is_tips(state = 'none', action) {
+export default function is_tips(state = {display: 'none', text: '账号密码错误'}, action) {
   switch (action.type) {
     case SHOW_TIPS:
-      return 'block';
+      return {
+        display: 'block',
+        text: action.tip
+      };
     case HIDE_TIPS:
-      return 'none';
+      return {
+        display: 'none',
+        text: ''
+      };
     default:
       return state;
   }
 }
+
+
 

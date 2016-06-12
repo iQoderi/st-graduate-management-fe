@@ -5,17 +5,19 @@ import React from 'react';
 require('./index.css');
 
 const TopTips = React.createClass({
-  handClick:function (e) {
+  handClick: function (e) {
     console.log(e);
     console.log(12232);
   },
   render: function () {
+    console.log(this.props.text)
     return (
       <div>
       <span className="TopTips" style={{display:this.props.Show}}>
-      账号或者密码错误
+        {this.props.text}
       </span>
-        <button onClick={this.handClick()}  data="1"  ww={this.props.addClick}>SHow</button>
+        <button onClick={()=>{this.props.addClick('哈哈,傻逼儿子')}}>Show</button>
+        <button onClick={()=>{this.props.addClick2()}} style={{marginTop:'100px'}}>Hide</button>
       </div>
     )
   }

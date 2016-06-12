@@ -9,16 +9,12 @@ import TopTips from './tools/topTips';
 import Loading2 from './tools/loading2';
 
 const AppComponent = React.createClass({
-  // handleClick: function (e) {
-  //   e.preventDefault();
-  //   alert(1);
-  //   console.log(this.props.action);
-  // },
   render: function () {
     const {is_loading, is_tips, action}=this.props;
     return (
       <div className="app-wrapper">
-        <TopTips Show={is_tips} addClick={action.showTips}/>
+        <TopTips Show={is_tips.display} text={is_tips.text} addClick={(text)=>action.showTips(text)}
+                 addClick2={action.hideTips}/>
         {this.props.children}
       </div>
     );
