@@ -11,4 +11,4 @@ const neuqstReducer = combineReducers({
   is_tips
 });
 
-export  default neuqstReducer;
+module.exports=neuqstReducer;
