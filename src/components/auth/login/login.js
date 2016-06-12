@@ -33,6 +33,7 @@ const LoginBox = React.createClass({
       .then(function (res) {
         console.log(res);
       })
+    
   },
   render: function () {
     return (
