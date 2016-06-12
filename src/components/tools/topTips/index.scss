@@ -1,4 +1,4 @@
-.TopTips{
+.TopTips {
   height: 50px;
   line-height: 50px;
   font-size: 14px;
@@ -12,6 +12,39 @@
   z-index: 132322;
   left: 0;
   right: 0;
-  top: 0;
-  margin:  auto;
+  top: -50px;
+  margin: auto;
+  animation: tipAnimation 2s;
 }
+
+@keyframes tipAnimation {
+  0% {
+    top: -50px;
+  }
+  20% {
+    top: 0;
+  }
+
+  80% {
+    top: 0;
+  }
+  100% {
+    top: -50px;
+  }
+}
+
+@-webkit-keyframes tipAnimation {
+  0% {
+    top: -50px;
+  }
+  20% {
+    top: 0;
+  }
+  80% {
+    top: 0;
+  }
+  100% {
+    top: -50px;
+  }
+}
+
