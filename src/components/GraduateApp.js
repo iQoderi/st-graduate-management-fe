@@ -8,16 +8,22 @@ import React, {propType} from 'react';
 import TopTips from './tools/topTips';
 import Loading2 from './tools/loading2';
 
-
-class AppComponent extends React.Component {
-  render() {
+const AppComponent = React.createClass({
+  // handleClick: function (e) {
+  //   e.preventDefault();
+  //   alert(1);
+  //   console.log(this.props.action);
+  // },
+  render: function () {
+    const {is_loading, is_tips, action}=this.props;
     return (
       <div className="app-wrapper">
+        <TopTips Show={is_tips} addClick={action.showTips}/>
         {this.props.children}
       </div>
     );
   }
-}
+});
 
 AppComponent.defaultProps = {};
 

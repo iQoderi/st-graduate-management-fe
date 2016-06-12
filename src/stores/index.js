@@ -4,7 +4,6 @@
 const redux = require('redux');
 const neuqstReducer = require('../reducers');
 
-console.log(neuqstReducer,'3123123');
 var configStore = function (initialState) {
   const store = redux.createStore(neuqstReducer, initialState);
   //热替换

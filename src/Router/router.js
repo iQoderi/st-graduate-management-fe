@@ -4,7 +4,8 @@
  */
 import React from 'react';
 
-import App from '../components/GraduateApp';
+// import App from '../components/GraduateApp';
+import App from '../containers/App';
 
 import AuthBox from  '../components/auth/auth';
 import AuthStart from  '../components/auth/start/start';
