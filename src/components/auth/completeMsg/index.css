@@ -1,0 +1,53 @@
+.brand .logout {
+  float: right;
+  color: #666666;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 10px 20px 0 0; }
+
+.user-info {
+  position: relative;
+  text-align: center;
+  margin-bottom: 100px; }
+  .user-info .avatar {
+    margin-bottom: 12px;
+    margin-top: 50px;
+    text-align: center; }
+    .user-info .avatar img {
+      width: 120px;
+      height: 120px;
+      border-radius: 120px; }
+  .user-info .raw-email {
+    margin-bottom: 40px;
+    color: #505556; }
+  .user-info .control-group {
+    position: relative;
+    margin-bottom: 20px;
+    display: block;
+    height: 50px; }
+    .user-info .control-group input, .user-info .control-group select {
+      position: relative;
+      width: 200px;
+      height: 50px;
+      padding: 18px 20px;
+      background-color: #fff;
+      border: 1px solid #D4D8DC;
+      border-radius: 25px;
+      outline: none; }
+    .user-info .control-group select {
+      padding: 5px 15px; }
+    .user-info .control-group .save {
+      border: 1px solid #F8BA0B;
+      background-color: #F8BA0B;
+      color: #fff;
+      padding: 18px 20px;
+      border-radius: 25px;
+      width: 200px;
+      margin-left: 65px;
+      margin-right: 20px;
+      vertical-align: middle; }
+    .user-info .control-group .cancel {
+      color: #666666;
+      margin-left: 15px; }
+
+/*# sourceMappingURL=index.css.map */
