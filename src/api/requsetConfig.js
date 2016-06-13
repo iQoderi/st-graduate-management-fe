@@ -9,7 +9,9 @@ function apiMaker(path) {
 const  API={
   reg:apiMaker('/users/register'),
   login:apiMaker('/users/login'),
-  reSendEmail:apiMaker('/users/reSendEmail')
+  reSendEmail:apiMaker('/users/reSendEmail'),
+  forgetPass:apiMaker('/users/forgetPass'),
+  resetPass:apiMaker('/users/passNew')
 };
 
 export  default API;

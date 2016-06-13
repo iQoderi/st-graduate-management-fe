@@ -12,7 +12,7 @@ import AuthStart from  '../components/auth/start/start';
 // import AuthLogin from  '../components/auth/login/login';
 import AuthReg from  '../containers/auth/reg.container.js';
 import AuthLogin from  '../containers/auth/login.container';
-import ForgetPassBox from '../components/auth/forgetPass';
+import ForgetPassBox from '../containers/auth/forgetPass.container';
 import SendEmailSuccess from '../components/auth/SendEmailSuccess';
 import SendNewEmail from '../containers/auth/reSendEmail.container';
 import ResetPass from  '../components/auth/resetPass';
@@ -26,8 +26,15 @@ import ExportExcelBox from  '../components/home/content/exportExcel';
 import AdminList from  '../components/home/content/adminList';
 import AddAdmin from  '../components/home/content/addAdmin';
 import QueryMsg from  '../components/home/content/queryStudent';
+import goto from '../library/changeHash';
 
 const RouterApp = React.createClass({
+  ifSendEmail:function () {
+    if (window.location.href.split('?id=').length < 2) {
+      alert('请先发送重置密码邮件');
+      goto('/auth/forgetPass');
+    }
+  },
   render: function () {
     return (
       <Router history={hashHistory}>
@@ -37,7 +44,7 @@ const RouterApp = React.createClass({
             <Route path="login" component={AuthLogin}/>
             <Route path="register" component={AuthReg}/>
             <Route path="forgetPass" component={ForgetPassBox}/>
-            <Route path="resetPass" component={ResetPass}/>
+            <Route path="resetPass" component={ResetPass} onEnter={this.ifSendEmail}/>
             <Route path="reSendEmail" component={SendNewEmail}/>
           </Route>
           <Route path="/registration/success" component={SendEmailSuccess}/>
