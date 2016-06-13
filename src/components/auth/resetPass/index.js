@@ -25,7 +25,15 @@ const ResetPass = React.createClass({
         password:MD5(_this.refs.newPass.value)
       };
       _this.loading();
-      fetch(API.resetPass,{
+      if(window.location.search){
+        const search=window.location.search;
+        const searcgRgx=/=+[\w,-]*/g;
+        var id=search.match(searcgRgx)[0].substr(1);
+      }else {
+        _this.loaded();
+        return false;
+      }
+      fetch(API.resetPass+'?id='+id,{
         method:'POST',
         headers: {
           'Accept': 'application/json',
