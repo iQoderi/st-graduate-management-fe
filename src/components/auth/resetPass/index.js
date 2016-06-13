@@ -99,5 +99,4 @@ const ResetPass = React.createClass({
   }
 });
 
-
 export default ResetPass;
