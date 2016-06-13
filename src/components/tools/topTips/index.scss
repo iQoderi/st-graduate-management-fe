@@ -9,12 +9,12 @@
   opacity: 0.6;
   color: #FFF;
   position: fixed;
+  font-weight: 600;
   z-index: 132322;
   left: 0;
   right: 0;
-  top: -50px;
+  top: 0;
   margin: auto;
-  animation: tipAnimation 2s;
 }
 
 @keyframes tipAnimation {

@@ -9,15 +9,16 @@ import App from '../containers/App';
 
 import AuthBox from  '../components/auth/auth';
 import AuthStart from  '../components/auth/start/start';
-import AuthLogin from  '../components/auth/login/login';
-import AuthReg from  '../components/auth/registered/registeredBox';
+// import AuthLogin from  '../components/auth/login/login';
+import AuthReg from  '../containers/auth/reg.container.js';
+import AuthLogin from  '../containers/auth/login.container';
 import ForgetPassBox from '../components/auth/forgetPass';
 import SendEmailSuccess from '../components/auth/SendEmailSuccess';
 import SendNewEmail from '../components/auth/reSendEmail';
-import {Router, Route, hashHistory, IndexRoute, browserHistory} from 'react-router';
 import ResetPass from  '../components/auth/resetPass';
-
 import CompleteMsg from  '../components/auth/completeMsg';
+import {Router, Route, hashHistory, IndexRoute, browserHistory} from 'react-router';
+
 import Home from '../components/home/homePage';
 import PersonalCenter from  '../components/home/content/personal';
 import ImportExcelBox from  '../components/home/content/importExcel';

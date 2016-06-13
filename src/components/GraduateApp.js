@@ -13,13 +13,14 @@ const AppComponent = React.createClass({
     const {is_loading, is_tips, action}=this.props;
     return (
       <div className="app-wrapper">
-        <TopTips Show={is_tips.display} text={is_tips.text} addClick={(text)=>action.showTips(text)}
-                 addClick2={action.hideTips}/>
+        <TopTips Show={is_tips.display} text={is_tips.text}/>
+        <Loading2 Show={is_loading}/>
         {this.props.children}
       </div>
     );
   }
 });
+
 
 AppComponent.defaultProps = {};
 

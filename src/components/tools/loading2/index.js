@@ -7,7 +7,7 @@ require('./index.css');
 const Loading2 = React.createClass({
   render: function () {
     return (
-      <div className="loading-2">
+      <div className="loading-2" style={{display:this.props.Show}}>
         <div className="spinner2">
           <div className="spinner-container container1">
             <div className="circle1"></div>
