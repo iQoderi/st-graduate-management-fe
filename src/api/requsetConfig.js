@@ -8,7 +8,8 @@ function apiMaker(path) {
 
 const  API={
   reg:apiMaker('/users/register'),
-  login:apiMaker('/users/login')
+  login:apiMaker('/users/login'),
+  reSendEmail:apiMaker('/users/reSendEmail')
 };
 
 export  default API;

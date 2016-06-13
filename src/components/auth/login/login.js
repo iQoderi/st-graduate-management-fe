@@ -7,20 +7,20 @@ import AuthTit from '../authTitle';
 import {Link} from 'react-router';
 import 'whatwg-fetch';
 import API from '../../../api/requsetConfig';
+import {verifyEmail,verifyPass} from '../../../library/verify';
+import goto from '../../../library/changeHash';
 import MD5 from 'md5';
+
 require('./loginBox.css');
 
 const LoginBox = React.createClass({
   handleLogin: function () {
     var _this=this;
     const {showTips,hideTips}=this.props.action;
-    const emailRgx=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/g;
-    const matchEmail=this.refs.loginEmail.value.match(emailRgx);
-    const matchPass=this.refs.loginPass.value.length>=6;
-    if(!matchEmail){
+    if(!verifyEmail(this.refs.loginEmail.value)){
       _this.isTips('邮箱格式不合法',2000);
     }else{
-      if(!matchPass){
+      if(!verifyPass(this.refs.loginPass.value)){
         _this.isTips('密码格式不合法，最短六位',2000);
       }else{
         var options={
@@ -43,9 +43,7 @@ const LoginBox = React.createClass({
             _this.loaded();
             if(json.code===10000){
               _this.isTips(json.data.Msg,2000);
-              setTimeout(function () {
-                window.location.hash='#/user/CompleteMsg';
-              },1000);
+              goto('/user/CompleteMsg',1000);
             }else{
               _this.isTips(json.data.Msg,2000);
             }
@@ -89,7 +87,7 @@ const LoginBox = React.createClass({
                      type="password"/>
             </div>
             <div className="form-group action">
-              <button className="btn btn-block login-btn" onClick={this.handleLogin}>登录</button>
+              <a className="btn btn-block login-btn" onClick={this.handleLogin}>登录</a>
             </div>
           </form>
           <div className="help-section">

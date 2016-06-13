@@ -14,7 +14,7 @@ import AuthReg from  '../containers/auth/reg.container.js';
 import AuthLogin from  '../containers/auth/login.container';
 import ForgetPassBox from '../components/auth/forgetPass';
 import SendEmailSuccess from '../components/auth/SendEmailSuccess';
-import SendNewEmail from '../components/auth/reSendEmail';
+import SendNewEmail from '../containers/auth/reSendEmail.container';
 import ResetPass from  '../components/auth/resetPass';
 import CompleteMsg from  '../components/auth/completeMsg';
 import {Router, Route, hashHistory, IndexRoute, browserHistory} from 'react-router';
