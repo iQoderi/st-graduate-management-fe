@@ -9,13 +9,12 @@ import App from '../containers/App';
 
 import AuthBox from  '../components/auth/auth';
 import AuthStart from  '../components/auth/start/start';
-// import AuthLogin from  '../components/auth/login/login';
 import AuthReg from  '../containers/auth/reg.container.js';
 import AuthLogin from  '../containers/auth/login.container';
 import ForgetPassBox from '../containers/auth/forgetPass.container';
 import SendEmailSuccess from '../components/auth/SendEmailSuccess';
 import SendNewEmail from '../containers/auth/reSendEmail.container';
-import ResetPass from  '../components/auth/resetPass';
+import ResetPass from  '../containers/auth/resetPassByEm.contaier';
 import CompleteMsg from  '../components/auth/completeMsg';
 import {Router, Route, hashHistory, IndexRoute, browserHistory} from 'react-router';
 
