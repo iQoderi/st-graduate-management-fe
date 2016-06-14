@@ -26,12 +26,19 @@ import AdminList from  '../components/home/content/adminList';
 import AddAdmin from  '../components/home/content/addAdmin';
 import QueryMsg from  '../components/home/content/queryStudent';
 import goto from '../library/changeHash';
+import {gotoLogin} from '../library/logout';
 
 const RouterApp = React.createClass({
   ifSendEmail:function () {
     if (window.location.href.split('?id=').length < 2) {
       alert('请先发送重置密码邮件');
       goto('/auth/forgetPass');
+    }
+  },
+  ifLogin:function () {
+    if(!localStorage.getItem('neuqst.token')){
+      alert('您还未登陆，请先登陆');
+      gotoLogin();
     }
   },
   render: function () {
@@ -48,7 +55,7 @@ const RouterApp = React.createClass({
           </Route>
           <Route path="/registration/success" component={SendEmailSuccess}/>
           <Route path="/user/CompleteMsg" component={CompleteMsg}/>
-          <Route path="/home" component={Home}>
+          <Route path="/home" component={Home} onEnter={this.ifLogin}>
             <Route path="personal" component={PersonalCenter}/>
             <Route path="importMsg" component={ImportExcelBox}/>
             <Route path="exportMsg" component={ExportExcelBox}/>

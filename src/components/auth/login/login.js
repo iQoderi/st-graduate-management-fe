@@ -43,6 +43,11 @@ const LoginBox = React.createClass({
             _this.loaded();
             if(json.code===10000){
               _this.isTips(json.data.Msg,2000);
+              if(localStorage){
+                localStorage.setItem('neuqst.token',json.data.token);
+              }else {
+                alert('您的浏览器不支持localStorage,建议更换浏览器或者更新浏览器');
+              }
               goto('/user/CompleteMsg',1000);
             }else{
               _this.isTips(json.data.Msg,2000);
@@ -75,15 +80,14 @@ const LoginBox = React.createClass({
               <input className="form-control"
                      autofocus="autofocus"
                      ref="loginEmail"
-                     placeholder="邮箱"
+                     placeholder="请输入您的邮箱地址"
                      type="email"/>
             </div>
-
             <div className="form-group">
               <input className="form-control"
                      ref="loginPass"
                      autocomplete="off"
-                     placeholder="密码"
+                     placeholder="密码(6-16位数字字母下划线)"
                      type="password"/>
             </div>
             <div className="form-group action">

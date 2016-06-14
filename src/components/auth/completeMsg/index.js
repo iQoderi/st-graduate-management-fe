@@ -71,7 +71,7 @@ const CompleteMsg = React.createClass({
             </div>
           </div>
         </div>
-        <div className="copyright">&copy; 2016 东北大学秦皇岛分校数学与统计学院</div>
+        <div className="c-footer">&copy; 2016 东北大学秦皇岛分校数学与统计学院</div>
       </div>
     )
   }

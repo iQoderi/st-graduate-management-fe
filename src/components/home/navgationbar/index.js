@@ -3,6 +3,7 @@
  */
 import React from 'react';
 require('./index.css');
+import {logout,gotoLogin,gotoReg} from '../../../library/logout';
 const NavgaionBar = React.createClass({
   render: function () {
     return (
@@ -13,19 +14,25 @@ const NavgaionBar = React.createClass({
           </div>
           <ul className="nav navbar-top-links navbar-right">
             <li className="dropdown">
-              <a className="dropdown-toggle count-info" data-toggle="dropdown" href="/#/auth/login">
+              <a
+                onClick={gotoLogin}
+                className="dropdown-toggle count-info" data-toggle="dropdown" href="javascript:;">
                 <i className="fa fa-lock"/>
                 登陆
               </a>
             </li>
             <li className="dropdown">
-              <a className="dropdown-toggle count-info" data-toggle="dropdown" href="/#/auth/register">
+              <a 
+                onClick={gotoReg}
+                className="dropdown-toggle count-info" data-toggle="dropdown" href="javascript:;">
                 <i className="fa fa-registered"/>
                 注册
               </a>
             </li>
             <li className="dropdown">
-              <a className="dropdown-toggle count-info" data-toggle="dropdown" href="/#/auth/start">
+              <a
+                onClick={logout}
+                className="dropdown-toggle count-info" data-toggle="dropdown" href="javascript:;">
                 <i className="fa fa-sign-out"/>
                 退出
               </a>

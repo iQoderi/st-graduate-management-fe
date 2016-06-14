@@ -28,6 +28,7 @@ const Loading2 = React.createClass({
             <div className="circle4"></div>
           </div>
         </div>
+        <span className="loading-word">loading...</span>
       </div>
     )
   }
