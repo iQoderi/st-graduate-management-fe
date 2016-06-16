@@ -44,7 +44,7 @@ img {
   border-right: 4px solid transparent;
   border-left: 4px solid transparent; }
 
-.home-wrapper .navActive {
+.home-wrapper .nav > li > .navActive {
   background: #222;
   border-left: 5px solid #1ab394; }
 

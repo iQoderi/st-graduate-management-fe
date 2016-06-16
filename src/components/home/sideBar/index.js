@@ -29,10 +29,10 @@ const SideBar = React.createClass({
           <li className="nav-header">
             <div className="dropdown profile-element">
               <span><img alt="image" className="img-circle" src={Avator}/></span>
-              <a className="dropdown-toggle" href="javascript:;">
+              <span className="dropdown-toggle">
                 <span className="clear">
                   <span className="block m-t-xs"><strong className="font-bold">齐超</strong></span>
-                  <span className="text-muted text-xs block">
+                  <span className="text-muted text-xs block" style={{cursor:'pointer'}}>
                     <span onClick={this.showDropMenu}>超级管理员
                       <b className="caret"/>
                     </span>
@@ -41,7 +41,7 @@ const SideBar = React.createClass({
                     </span>
                   </span>
                 </span>
-              </a>
+              </span>
             </div>
           </li>
           <PersonalItem/>

@@ -39,6 +39,7 @@ const LoginBox = React.createClass({
           .then(function (res) {
             return res.json()
           })
+          
           .then(function (json) {
             _this.loaded();
             if(json.code===10000){

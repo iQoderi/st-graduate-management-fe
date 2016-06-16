@@ -29,14 +29,14 @@ import goto from '../library/changeHash';
 import {gotoLogin} from '../library/logout';
 
 const RouterApp = React.createClass({
-  ifSendEmail:function () {
+  ifSendEmail: function () {
     if (window.location.href.split('?id=').length < 2) {
       alert('请先发送重置密码邮件');
       goto('/auth/forgetPass');
     }
   },
-  ifLogin:function () {
-    if(!localStorage.getItem('neuqst.token')){
+  ifLogin: function () {
+    if (!localStorage.getItem('neuqst.token')) {
       alert('您还未登陆，请先登陆');
       gotoLogin();
     }
@@ -45,6 +45,7 @@ const RouterApp = React.createClass({
     return (
       <Router history={hashHistory}>
         <Route path="/" component={App}>
+          <IndexRoute component={Home} onEnter={this.ifLogin}/>
           <Route path="/auth" component={AuthBox}>
             <Route path="start" component={AuthStart}/>
             <Route path="login" component={AuthLogin}/>
@@ -68,5 +69,6 @@ const RouterApp = React.createClass({
     )
   }
 });
+
 
 export  default RouterApp;

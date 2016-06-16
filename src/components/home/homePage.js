@@ -1,6 +1,3 @@
-/**
- * Created by everyun on 16/5/14.
- */
 import  React from 'react';
 import NavgaionBar from './navgationbar'
 import Loading from '../tools/loading';
@@ -29,5 +26,6 @@ const Home = React.createClass({
     )
   }
 });
+
 
 export default Home;
