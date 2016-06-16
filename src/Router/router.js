@@ -55,7 +55,7 @@ const RouterApp = React.createClass({
             <Route path="reSendEmail" component={SendNewEmail}/>
           </Route>
           <Route path="/registration/success" component={SendEmailSuccess}/>
-          <Route path="/user/CompleteMsg" component={CompleteMsg}/>
+          <Route path="/user/CompleteMsg" component={CompleteMsg} onEnter={this.ifLogin}/>
           <Route path="/home" component={Home} onEnter={this.ifLogin}>
             <Route path="personal" component={PersonalCenter}/>
             <Route path="importMsg" component={ImportExcelBox}/>

@@ -11,18 +11,18 @@ import PersonalItem from '../sideBarItem/personal';
 import AddAdminItem from '../sideBarItem/addAdmin';
 import DropMenu from '../dropmenu';
 import AdminListItem from '../sideBarItem/adminList';
-const Avator=require('../../../images/avatar.png');
+const Avator = require('../../../images/avatar.png');
 const SideBar = React.createClass({
-  showDropMenu:function () {
+  showDropMenu: function () {
     const {showDropMenu}=this.props.action;
     showDropMenu();
   },
-  hideDropMenu:function () {
+  hideDropMenu: function () {
     const {hideDropMenu}=this.props.action;
     hideDropMenu();
   },
   render: function () {
-    const {action,is_dropMenu}=this.props;
+    const {action, is_dropMenu}=this.props;
     return (
       <nav className="navbar-default navbar-static-side" role="navigation">
         <ul className="nav nav-side" id="side-menu">
