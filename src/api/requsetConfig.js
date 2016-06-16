@@ -11,7 +11,8 @@ const  API={
   login:apiMaker('/users/login'),
   reSendEmail:apiMaker('/users/reSendEmail'),
   forgetPass:apiMaker('/users/forgetPass'),
-  resetPass:apiMaker('/users/passNew')
+  resetPass:apiMaker('/users/passNew'),
+  BaseMsg:apiMaker('/users//BaseMsg')
 };
 
 export  default API;

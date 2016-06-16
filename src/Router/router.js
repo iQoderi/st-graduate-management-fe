@@ -15,7 +15,7 @@ import ForgetPassBox from '../containers/auth/forgetPass.container';
 import SendEmailSuccess from '../components/auth/SendEmailSuccess';
 import SendNewEmail from '../containers/auth/reSendEmail.container';
 import ResetPass from  '../containers/auth/resetPassByEm.contaier';
-import CompleteMsg from  '../components/auth/completeMsg';
+import CompleteMsg from  '../containers/auth/completeMsg.container';
 import {Router, Route, hashHistory, IndexRoute, browserHistory} from 'react-router';
 
 import Home from '../components/home/homePage';

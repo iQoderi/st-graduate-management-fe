@@ -5,7 +5,7 @@
   font-size: 14px;
   margin: 10px 20px 0 0;
 }
-*{}
+
 
 .user-info {
   position: relative;
@@ -63,4 +63,13 @@
 }
 .c-footer{
   text-align: center;
+}
+.user-info .control-group .radio-inline input{
+  width: 20px;
+  height: 20px;
+  vertical-align: -4px;
+}
+
+.user-info .control-group .radio-2 input {
+  margin-left: -75px;
 }
