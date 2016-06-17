@@ -13,8 +13,31 @@ const myAvatar = require('../../../images/avator.jpg');
 const CompleteMsg = React.createClass({
   getInitialState: function () {
     return {
-      myEmail: '841599872@qq.com'
+      myEmail: ''
     }
+  },
+  componentDidMount: function () {
+    const _this = this;
+    const token = localStorage.getItem('neuqst.token');
+    this.loading();
+    fetch(API.my, {
+      headers: {
+        Token: token
+      }
+    })
+      .then((res)=> {
+        return res.json();
+      })
+      .then((json)=> {
+        _this.loaded();
+        if (json.code === 10000) {
+          _this.setState({
+            myEmail: json.data.users.email
+          })
+        } else {
+          _this.isTips(json.data.Msg, 1500);
+        }
+      })
   },
   saveMyMess: function () {
     var data = [
@@ -74,9 +97,6 @@ const CompleteMsg = React.createClass({
   loaded: function () {
     const {hideLoading}=this.props.action;
     hideLoading();
-  },
-  componentDidMount: function () {
-    alert('我被渲染啦');
   },
   render: function () {
     return (

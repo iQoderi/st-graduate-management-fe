@@ -13,7 +13,9 @@ const API = {
   forgetPass: apiMaker('/users/forgetPass'),
   resetPass: apiMaker('/users/passNew'),
   BaseMsg: apiMaker('/users/BaseMsg'),
-  my: apiMaker('/home/my')
+  my: apiMaker('/home/my'),
+  changePass: apiMaker('/home/changePass'),
+  admin: apiMaker('/home/admin')
 };
 
 export  default API;
