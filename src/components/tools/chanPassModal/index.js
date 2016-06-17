@@ -10,7 +10,17 @@ const ChanPassModal = React.createClass({
     var {is_chanPass,action} =this.props;
     console.log(this.props);
     const formInstance = (
+       
       <Form horizontal>
+        <FormGroup controlId="formHorizontalEmail1">
+          <Col componentClass={ControlLabel} sm={2}>
+            旧密码
+          </Col>
+          <Col sm={8}>
+            <FormControl type="password" placeholder="密码(6-16位数字字母或者下划线)"/>
+          </Col>
+        </FormGroup>
+        
         <FormGroup controlId="formHorizontalEmail">
           <Col componentClass={ControlLabel} sm={2}>
             新密码
