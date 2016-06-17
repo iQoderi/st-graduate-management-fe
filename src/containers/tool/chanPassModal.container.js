@@ -4,7 +4,13 @@
 import ChanPassModal from  '../../components/tools/chanPassModal';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {showChanPass, hideChanPass} from  '../../actions/neuqst.actions.js';
+import {
+  hideChanPass,
+  showLoading,
+  hideLoading,
+  showTips,
+  hideTips
+} from  '../../actions/neuqst.actions.js';
 
 function mapStateToProps(state) {
   return {
@@ -16,7 +22,11 @@ function mapDispatchToProps(dispatch) {
   var actions = {};
   var actionMap = {
     action: bindActionCreators({
-      hideChanPass: hideChanPass
+      hideChanPass: hideChanPass,
+      showLoading,
+      showTips,
+      hideLoading,
+      hideTips
     }, dispatch)
   };
   return actionMap;

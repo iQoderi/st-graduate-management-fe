@@ -4,7 +4,15 @@
 import SideBar from  '../../components/home/sideBar';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {showDropMenu, hideDropMenu, showChanPass} from  '../../actions/neuqst.actions.js';
+import {
+  showDropMenu,
+  hideDropMenu,
+  showChanPass,
+  showLoading,
+  showTips,
+  hideLoading,
+  hideTips
+} from  '../../actions/neuqst.actions.js';
 
 function mapStateToProps(state) {
   return {
@@ -18,7 +26,11 @@ function mapDispatchToProps(dispatch) {
     action: bindActionCreators({
       showDropMenu: showDropMenu,
       hideDropMenu: hideDropMenu,
-      showChanPass: showChanPass
+      showChanPass: showChanPass,
+      showLoading: showLoading,
+      showTips: showTips,
+      hideLoading: hideLoading,
+      hideTips: hideTips
     }, dispatch)
   };
   return actionMap;
