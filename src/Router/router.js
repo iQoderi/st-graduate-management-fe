@@ -23,7 +23,7 @@ import PersonalCenter from  '../components/home/content/personal';
 import ImportExcelBox from  '../components/home/content/importExcel';
 import ExportExcelBox from  '../components/home/content/exportExcel';
 import AdminList from  '../components/home/content/adminList';
-import AddAdmin from  '../components/home/content/addAdmin';
+import AddAdmin from  '../containers/home/addAdmin.container';
 import QueryMsg from  '../components/home/content/queryStudent';
 import goto from '../library/changeHash';
 import {gotoLogin} from '../library/logout';

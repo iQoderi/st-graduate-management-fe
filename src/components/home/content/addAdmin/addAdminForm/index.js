@@ -3,26 +3,101 @@
  */
 import React from 'react';
 import {Form, Col, FormGroup, FormControl, Button, Checkbox, ControlLabel} from 'react-bootstrap';
-
+import 'whatwg-fetch';
+import API from '../../../../../api/requsetConfig';
+import {verifyPass, verifyEmail, verifyPhone} from '../../../../../library/verify';
+import MD5 from 'md5';
+import _$ from '../../../../../library/getElement';
 require('./index.css');
 const AddAdminForm = React.createClass({
+  addAdmin: function () {
+    const _this = this;
+    const time = 1000;
+    if (!_$('adminName').value) {
+      _this.isTips('请填写用户名', time);
+      return false;
+    }
+    if (!_$('adminCode').value) {
+      _this.isTips('请填写工号', time);
+      return false;
+    }
+    if (!verifyPhone(_$('adminPhone').value)) {
+      _this.isTips('手机号格式不正确', time);
+      return false;
+    }
+    if (!verifyEmail(_$('adminEmail').value)) {
+      _this.isTips('邮箱号格式不正确', time);
+      return false;
+    }
+    if (!verifyPass(_$('adminPassword').value)) {
+      _this.isTips('密码格式不正确', time);
+      return false;
+    }
+
+    const options = {
+      name: _$('adminName').value,
+      email: _$('adminEmail').value,
+      phone: _$('adminPhone').value,
+      role: _$('adminRole').value,
+      academy: _$('adminAcademy').value,
+      code: _$('adminCode').value,
+      password: MD5(_$('adminPassword').value)
+    };
+    const token = localStorage.getItem('neuqst.token');
+    _this.loading();
+    fetch(API.admin, {
+      method: 'POST',
+      headers: {
+        'Token': token,
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(options)
+    })
+      .then((res)=> {
+        return res.json();
+      })
+      .then((json)=> {
+        _this.loaded();
+        if (json.code === 10000) {
+          _this.isTips('添加管理员成功', 1500);
+        } else {
+          _this.isTips(json.data.Msg, 1500);
+        }
+      })
+  },
+  isTips: function (tip, time) {
+    clearTimeout(timer);
+    const {showTips, hideTips}=this.props.action;
+    showTips(tip);
+    var timer = setTimeout(this.props.action.hideTips, time);
+  },
+  loading: function () {
+    const {showLoading}=this.props.action;
+    showLoading();
+  },
+  loaded: function () {
+    const {hideLoading}=this.props.action;
+    hideLoading();
+  },
   render: function () {
     return (
       <Form horizontal style={{width:'400px'}}>
-        <FormGroup controlId="formHorizontalPassword">
+        <FormGroup controlId="adminName">
           <Col componentClass={ControlLabel} sm={2}>
             姓名
           </Col>
           <Col sm={10}>
-            <FormControl type="text" placeholder="请输入姓名"/>
+            <FormControl
+              type="text" placeholder="请输入姓名"/>
           </Col>
         </FormGroup>
-        <FormGroup controlId="formHorizontalPassword">
+        <FormGroup>
           <Col componentClass={ControlLabel} sm={2}>
             学院
           </Col>
           <Col sm={10}>
-            <select className="form-control">
+            <select className="form-control" id="adminAcademy">
               <option>研究生分院</option>
               <option>经济学院</option>
               <option>管理学院</option>
@@ -36,18 +111,18 @@ const AddAdminForm = React.createClass({
             </select>
           </Col>
         </FormGroup>
-        <FormGroup controlId="formHorizontalEmail">
+        <FormGroup>
           <Col componentClass={ControlLabel} sm={2}>
             权限
           </Col>
           <Col sm={10}>
-            <select className="form-control">
+            <select className="form-control" id="adminRole">
               <option>管理员</option>
               <option>辅导员</option>
             </select>
           </Col>
         </FormGroup>
-        <FormGroup controlId="formHorizontalPassword">
+        <FormGroup controlId="adminCode">
           <Col componentClass={ControlLabel} sm={2}>
             工号
           </Col>
@@ -55,7 +130,7 @@ const AddAdminForm = React.createClass({
             <FormControl type="text" placeholder="请输入工号"/>
           </Col>
         </FormGroup>
-        <FormGroup controlId="formHorizontalPassword">
+        <FormGroup controlId="adminPhone">
           <Col componentClass={ControlLabel} sm={2}>
             手机
           </Col>
@@ -63,7 +138,7 @@ const AddAdminForm = React.createClass({
             <FormControl type="text" placeholder="请输入联系电话"/>
           </Col>
         </FormGroup>
-        <FormGroup controlId="formHorizontalEmail">
+        <FormGroup controlId="adminEmail">
           <Col componentClass={ControlLabel} sm={2}>
             邮箱
           </Col>
@@ -71,17 +146,7 @@ const AddAdminForm = React.createClass({
             <FormControl type="email" placeholder="请输入邮箱地址"/>
           </Col>
         </FormGroup>
-        <FormGroup controlId="formHorizontalPassword">
-          <Col componentClass={ControlLabel} sm={2}>
-            手机
-          </Col>
-          <Col sm={10}>
-            <FormControl type="text" placeholder="请输入联系电话"/>
-          </Col>
-        </FormGroup>
-
-
-        <FormGroup controlId="formHorizontalPassword">
+        <FormGroup controlId="adminPassword">
           <Col componentClass={ControlLabel} sm={2}>
             密码
           </Col>
@@ -92,7 +157,9 @@ const AddAdminForm = React.createClass({
 
         <FormGroup>
           <Col smOffset={2} sm={10}>
-            <Button type="button" bsStyle="primary" className="normal-btn fr">
+            <Button
+              onClick={this.addAdmin}
+              type="button" bsStyle="primary" className="normal-btn fr">
               注册
             </Button>
           </Col>
