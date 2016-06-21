@@ -17,15 +17,13 @@ const AdminList = React.createClass({
     };
   },
   handleSelect(eventKey) {
+    console.log(eventKey);
     this.setState({
       activePage: eventKey
     });
   },
-  componentDidMount:function () {
+  readPage:function (start,per) {
     const token=getToken();
-    const {changePageSucc}=this.props.action;
-    const start=1;
-    const per=15;
     fetch(`${API.admin}?start=${start}&pageSize=${per}`,{
       headers:{
         Token:token
@@ -36,8 +34,14 @@ const AdminList = React.createClass({
       })
       .then((json)=>{
         console.log(json);
-        changePageSucc(json.data.pages,1,json.data.count)
+        changePageSucc(json.data.pages,start,json.data.count)
       })
+  },
+  componentDidMount:function () {
+    const {changePageSucc}=this.props.action;
+    const start=1;
+    const per=15;
+    this.readPage(start,per);
   },
   render: function () {
     const {count,curPage,page}=this.props.pages;
@@ -52,7 +56,7 @@ const AdminList = React.createClass({
             last
             ellipsis
             boundaryLinks
-            items={count+3}
+            items={Math.ceil(count/15)}
             maxButtons={5}
             activePage={curPage}
             onSelect={this.handleSelect}/>
