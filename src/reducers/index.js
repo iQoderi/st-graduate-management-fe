@@ -7,14 +7,15 @@ import is_loading from './loading.reducer';
 import is_tips from './tips.reducer';
 import is_dropMenu from './dropmenu.reducer';
 import is_changePass from './chanPass.reducer';
+import pages from './changePage.reducer';
 import {routerReducer} from 'react-router-redux';
 const neuqstReducer = combineReducers({
   is_loading,
   is_tips,
   is_dropMenu,
   is_changePass,
-  routing:routerReducer
+  pages,
+  routing: routerReducer
 });
 
-
-module.exports=neuqstReducer;
+module.exports = neuqstReducer;

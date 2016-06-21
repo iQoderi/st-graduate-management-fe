@@ -14,3 +14,6 @@ export const HIDE_DROPMENU = 'HIDE_DROPMENU';
 
 export const SHOW_CHANPASS = 'SHOW_CHANPASS';
 export const HIDE_CHANPASS = 'HIDE_CHANPASS';
+
+export const CHANGE_PAGE = 'CHANGE_PAGE';
+export const CHANGE_PAGE_SUCCESS = 'CHANGE_PAGE_SUCCESS';

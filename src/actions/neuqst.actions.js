@@ -5,8 +5,12 @@ import {
   SHOW_LOADING, HIDE_LOADING,
   SHOW_TIPS, HIDE_TIPS,
   SHOW_CHANPASS, HIDE_CHANPASS,
-  HIDE_DROPMENU, SHOW_DROPMENU
+  HIDE_DROPMENU, SHOW_DROPMENU,
+  CHANGE_PAGE,
+  CHANGE_PAGE_SUCCESS
 } from './consts';
+import 'whatwg-fetch';
+import API from '../api/requsetConfig';
 
 export function showTips(tip) {
   return {
@@ -63,4 +67,18 @@ export function hideChanPass() {
   }
 }
 
+export function changePage(index = 1, size = 10) {
+  return {
+    type: CHANGE_PAGE,
+    get: fetch(API.admin + '?start=' + index + '&pageSize=' + size)
+  }
+}
 
+export function changePageSucc(page=[],curPage=1,count=0) {
+  return {
+    type: CHANGE_PAGE_SUCCESS,
+    page,
+    curPage,
+    count
+  }
+}
