@@ -52,6 +52,7 @@ const LoginBox = React.createClass({
             if (json.code === 10000) {
               _this.isTips(json.data.Msg, 2000);
               goto('/home', 1000);
+              console.log(json);
             } else {
               if (json.code === 90010) {
                 _this.isTips(json.data.Msg, 2000);

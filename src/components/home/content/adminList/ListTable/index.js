@@ -3,31 +3,21 @@
  * Created by qoder on 16/6/6.
  */
 import React from 'react';
-import ReactBootstrap, {Table} from 'react-bootstrap';
+import {Table} from 'react-bootstrap';
+import Tr from './tableItem';
 
 require('./index.css');
 const Listtable = React.createClass({
   render: function () {
     const {page}=this.props;
     const pages=page.map((each,index)=>{
-      return (
-        <tr>
-          <td>{index+1}</td>
-          <td>{each.teacher[0].code}</td>
-          <td>{each.teacher[0].name}</td>
-          <td>{each.teacher[0].academy}</td>
-          <td>{each.teacher[0].role}</td>
-          <td>{each.teacher[0].email}</td>
-          <td>{each.teacher[0].phone}</td>
-          <td className="opr-admin">
-            <span className="edit-admin">编辑</span>
-            <span className="text-danger">删除</span>
-          </td>
-        </tr>
-      )
+      each.index=index+1;
+        return (
+          <Tr data={each} key={each.id} id={each.id}/>
+        )
     });
     return (
-      <Table responsive hover>
+      <Table responsive>
         <thead>
         <tr>
           <th>#</th>

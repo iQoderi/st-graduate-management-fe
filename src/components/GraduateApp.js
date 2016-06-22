@@ -7,12 +7,14 @@ require('styles/App.css');
 import React, {propType} from 'react';
 import TopTips from './tools/topTips';
 import Loading2 from './tools/loading2';
+import Confirm from '../components/tools/confirm';
 
 const AppComponent = React.createClass({
   render: function () {
     const {is_loading, is_tips, action}=this.props;
     return (
       <div className="app-wrapper">
+        <Confirm/>
         <TopTips Show={is_tips.display} text={is_tips.text}/>
         <Loading2 Show={is_loading}/>
         {this.props.children}
