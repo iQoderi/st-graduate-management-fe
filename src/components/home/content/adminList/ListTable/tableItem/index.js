@@ -1,10 +1,6 @@
 /**
  * Created by qoder on 16-6-23.
  */
-/**
- *
- * Created by qoder on 16/6/6.
- */
 import React from 'react';
 
 const Tr = React.createClass({
@@ -34,7 +30,7 @@ const Tr = React.createClass({
         <td>{data.phone}</td>
         <td className="opr-admin">
           <span className="edit-admin" onClick={this.editAdmin}>编辑</span>
-          <span className="edit-admin" onClick={this.editAdmin}>修改密码</span>
+          <span className="edit-admin" onClick={()=>{this.props.action.showChangeAdminPass(data.id)}}>修改密码</span>
           <span className="text-danger" onClick={this.rmAdmin}>删除</span>
         </td>
       </tr>

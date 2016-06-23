@@ -15,7 +15,8 @@ const API = {
   BaseMsg: apiMaker('/users/BaseMsg'),
   my: apiMaker('/home/my'),
   changePass: apiMaker('/home/changePass'),
-  admin: apiMaker('/home/admin')
+  admin: apiMaker('/home/admin'),
+  changeAdminPass:apiMaker('/home/changeAdminPass')
 };
 
 export  default API;

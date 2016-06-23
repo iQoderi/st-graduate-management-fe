@@ -6,12 +6,10 @@ import {
   SHOW_TIPS, HIDE_TIPS,
   SHOW_CHANPASS, HIDE_CHANPASS,
   HIDE_DROPMENU, SHOW_DROPMENU,
-  CHANGE_PAGE,
-  CHANGE_PAGE_SUCCESS,
-  SHOW_CONFIRM,
-  HIDE_CONFIRM,
-  SHOW_EDIT_ADMIN,
-  HIDE_EDIT_ADMIN
+  CHANGE_PAGE, CHANGE_PAGE_SUCCESS,
+  SHOW_CONFIRM, HIDE_CONFIRM,
+  SHOW_EDIT_ADMIN, HIDE_EDIT_ADMIN,
+  SHOW_CHANGE_ADMIN_PASS, HIDE_CHANGE_ADMIN_PASS
 } from './consts';
 import 'whatwg-fetch';
 import API from '../api/requsetConfig';
@@ -123,3 +121,17 @@ export function hideEditAdmin() {
   }
 }
 
+export function showChangeAdminPass(id) {
+  return {
+    type:SHOW_CHANGE_ADMIN_PASS,
+    show:true,
+    id
+  }
+}
+
+export function hideChangeAdminPass() {
+  return{
+    type:HIDE_CHANGE_ADMIN_PASS,
+    show:false
+  }
+}

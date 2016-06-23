@@ -7,6 +7,7 @@ import {Pagination} from 'react-bootstrap';
 import getToken from '../../../../library/getToken';
 import API from '../../../../api/requsetConfig';
 import EditAdmin from '../../../tools/editAdminModal';
+import ChangeAdminPass from '../../../tools/changeAdminPass';
 import 'whatwg-fetch';
 require('./index.css');
 
@@ -61,7 +62,14 @@ const AdminList = React.createClass({
     const {count, curPage, page}=this.props.pages;
     return (
       <div className="adminList-wrapper">
-        <EditAdmin data={this.props.editAdmin} action={this.props.action} pages={this.props.pages}/>
+        <ChangeAdminPass
+          action={this.props.action}
+          data={this.props.changeAdminPass}
+        />
+        <EditAdmin 
+          data={this.props.editAdmin} 
+          action={this.props.action} 
+          pages={this.props.pages}/>
         <ListTable page={page} action={this.props.action}/>
         <div className="pager">
           <Pagination

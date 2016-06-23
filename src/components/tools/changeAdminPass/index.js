@@ -8,34 +8,28 @@ import API from '../../../api/requsetConfig';
 import {verifyPass} from '../../../library/verify';
 import MD5 from 'md5';
 import {logout} from '../../../library/logout';
-require('./index.css');
-const ChanPassModal = React.createClass({
-  _$: function (node) {
-    return document.querySelector(node);
-  },
+import getToken from '../../../library/getToken';
+import _$ from '../../../library/getElement';
+const ChanAdminPass = React.createClass({
   changePass: function () {
     var _this = this;
-    if (!verifyPass(_this._$('#oldPass').value)) {
-      _this.isTips('旧密码不合法', 1500);
+    const time=1500;
+    if (!verifyPass(_$('newPass2').value)) {
+      _this.isTips('新密码格式不正确', time);
       return false;
     }
 
-    if (!verifyPass(_this._$('#newPass').value)) {
-      _this.isTips('新密码不合法', 1500);
+    if (_$('newPass2').value !== _$('repeatPass2').value) {
+      _this.isTips('两次密码输入不一致', time);
       return false;
     }
-
-    if (_this._$('#newPass').value !== _this._$('#repeatPass').value) {
-      _this.isTips('两次密码输入不一致', 1500);
-      return false;
-    }
+    _this.props.action.hideChangeAdminPass();
     _this.loading();
-    const token = localStorage.getItem('neuqst.token');
+    const token = getToken();
     const options = {
-      oldPassword: MD5(_this._$('#oldPass').value),
-      password: MD5(_this._$('#newPass').value)
+      password: MD5(_$('newPass2').value)
     };
-    fetch(API.changePass, {
+    fetch(`${API.changeAdminPass}?id=${this.props.data.id}`, {
       method: 'PUT',
       headers: {
         'Token': token,
@@ -49,16 +43,15 @@ const ChanPassModal = React.createClass({
       })
       .then((json)=> {
         _this.loaded();
-        _this.props.action.hideChanPass();
         if (json.code === 10000) {
-          _this.isTips('修改密码成功', 1500);
+          _this.isTips('修改用户密码成功', time);
         }
         if (json.code === 10013) {
-          _this.isTips(json.data.Msg, 1500);
+          _this.isTips(json.data.Msg, time);
         }
 
         if (json.code !== 10000 && json.code !== 10013) {
-          _this.isTips(json.data.Msg, 1500);
+          _this.isTips(json.data.Msg, time);
           logout();
         }
       })
@@ -77,49 +70,26 @@ const ChanPassModal = React.createClass({
     const {hideLoading}=this.props.action;
     hideLoading();
   },
-  showDropMenu: function () {
-    const {showDropMenu}=this.props.action;
-    showDropMenu();
-  },
-  hideDropMenu: function () {
-    const {hideDropMenu}=this.props.action;
-    hideDropMenu();
-  },
   render() {
-    var {is_chanPass, action} =this.props;
-    console.log(this.props);
+    const {action,data} =this.props;
     const formInstance = (
-
       <Form horizontal>
-        <FormGroup controlId="formHorizontalEmail1">
-          <Col componentClass={ControlLabel} sm={2}>
-            旧密码
-          </Col>
-          <Col sm={8}>
-            <FormControl
-              id="oldPass"
-              type="password" placeholder="密码(6-16位数字字母或者下划线)"/>
-          </Col>
-        </FormGroup>
-
-        <FormGroup controlId="formHorizontalEmail">
+        <FormGroup controlId="newPass2">
           <Col componentClass={ControlLabel} sm={2}>
             新密码
           </Col>
           <Col sm={8}>
             <FormControl
-              id="newPass"
               type="password" placeholder="密码(6-16位数字字母或者下划线)"/>
           </Col>
         </FormGroup>
 
-        <FormGroup controlId="formHorizontalPassword">
+        <FormGroup controlId="repeatPass2">
           <Col componentClass={ControlLabel} sm={2}>
             重复密码
           </Col>
           <Col sm={8}>
             <FormControl
-              id="repeatPass"
               type="password" placeholder="重复密码"/>
           </Col>
         </FormGroup>
@@ -128,12 +98,12 @@ const ChanPassModal = React.createClass({
     return (
       <div className="modal-container">
         <Modal
-          show={is_chanPass}
-          onHide={action.hideChanPass}
+          show={data.show}
+          onHide={action.hideChangeAdminPass}
           container={this}
           aria-labelledby="contained-modal-title">
           <Modal.Header closeButton>
-            <Modal.Title id="contained-modal-title">修改密码</Modal.Title>
+            <Modal.Title id="contained-modal-title">修改管理员密码</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             {formInstance}
@@ -150,4 +120,4 @@ const ChanPassModal = React.createClass({
   }
 });
 
-export default ChanPassModal;
+export default ChanAdminPass;

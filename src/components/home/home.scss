@@ -52,3 +52,6 @@ body.canvas-menu .navbar-static-side, body.fixed-sidebar .navbar-static-side {
 .home-wrapper .modal, .modal-container .modal-backdrop {
   position: absolute;
 }
+.modal-body{
+  min-height: 90px;
+}

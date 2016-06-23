@@ -11,6 +11,7 @@ import is_changePass from './chanPass.reducer';
 import pages from './changePage.reducer';
 import confirm from './confirm.reducer';
 import editAdmin from './editAdmin.reducer';
+import changeAdminPass from './changeAdminPass.reducer';
 
 import {routerReducer} from 'react-router-redux';
 const neuqstReducer = combineReducers({
@@ -21,6 +22,7 @@ const neuqstReducer = combineReducers({
   pages,
   confirm,
   editAdmin,
+  changeAdminPass,
   routing: routerReducer
 });
 
