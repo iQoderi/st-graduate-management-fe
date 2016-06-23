@@ -20,3 +20,6 @@ export const CHANGE_PAGE_SUCCESS = 'CHANGE_PAGE_SUCCESS';
 
 export const SHOW_CONFIRM = 'SHOW_CONFIRM';
 export const HIDE_CONFIRM = 'HIDE_CONFIRM';
+
+export const SHOW_EDIT_ADMIN = 'SHOW_EDIT_ADMIN';
+export const HIDE_EDIT_ADMIN = 'HIDE_EDIT_ADMIN';

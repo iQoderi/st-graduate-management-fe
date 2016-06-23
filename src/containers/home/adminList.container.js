@@ -11,13 +11,16 @@ import {
   hideTips,
   changePageSucc,
   showConfirm,
-  hideConfirm
+  hideConfirm,
+  showEditAdmin,
+  hideEditAdmin
 } from  '../../actions/neuqst.actions.js';
 
 function mapStateToProps(state) {
   return {
     pages: state.pages,
-    confirm: state.confirm
+    confirm: state.confirm,
+    editAdmin: state.editAdmin
   }
 }
 
@@ -31,10 +34,12 @@ function mapDispatchToProps(dispatch) {
       hideTips: hideTips,
       changePageSucc: changePageSucc,
       showConfirm: showConfirm,
-      hideConfirm: hideConfirm
+      hideConfirm: hideConfirm,
+      showEditAdmin: showEditAdmin,
+      hideEditAdmin: hideEditAdmin
     }, dispatch)
   };
-
+  
   return actionMap;
 }
 

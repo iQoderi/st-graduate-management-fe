@@ -1,4 +1,4 @@
-import  React from 'react';
+import React from 'react';
 import NavgaionBar from './navgationbar'
 import Loading from '../tools/loading';
 import SideBar from  '../../containers/home/sideBar.container';

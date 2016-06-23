@@ -16,6 +16,11 @@ const Tr = React.createClass({
     const callback = this.props.callback;
     action.showConfirm(header, body, id);
   },
+  editAdmin: function () {
+    const {showEditAdmin}=this.props.action;
+    const data = this.props.data;
+    showEditAdmin(data);
+  },
   render: function () {
     const {data}=this.props;
     return (
@@ -28,7 +33,8 @@ const Tr = React.createClass({
         <td>{data.email}</td>
         <td>{data.phone}</td>
         <td className="opr-admin">
-          <span className="edit-admin">编辑</span>
+          <span className="edit-admin" onClick={this.editAdmin}>编辑</span>
+          <span className="edit-admin" onClick={this.editAdmin}>修改密码</span>
           <span className="text-danger" onClick={this.rmAdmin}>删除</span>
         </td>
       </tr>

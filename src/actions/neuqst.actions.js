@@ -9,7 +9,9 @@ import {
   CHANGE_PAGE,
   CHANGE_PAGE_SUCCESS,
   SHOW_CONFIRM,
-  HIDE_CONFIRM
+  HIDE_CONFIRM,
+  SHOW_EDIT_ADMIN,
+  HIDE_EDIT_ADMIN
 } from './consts';
 import 'whatwg-fetch';
 import API from '../api/requsetConfig';
@@ -105,4 +107,19 @@ export function hideConfirm() {
   }
 }
 
+export function showEditAdmin(data) {
+  return {
+    type: SHOW_EDIT_ADMIN,
+    show: true,
+    data
+  }
+}
+
+
+export function hideEditAdmin() {
+  return {
+    type: HIDE_EDIT_ADMIN,
+    show: false
+  }
+}
 
