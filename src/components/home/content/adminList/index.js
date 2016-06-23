@@ -12,35 +12,36 @@ require('./index.css');
 
 const AdminList = React.createClass({
   handleSelect(eventKey) {
-    const per=15;
-    this.readPage(eventKey,per);
+    const per = 15;
+    this.readPage(eventKey, per);
   },
-  readPage:function (start,per) {
+  readPage: function (start, per) {
     const {changePageSucc}=this.props.action;
-    const token=getToken();
+    const token = getToken();
     this.loading();
-    fetch(`${API.admin}?start=${start}&pageSize=${per}`,{
-      headers:{
-        Token:token
+    fetch(`${API.admin}?start=${start}&pageSize=${per}`, {
+      headers: {
+        Token: token
       }
     })
-      .then((res)=>{
+      .then((res)=> {
         return res.json();
       })
-      .then((json)=>{
+      .then((json)=> {
         this.loaded();
-        if(json.code===10000){
-          changePageSucc(json.data.pages,start,json.data.count)
-        }else{
-          this.isTips(json.data.Msg,10000);
+        if (json.code === 10000) {
+          changePageSucc(json.data.pages, start, json.data.count)
+        } else {
+          this.isTips(json.data.Msg, 10000);
         }
       })
   },
-  componentDidMount:function () {
-    const start=1;
-    const per=15;
-    this.readPage(start,per);
+  componentDidMount: function () {
+    const start = 1;
+    const per = 15;
+    this.readPage(start, per);
   },
+
   isTips: function (tip, time) {
     clearTimeout(timer);
     const {showTips, hideTips}=this.props.action;
@@ -56,10 +57,10 @@ const AdminList = React.createClass({
     hideLoading();
   },
   render: function () {
-    const {count,curPage,page}=this.props.pages;
+    const {count, curPage, page}=this.props.pages;
     return (
       <div className="adminList-wrapper">
-        <ListTable page={page}/>
+        <ListTable page={page} action={this.props.action}/>
         <div className="pager">
           <Pagination
             prev

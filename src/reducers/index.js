@@ -3,11 +3,14 @@
  */
 import {combineReducers} from 'redux';
 
+
 import is_loading from './loading.reducer';
 import is_tips from './tips.reducer';
 import is_dropMenu from './dropmenu.reducer';
 import is_changePass from './chanPass.reducer';
 import pages from './changePage.reducer';
+import confirm from './confirm.reducer';
+
 import {routerReducer} from 'react-router-redux';
 const neuqstReducer = combineReducers({
   is_loading,
@@ -15,6 +18,7 @@ const neuqstReducer = combineReducers({
   is_dropMenu,
   is_changePass,
   pages,
+  confirm,
   routing: routerReducer
 });
 

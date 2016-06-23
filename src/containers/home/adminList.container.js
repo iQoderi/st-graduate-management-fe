@@ -8,17 +8,20 @@ import {
   showLoading,
   showTips,
   hideLoading,
-  hideTips, 
-  changePageSucc
+  hideTips,
+  changePageSucc,
+  showConfirm,
+  hideConfirm
 } from  '../../actions/neuqst.actions.js';
 
 function mapStateToProps(state) {
   return {
-    pages:state.pages
+    pages: state.pages,
+    confirm: state.confirm
   }
 }
 
-function  mapDispatchToProps(dispatch) {
+function mapDispatchToProps(dispatch) {
   var actions = {};
   var actionMap = {
     action: bindActionCreators({
@@ -26,10 +29,12 @@ function  mapDispatchToProps(dispatch) {
       showTips: showTips,
       hideLoading: hideLoading,
       hideTips: hideTips,
-      changePageSucc:changePageSucc
+      changePageSucc: changePageSucc,
+      showConfirm: showConfirm,
+      hideConfirm: hideConfirm
     }, dispatch)
   };
-  
+
   return actionMap;
 }
 

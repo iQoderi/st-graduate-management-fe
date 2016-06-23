@@ -7,7 +7,9 @@ import {
   SHOW_CHANPASS, HIDE_CHANPASS,
   HIDE_DROPMENU, SHOW_DROPMENU,
   CHANGE_PAGE,
-  CHANGE_PAGE_SUCCESS
+  CHANGE_PAGE_SUCCESS,
+  SHOW_CONFIRM,
+  HIDE_CONFIRM
 } from './consts';
 import 'whatwg-fetch';
 import API from '../api/requsetConfig';
@@ -67,6 +69,7 @@ export function hideChanPass() {
   }
 }
 
+
 export function changePage(index = 1, size = 10) {
   return {
     type: CHANGE_PAGE,
@@ -74,7 +77,7 @@ export function changePage(index = 1, size = 10) {
   }
 }
 
-export function changePageSucc(page=[],curPage=1,count=0) {
+export function changePageSucc(page = [], curPage = 1, count = 0) {
   return {
     type: CHANGE_PAGE_SUCCESS,
     page,
@@ -82,3 +85,24 @@ export function changePageSucc(page=[],curPage=1,count=0) {
     count
   }
 }
+
+
+export function showConfirm(header, body, id) {
+  return {
+    type: SHOW_CONFIRM,
+    show: "block",
+    header,
+    body,
+    id
+  }
+}
+
+
+export function hideConfirm() {
+  return {
+    type: HIDE_CONFIRM,
+    show: 'none'
+  }
+}
+
+

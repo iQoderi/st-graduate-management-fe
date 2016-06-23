@@ -9,17 +9,19 @@ import *  as  NEUQAction from  '../actions/neuqst.actions';
 
 function mapStateToProps(state) {
   return {
-    is_loading:state.is_loading,
-    is_tips:state.is_tips
+    is_loading: state.is_loading,
+    is_tips: state.is_tips,
+    confirm: state.confirm,
+    pages: state.pages
   }
 }
 
 
 function mapDispatchToProps(dispatch) {
-  var  actions = {};
-  var actionMap={action:bindActionCreators(NEUQAction,dispatch)};
+  var actions = {};
+  var actionMap = {action: bindActionCreators(NEUQAction, dispatch)};
   return actionMap;
 }
 
-export  default connect(mapStateToProps,mapDispatchToProps)(App);
+export  default connect(mapStateToProps, mapDispatchToProps)(App);
 

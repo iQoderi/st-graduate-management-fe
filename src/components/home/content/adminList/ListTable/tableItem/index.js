@@ -8,12 +8,16 @@
 import React from 'react';
 
 const Tr = React.createClass({
-  rmAdmin:function () {
-    console.log(this.props);
-    console.log('called');
+  rmAdmin: function () {
+    const {action}=this.props;
+    const header = '确认删除?';
+    const body = `您确定要删除用户${this.props.data.name}?删除后该用户的信息无法恢复,请谨慎操作!`;
+    const id = this.props.id;
+    const callback = this.props.callback;
+    action.showConfirm(header, body, id);
   },
   render: function () {
-    const {data,key}=this.props;
+    const {data}=this.props;
     return (
       <tr>
         <td>{data.index}</td>

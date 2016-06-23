@@ -17,3 +17,6 @@ export const HIDE_CHANPASS = 'HIDE_CHANPASS';
 
 export const CHANGE_PAGE = 'CHANGE_PAGE';
 export const CHANGE_PAGE_SUCCESS = 'CHANGE_PAGE_SUCCESS';
+
+export const SHOW_CONFIRM = 'SHOW_CONFIRM';
+export const HIDE_CONFIRM = 'HIDE_CONFIRM';

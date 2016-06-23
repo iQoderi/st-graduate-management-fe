@@ -9,13 +9,14 @@ import Tr from './tableItem';
 require('./index.css');
 const Listtable = React.createClass({
   render: function () {
-    const {page}=this.props;
-    const pages=page.map((each,index)=>{
-      each.index=index+1;
-        return (
-          <Tr data={each} key={each.id} id={each.id}/>
-        )
+    const {page, action}=this.props;
+    const pages = page.map((each, index)=> {
+      each.index = index + 1;
+      return (
+        <Tr data={each} key={each.id} id={each.id} action={action}/>
+      )
     });
+
     return (
       <Table responsive>
         <thead>
@@ -37,6 +38,5 @@ const Listtable = React.createClass({
     )
   }
 });
-
 
 export  default Listtable;

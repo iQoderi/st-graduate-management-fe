@@ -81,7 +81,7 @@ const LoginBox = React.createClass({
   },
   render: function () {
     return (
-      <div>
+      <div>t0
         <AuthTit title="登陆"/>
         <div className="form-inner">
           <form className="form-float-label" accept-charset="UTF-8">
