@@ -2,14 +2,14 @@
  * Created by qoder on 16/6/6.
  */
 import React from  'react';
-
+import QuerySTForm from './queryForm';
 require('./index.css');
 
-const QueryMsg=React.createClass({
-  render:function () {
+const QueryMsg = React.createClass({
+  render: function () {
     return (
-      <div>
-        <h1>查询毕业生信息</h1>
+      <div className="AddAdmin-wrapper">
+        <QuerySTForm/>
       </div>
     )
   }

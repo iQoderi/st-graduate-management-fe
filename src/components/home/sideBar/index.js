@@ -16,6 +16,8 @@ import API from '../../../api/requsetConfig';
 import goto from '../../../library/changeHash';
 import {logout} from '../../../library/logout';
 const Avator = require('../../../images/avatar.png');
+
+
 const SideBar = React.createClass({
   getInitialState: function () {
     return {

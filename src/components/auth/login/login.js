@@ -10,7 +10,6 @@ import API from '../../../api/requsetConfig';
 import {verifyEmail, verifyPass} from '../../../library/verify';
 import goto from '../../../library/changeHash';
 import MD5 from 'md5';
-
 require('./loginBox.css');
 
 const LoginBox = React.createClass({
@@ -81,7 +80,7 @@ const LoginBox = React.createClass({
   },
   render: function () {
     return (
-      <div>t0
+      <div>
         <AuthTit title="登陆"/>
         <div className="form-inner">
           <form className="form-float-label" accept-charset="UTF-8">
