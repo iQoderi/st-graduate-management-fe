@@ -1,9 +1,6 @@
 /**
  * Created by qoder on 16-6-26.
  */
-/**
- * Created by qoder on 16-6-6.
- */
 import React from 'react';
 import {Form, Col, FormGroup, FormControl, Button, Checkbox, ControlLabel} from 'react-bootstrap';
 import 'whatwg-fetch';
