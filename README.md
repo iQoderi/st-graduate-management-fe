@@ -23,7 +23,7 @@
 
 ```
 
-**pack**
+**dist**
 
 `npm run dist`
 
