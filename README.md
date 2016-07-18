@@ -25,7 +25,7 @@
 
 **dist**
 
-`npm run dist`
+`1. npm run dist`
 
 **确保你的电脑已经装好了webpack webpack-dev-server**
 
