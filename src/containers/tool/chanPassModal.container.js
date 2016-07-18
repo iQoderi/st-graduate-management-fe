@@ -12,6 +12,7 @@ import {
   hideTips
 } from  '../../actions/neuqst.actions.js';
 
+
 function mapStateToProps(state) {
   return {
     is_chanPass: state.is_changePass
