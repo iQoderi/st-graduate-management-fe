@@ -1,7 +1,7 @@
 /**
  * Created by qoder on 16/6/11.
  */
-import {
+import{
   SHOW_LOADING, HIDE_LOADING,
   SHOW_TIPS, HIDE_TIPS,
   SHOW_CHANPASS, HIDE_CHANPASS,
@@ -9,7 +9,8 @@ import {
   CHANGE_PAGE, CHANGE_PAGE_SUCCESS,
   SHOW_CONFIRM, HIDE_CONFIRM,
   SHOW_EDIT_ADMIN, HIDE_EDIT_ADMIN,
-  SHOW_CHANGE_ADMIN_PASS, HIDE_CHANGE_ADMIN_PASS
+  SHOW_CHANGE_ADMIN_PASS, HIDE_CHANGE_ADMIN_PASS,
+  GET_MY_MESS, EDIT_MY_MESS
 } from './consts';
 import 'whatwg-fetch';
 import API from '../api/requsetConfig';
@@ -123,15 +124,30 @@ export function hideEditAdmin() {
 
 export function showChangeAdminPass(id) {
   return {
-    type:SHOW_CHANGE_ADMIN_PASS,
-    show:true,
+    type: SHOW_CHANGE_ADMIN_PASS,
+    show: true,
     id
   }
 }
 
 export function hideChangeAdminPass() {
-  return{
-    type:HIDE_CHANGE_ADMIN_PASS,
-    show:false
+  return {
+    type: HIDE_CHANGE_ADMIN_PASS,
+    show: false
   }
 }
+
+export function getMyMess(users) {
+  return {
+    type:GET_MY_MESS,
+    users
+  }
+}
+
+
+export  function editMyMess() {
+  return{
+    type:EDIT_MY_MESS
+  }
+}
+

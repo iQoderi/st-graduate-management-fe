@@ -19,7 +19,7 @@ import CompleteMsg from  '../containers/auth/completeMsg.container';
 import {Router, Route, hashHistory, IndexRoute, browserHistory} from 'react-router';
 
 import Home from '../components/home/homePage';
-import PersonalCenter from  '../components/home/content/personal';
+import PersonalCenter from  '../containers/home/personalCenter.container';
 import ImportExcelBox from  '../components/home/content/importExcel';
 import ExportExcelBox from  '../components/home/content/exportExcel';
 import AdminList from  '../containers/home/adminList.container';

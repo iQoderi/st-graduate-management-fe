@@ -12,7 +12,8 @@ import pages from './changePage.reducer';
 import confirm from './confirm.reducer';
 import editAdmin from './editAdmin.reducer';
 import changeAdminPass from './changeAdminPass.reducer';
-
+import myMsg from './getMyMess.reducer';
+import isEditMsg from './editMyMess.reducer';
 import {routerReducer} from 'react-router-redux';
 const neuqstReducer = combineReducers({
   is_loading,
@@ -23,6 +24,8 @@ const neuqstReducer = combineReducers({
   confirm,
   editAdmin,
   changeAdminPass,
+  myMsg,
+  isEditMsg,
   routing: routerReducer
 });
 

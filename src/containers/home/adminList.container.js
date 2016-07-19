@@ -28,7 +28,6 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  var actions = {};
   var actionMap = {
     action: bindActionCreators({
       showLoading: showLoading,
