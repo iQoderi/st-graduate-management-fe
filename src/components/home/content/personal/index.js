@@ -17,6 +17,26 @@ import API from '../../../../api/requsetConfig';
 
 
 const PersonalCenter = React.createClass({
+  componentWillMount: function () {
+    const token = getToken();
+    const {getMyMess}=this.props.action;
+    const {myMsg}=this.props;
+    const _this = this;
+    fetch(API.my, {
+      headers: {
+        Token: token
+      }
+    }).then((res)=> {
+      return res.json();
+    }).then((json)=> {
+      console.log(json.data.users.role);
+      if (json.data.users.role === '学生') {
+        getMyMess(json.data.users.students);
+      } else {
+        getMyMess(json.data.users.teacher);
+      }
+    })
+  },
   componentDidMount: function () {
     const token = getToken();
     const {getMyMess}=this.props.action;
@@ -42,10 +62,10 @@ const PersonalCenter = React.createClass({
     let MSGLIST = '';
     if (myMsg.role !== '管理员') {
       MSGLIST = <Student data={myMsg}/>
-      console.log('called');
     } else {
       MSGLIST = <Teacher data={myMsg}/>
     }
+
     return (
       <div className="personal-wrapper">
         <Panel style={{border:'none'}}>

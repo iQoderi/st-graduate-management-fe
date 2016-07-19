@@ -29,6 +29,7 @@ const SideBar = React.createClass({
   componentDidMount: function () {
     const _this = this;
     const token = localStorage.getItem('neuqst.token');
+    const {getMyMess}=this.props.action;
     _this.loading();
     fetch(API.my, {
       headers: {
@@ -43,12 +44,14 @@ const SideBar = React.createClass({
         if (json.code === 10000) {
           if (json.data.users.isCompleteMsg) {
             if (json.data.users.role === '学生') {
+              getMyMess(json.data.users.students);
               _this.setState({
                 role: json.data.users.role,
                 email: json.data.users.email,
                 sideItems: [<PersonalItem/>, <SearchItem/>]
               });
             } else {
+              getMyMess(json.data.users.teacher);
               _this.setState({
                 role: json.data.users.role,
                 email: json.data.users.email,
