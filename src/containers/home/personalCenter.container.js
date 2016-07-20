@@ -4,7 +4,14 @@
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import PersonalCenter from '../../components/home/content/personal';
-import {getMyMess, editMyMess} from '../../actions/neuqst.actions';
+import {
+  getMyMess,
+  editMyMess,
+  showLoading,
+  hideLoading,
+  showTips,
+  hideTips
+} from '../../actions/neuqst.actions';
 
 function mapStateToProps(state) {
   return {
@@ -13,14 +20,18 @@ function mapStateToProps(state) {
   }
 }
 
+
 function mapActionToProps(dispatch) {
   const actionMap = {
     action: bindActionCreators({
       getMyMess,
-      editMyMess
+      editMyMess,
+      showLoading,
+      hideLoading,
+      showTips,
+      hideTips
     }, dispatch)
   };
-  
   return actionMap;
 }
 

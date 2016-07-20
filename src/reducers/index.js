@@ -3,7 +3,6 @@
  */
 import {combineReducers} from 'redux';
 
-
 import is_loading from './loading.reducer';
 import is_tips from './tips.reducer';
 import is_dropMenu from './dropmenu.reducer';

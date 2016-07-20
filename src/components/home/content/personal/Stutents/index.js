@@ -21,8 +21,8 @@ class Student extends Component {
           <ListGroupItem>专业:<span className='personal-item-detail'>{data.major}</span></ListGroupItem>
           <ListGroupItem>班级:<span className='personal-item-detail'>{data.class}</span></ListGroupItem>
           <ListGroupItem>身份:<span className='personal-item-detail'>{data.role}</span></ListGroupItem>
-          <ListGroupItem>手机号:<span className='personal-item-detail'>{data.phone}</span></ListGroupItem>
           <ListGroupItem>邮箱:<span className='personal-item-detail'>{data.email}</span></ListGroupItem>
+          <ListGroupItem>手机号:<span className='personal-item-detail'>{data.phone}</span></ListGroupItem>
           <ListGroupItem>QQ号:<span className='personal-item-detail'>{data.QQNumber}</span></ListGroupItem>
         </ListGroup>
       </Panel>

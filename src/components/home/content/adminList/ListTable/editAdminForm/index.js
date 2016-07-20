@@ -38,7 +38,7 @@ const EditAdminForm = React.createClass({
       _this.isTips('密码格式不正确', time);
       return false;
     }
-
+    
     const options = {
       name: _$('adminName').value,
       email: _$('adminEmail').value,
