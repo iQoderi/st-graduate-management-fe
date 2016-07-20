@@ -2,6 +2,7 @@
  * Created by qoder on 16-6-14.
  */
 import React from 'react';
+import {Link} from 'react-router';
 import {logout} from '../../../library/logout';
 require('./index.css');
 const DropMenu=React.createClass({
@@ -10,7 +11,7 @@ const DropMenu=React.createClass({
       <ul
         style={{display:this.props.Show}}
         className="dropdown-menu2 animated fadeInRight m-t-xs">
-        <li><a href="javascript:;">个人资料</a>
+        <li><Link to="home/personal">个人资料</Link>
         </li>
         <li><a href="javascript:;" onClick={this.props.showChanPass}>修改密码</a>
         </li>
@@ -20,6 +21,7 @@ const DropMenu=React.createClass({
         </li>
       </ul>
     )
+
   }
 });
 

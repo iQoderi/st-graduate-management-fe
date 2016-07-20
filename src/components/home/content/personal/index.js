@@ -10,18 +10,20 @@ require('./index.css');
 import 'whatwg-fetch';
 import  Teacher from './Admin';
 import Student from './Stutents';
-
-import Loading from '../../../tools/loading2';
+import EditMyMsg from './Edit.MyMsg.Modal';
 import getToken from '../../../../library/getToken';
 import API from '../../../../api/requsetConfig';
 
 
 const PersonalCenter = React.createClass({
+  editMyMsg: function () {
+    // const _this=this;
+    const {editMyMess}=this.props.action;
+    editMyMess(true);
+  },
   componentWillMount: function () {
     const token = getToken();
     const {getMyMess}=this.props.action;
-    const {myMsg}=this.props;
-    const _this = this;
     fetch(API.my, {
       headers: {
         Token: token
@@ -40,8 +42,6 @@ const PersonalCenter = React.createClass({
   componentDidMount: function () {
     const token = getToken();
     const {getMyMess}=this.props.action;
-    const {myMsg}=this.props;
-    const _this = this;
     fetch(API.my, {
       headers: {
         Token: token
@@ -58,7 +58,9 @@ const PersonalCenter = React.createClass({
     })
   },
   render: function () {
-    const {myMsg}=this.props;
+    const {myMsg, isEditMsg}=this.props;
+    const {editMyMess}=this.props.action;
+    console.log(editMyMess);
     let MSGLIST = '';
     if (myMsg.role !== '管理员') {
       MSGLIST = <Student data={myMsg}/>
@@ -68,10 +70,13 @@ const PersonalCenter = React.createClass({
 
     return (
       <div className="personal-wrapper">
+        <EditMyMsg myMsg={myMsg} show={isEditMsg} editMyMess={editMyMess}/>
         <Panel style={{border:'none'}}>
           {MSGLIST}
-          <span>修改</span>
-          <Button bsStyle="primary" className="normal-btn edit-personal-btn">完成</Button>
+          <Button
+            onClick={this.editMyMsg}
+            bsStyle="primary"
+            className="normal-btn edit-personal-btn">修改</Button>
         </Panel>
       </div>
     )

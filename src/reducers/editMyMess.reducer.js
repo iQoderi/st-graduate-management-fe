@@ -8,7 +8,7 @@ const initialState = false;
 const isEditMess = function (state = initialState, action) {
   switch (action.type) {
     case EDIT_MY_MESS:
-      return true;
+      return action.show;
     default:
       return state;
   }

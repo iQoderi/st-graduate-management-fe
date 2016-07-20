@@ -145,9 +145,10 @@ export function getMyMess(users) {
 }
 
 
-export  function editMyMess() {
+export  function editMyMess(show) {
   return{
-    type:EDIT_MY_MESS
+    type:EDIT_MY_MESS,
+    show
   }
 }
 
