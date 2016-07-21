@@ -37,7 +37,7 @@ class EditMyMsg extends Component {
   }
 
   fetchData() {
-    const {myMsg, showLoading, hideLoading}=this.props;
+    const {myMsg, showLoading, hideLoading, getMyMess}=this.props;
     if (myMsg.role === '管理员' || myMsg.role === '辅导员') {
       if (this.checkAdminData()) {
         var option = this.checkAdminData();
@@ -62,9 +62,9 @@ class EditMyMsg extends Component {
         'Content-Type': 'application/json',
         'Token': token
       },
-      body:JSON.stringify(option)
+      body: JSON.stringify(option)
     }).then((res)=> {
-      return res;
+      return res.json();
     }).then((json)=> {
       hideLoading();
       if (!json.code) {
@@ -76,7 +76,10 @@ class EditMyMsg extends Component {
         }
       }
       if (json.code === 10000) {
+        option.email = myMsg.email;
+        getMyMess(option);
         this.isTips('修改个人成功', time);
+
       } else {
         this.isTips(json.data.msg, time);
       }
@@ -112,17 +115,17 @@ class EditMyMsg extends Component {
   checkStuData() {
     const _this = this;
     const time = 1000;
-    console.log(_$('MStuRole1').checked);
     const options = {
       name: _$('MStuName').value,
       phone: _$('MStuPhone').value,
-      role: "",
+      role: _$('MStuRole1').checked ? '在校生' : '毕业生',
       academy: _$('MStuAcademy').value,
       studentId: _$('MStuCode').value,
       major: _$('MStuMajor').value,
       class: _$('MStuClass').value,
       QQNumber: _$('MStuQQNum').value
     };
+    
     if (!options.name) {
       _this.isTips('请填写用户名', time);
       return false;
@@ -141,11 +144,6 @@ class EditMyMsg extends Component {
   confirmEdit() {
     const {myMsg}=this.props;
     this.fetchData();
-    if (myMsg.role === '管理员' || myMsg.role === '辅导员') {
-
-    } else {
-
-    }
   }
 
   render() {

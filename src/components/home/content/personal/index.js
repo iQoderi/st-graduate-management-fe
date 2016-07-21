@@ -59,9 +59,9 @@ const PersonalCenter = React.createClass({
   },
   render: function () {
     const {myMsg, isEditMsg}=this.props;
-    const {editMyMess, showLoading, hideLoading, showTips, hideTips}=this.props.action;
+    const {editMyMess, showLoading, hideLoading, showTips, hideTips, getMyMess}=this.props.action;
     let MSGLIST = '';
-    if (myMsg.role !== '管理员') {
+    if (myMsg.role !== '管理员' && myMsg.role !== '辅导员') {
       MSGLIST = <Student data={myMsg}/>
     } else {
       MSGLIST = <Teacher data={myMsg}/>
@@ -76,6 +76,7 @@ const PersonalCenter = React.createClass({
                    showTips={showTips}
                    hideTips={hideTips}
                    editMyMess={editMyMess}
+                   getMyMess={getMyMess}
         />
         <Panel style={{border:'none'}}>
           {MSGLIST}
