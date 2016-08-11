@@ -11,7 +11,8 @@ import {
   hideTips,
   showSearchStu,
   hideSearchStu,
-  searchStu
+  searchStu,
+  exportStu
 } from  '../../actions/neuqst.actions.js';
 
 function mapStateToProps(state) {
@@ -30,7 +31,8 @@ function mapDispatchToProps(dispatch) {
       hideTips,
       showSearchStu,
       hideSearchStu,
-      searchStu
+      searchStu,
+      exportStu
     }, dispatch)
   };
   return actionMap;

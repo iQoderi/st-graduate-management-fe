@@ -14,6 +14,8 @@ class SearchResultTable extends Component {
     this.props.action.searchStu(eventKey, 15, this.props.graduateList.body);
   }
 
+
+
   render() {
     const {graduateList}=this.props;
     const pages = graduateList.pages.map((graduate, index)=> {

@@ -4,6 +4,9 @@
 import React, {Component} from 'react';
 import {ButtonToolbar, Modal, Button} from 'react-bootstrap';
 import SearchResultTable from '../../home/content/queryStudent/searchResultTable';
+import API from '../../../api/requsetConfig';
+import getToken from '../../../library/getToken';
+
 import './index.css';
 
 class SearchStuModal extends Component {
@@ -15,6 +18,11 @@ class SearchStuModal extends Component {
       show: false
     };
     this.showModal = this.showModal.bind(this);
+    this.exportsStu = this.exportsStu.bind(this);
+  }
+
+  exportsStu() {
+    this.props.action.exportStu();
   }
 
   showModal() {
@@ -23,6 +31,7 @@ class SearchStuModal extends Component {
 
   render() {
     const {isSearchStu, graduateList, action}=this.props;
+    const token = getToken();
     return (
       <ButtonToolbar>
         <Modal
@@ -43,7 +52,22 @@ class SearchStuModal extends Component {
               graduateList={graduateList}/>
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.hideModal}>Close</Button>
+            <Button bsStyle='primary'
+                    style={{
+                      width: '80px',
+                      marginLeft: '20px',
+                      float: 'right'
+                    }}>
+              <a
+                className="export-href"
+                href={`${API.testExcel}/?Token=${token}`} target="_blank">导出当前页</a>
+            </Button>
+            <Button bsStyle='primary'
+                    style={{width: '80px', float: 'right'}}>
+              <a
+                className="export-href"
+                href={`${API.testExcel}/?Token=${token}`} target="_blank">导出全部</a>
+            </Button>
           </Modal.Footer>
         </Modal>
       </ButtonToolbar>

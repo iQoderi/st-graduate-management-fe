@@ -19,6 +19,7 @@ const API = {
   adminAddGraduate: apiMaker('/home/admin/graduate'),
   changeAdminPass: apiMaker('/home/changeAdminPass'),
   searchGraduate: apiMaker('/home/searchGraduate'),
+  testExcel: apiMaker('/home/excel')
 };
 
 export  default API;

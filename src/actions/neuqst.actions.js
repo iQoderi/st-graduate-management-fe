@@ -15,7 +15,6 @@ export function showTips(tip) {
   }
 }
 
-
 export function hideTips() {
   return {
     type: ACTIONS.HIDE_TIPS
@@ -181,7 +180,6 @@ export function searchStuSucc(pages, count, cur, body) {
   }
 }
 
-
 export function searchStuFail() {
   return {
     type: ACTIONS.SEACH_STU_FAIL
@@ -216,5 +214,28 @@ export function searchStu(start = 1, per = 15, body) {
         dispatch(searchStuFail());
       }
     })
+  }
+}
+
+
+export function exportStu(body) {
+  return (dispatch)=> {
+    dispatch(showLoading());
+    const token = getToken();
+    console.log(token);
+    return fetch(API.testExcel, {
+      method: 'GET',
+      headers: {
+        "Content-Type": undefined,
+        "Token": token
+      }
+    })
+      .then((res)=> {
+        dispatch(hideLoading());
+        return res.json();
+      }).then((json)=> {
+        dispatch(ayncCloseTips('导出毕业生信息成功'));
+        console.log(json);
+      })
   }
 }
