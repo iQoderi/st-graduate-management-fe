@@ -9,7 +9,7 @@ class AddGraduate extends Component {
   render() {
     return (
       <div className="AddAdmin-wrapper">
-        <AddGraduateForm/>
+        <AddGraduateForm action={this.props.action}/>
       </div>
     )
   }

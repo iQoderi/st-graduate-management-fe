@@ -13,7 +13,6 @@ import editAdmin from './editAdmin.reducer';
 import changeAdminPass from './changeAdminPass.reducer';
 import myMsg from './getMyMess.reducer';
 import isEditMsg from './editMyMess.reducer';
-import {routerReducer} from 'react-router-redux';
 const neuqstReducer = combineReducers({
   is_loading,
   is_tips,
@@ -25,7 +24,6 @@ const neuqstReducer = combineReducers({
   changeAdminPass,
   myMsg,
   isEditMsg,
-  routing: routerReducer
 });
 
 module.exports = neuqstReducer;

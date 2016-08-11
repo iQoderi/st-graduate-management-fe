@@ -15,7 +15,7 @@ let config = Object.assign({}, baseConfig, {
     './src/index'
   ],
   cache: true,
-  devtool: false,
+  devtool: 'eval-source-map',
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),

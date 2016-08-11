@@ -1,5 +1,20 @@
 .personal-wrapper {
   width: 95%;
-  margin: 50px auto; }
+  margin: 50px auto;
+  position: relative; }
+  .personal-wrapper .modal, .personal-wrapper .modal-backdrop {
+    position: absolute; }
+
+.personal-item-detail {
+  margin-left: 10px; }
+
+.modify-myMsg {
+  margin-left: 10px;
+  cursor: pointer;
+  color: #0074D9; }
+
+.edit-personal-btn {
+  margin-top: 15px;
+  margin-left: 15px; }
 
 /*# sourceMappingURL=index.css.map */

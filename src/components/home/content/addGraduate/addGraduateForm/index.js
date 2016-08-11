@@ -7,15 +7,36 @@ import MustInput from '../../../../tools/mustInput';
 import 'whatwg-fetch';
 import API from '../../../../../api/requsetConfig';
 import {verifyQQ, verifyPhone} from '../../../../../library/verify';
-import MD5 from 'md5';
+import getToken from '../../../../../library/getToken';
 import _$ from '../../../../../library/getElement';
 import './index.css';
 
 class AddGraduateForm extends Component {
   constructor(props) {
     super(props);
+    this.timer = null;
     this.submitInfo = this.submitInfo.bind(this);
     this.verifyInformation = this.verifyInformation.bind(this);
+    this.isTips = this.isTips.bind(this);
+    this.loading = this.loading.bind(this);
+    this.loaded = this.loaded.bind(this);
+  }
+
+  isTips(tip, time = 1500) {
+    clearTimeout(this.timer);
+    const {showTips, hideTips}=this.props.action;
+    showTips(tip);
+    this.timer = setTimeout(this.props.action.hideTips, time);
+  }
+
+  loading() {
+    const {showLoading}=this.props.action;
+    showLoading();
+  }
+
+  loaded() {
+    const {hideLoading}=this.props.action;
+    hideLoading();
   }
 
   verifyInformation() {
@@ -23,23 +44,32 @@ class AddGraduateForm extends Component {
       name: _$('gName').value,
       academy: _$('gAcademy').value,
       major: _$('gMajor').value,
+      class: _$('gClass').value,
       stuId: _$('gStuId').value,
       company: _$('gCompany').value,
       job: _$('gJob').value,
       skill: _$('gSkill').value
     };
     if (!resource.name) {
+      this.isTips('请填写毕业生姓名');
       return false;
     }
 
     if (!resource.academy) {
+      this.isTips('请填写毕业生所在学院');
       return false;
     }
 
     if (!resource.major) {
+      this.isTips('请填写毕业生所在专业');
+      return false;
+    }
+    if (!resource.class) {
+      this.isTips('请填写毕业生所在班级');
       return false;
     }
     if (!resource.stuId) {
+      this.isTips('请填写毕业生学号');
       return false;
     }
     if (_$('gPhone').value) {
@@ -59,16 +89,20 @@ class AddGraduateForm extends Component {
     }
 
     if (!resource.company) {
+      this.isTips('请填写毕业生就职公司');
       return false;
     }
 
     if (!resource.job) {
+      this.isTips('请填写毕业生就职岗位');
       return false;
     }
 
     if (!resource.skill) {
+      this.isTips('请填写毕业生只能');
       return false;
     }
+
     if (_$('gSuggestion').value) {
       resource.suggestion = _$('gSuggestion').value;
     }
@@ -76,18 +110,35 @@ class AddGraduateForm extends Component {
     if (_$('gRecruit').value) {
       resource.recruit = _$('gRecruit').value;
     }
-    console.log(resource);
     return resource;
   }
 
   submitInfo() {
     const data = this.verifyInformation();
     if (data) {
-
-    } else {
-
+      const token = getToken();
+      this.loading();
+      fetch(API.adminAddGraduate, {
+        method: 'POST',
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+          "token": token
+        },
+        body: JSON.stringify(data)
+      }).then((res)=> {
+        this.loaded();
+        return res.json();
+      }).then((json)=> {
+        if (json.code === 10000) {
+          this.isTips('添加毕业生成功');
+        } else {
+          this.isTips(json.data.msg);
+        }
+      })
     }
   }
+
 
   render() {
     return (
@@ -125,7 +176,15 @@ class AddGraduateForm extends Component {
             <MustInput/>专业
           </Col>
           <Col sm={10}>
-            <FormControl type="text" placeholder="请输入毕业生输入专业"/>
+            <FormControl type="text" placeholder="请输入毕业生专业"/>
+          </Col>
+        </FormGroup>
+        <FormGroup controlId="gClass">
+          <Col componentClass={ControlLabel} sm={2}>
+            <MustInput/>班级
+          </Col>
+          <Col sm={10}>
+            <FormControl type="text" placeholder="请输入毕业生班级"/>
           </Col>
         </FormGroup>
         <FormGroup controlId="gStuId">
