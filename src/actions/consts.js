@@ -27,5 +27,8 @@ export const HIDE_EDIT_ADMIN = 'HIDE_EDIT_ADMIN';
 export const SHOW_CHANGE_ADMIN_PASS = 'SHOW_CHANGE_ADMIN_PASS';
 export const HIDE_CHANGE_ADMIN_PASS = 'HIDE_CHANGE_ADMIN_PASS';
 
-export const GET_MY_MESS='GET_MY_MESS';
-export const EDIT_MY_MESS='EDIT_MY_MESS';
+export const GET_MY_MESS = 'GET_MY_MESS';
+export const EDIT_MY_MESS = 'EDIT_MY_MESS';
+
+export const SHOW_SEARCH_STU = 'SHOW_SEARCH_STU';
+export const HIDE_SEARCH_STU = 'HIDE_SEARCH_STU';

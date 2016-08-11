@@ -158,7 +158,6 @@ class AddGraduateForm extends Component {
           </Col>
           <Col sm={10}>
             <select className="form-control" id="gAcademy">
-              <option>研究生分院</option>
               <option>经济学院</option>
               <option>管理学院</option>
               <option>计算机与通信工程学院</option>
@@ -166,8 +165,6 @@ class AddGraduateForm extends Component {
               <option>语言学院</option>
               <option>数学与统计学院</option>
               <option>资源与材料学院</option>
-              <option>社会科学研究院</option>
-              <option>体育部</option>
             </select>
           </Col>
         </FormGroup>

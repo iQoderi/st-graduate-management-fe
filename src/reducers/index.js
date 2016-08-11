@@ -13,6 +13,7 @@ import editAdmin from './editAdmin.reducer';
 import changeAdminPass from './changeAdminPass.reducer';
 import myMsg from './getMyMess.reducer';
 import isEditMsg from './editMyMess.reducer';
+import isSearchStu from './isSearchStu.reducer';
 const neuqstReducer = combineReducers({
   is_loading,
   is_tips,
@@ -24,6 +25,7 @@ const neuqstReducer = combineReducers({
   changeAdminPass,
   myMsg,
   isEditMsg,
+  isSearchStu
 });
 
 module.exports = neuqstReducer;

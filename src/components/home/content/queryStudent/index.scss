@@ -1,0 +1,11 @@
+ .modal .modal-lg {
+  width: 80%;
+}
+
+@media (min-width: 992px) {
+  .modal {
+    .modal-lg {
+      width: 80%;
+    }
+  }
+}

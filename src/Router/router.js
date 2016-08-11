@@ -25,7 +25,7 @@ import ExportExcelBox from  '../components/home/content/exportExcel';
 import AdminList from  '../containers/home/adminList.container';
 import AddAdmin from  '../containers/home/addAdmin.container';
 import AddGraduate from '../containers/home/addGraduate.container';
-import QueryMsg from  '../components/home/content/queryStudent';
+import QueryMsg from  '../containers/home/queryStu.container';
 import goto from '../library/changeHash';
 import {gotoLogin} from '../library/logout';
 
