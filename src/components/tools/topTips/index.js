@@ -7,12 +7,12 @@ require('./index.css');
 const TopTips = React.createClass({
   render: function () {
     return (
-      <span className="TopTips">
-      账号或者密码错误
+      <span className="TopTips" style={{display:this.props.Show}}>
+        {this.props.text}
       </span>
     )
   }
-  
+
 });
 
 export  default TopTips;

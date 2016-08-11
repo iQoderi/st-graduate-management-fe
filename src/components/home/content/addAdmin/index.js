@@ -4,11 +4,11 @@
 import React from  'react';
 import AddAdminForm from './addAdminForm/index'
 require('./index.css');
-const AddAdmin=React.createClass({
-  render:function () {
+const AddAdmin = React.createClass({
+  render: function () {
     return (
       <div className="AddAdmin-wrapper">
-        <AddAdminForm/>
+        <AddAdminForm action={this.props.action}/>
       </div>
     )
   }

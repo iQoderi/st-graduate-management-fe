@@ -12,7 +12,7 @@ const ImportExcelItem=React.createClass({
   render:function () {
     return (
       <li>
-        <Link className="J_menuItem" to="/home/importMsg" activeClassName="navActive">
+        <Link className="J_menuItem" to="home/importMsg" activeClassName="navActive">
           <i className="fa fa-upload"/>
           <span className="nav-label">导入学生信息</span></Link>
       </li>

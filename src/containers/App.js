@@ -1,21 +1,27 @@
 /**
  * Created by qoder on 16/6/11.
  */
-import App from  '../Router/router';
+import App from  '../components/GraduateApp';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import *  as  NEUQAction from  '../actions/neuqst.actions';
+
 
 function mapStateToProps(state) {
-  const props = {};
-  return props;
+  return {
+    is_loading: state.is_loading,
+    is_tips: state.is_tips,
+    confirm: state.confirm,
+    pages: state.pages
+  }
 }
 
+
 function mapDispatchToProps(dispatch) {
-  const actions = {};
-  const actionMap={action:bindActionCreators(actions,dispatch)};
+  var actions = {};
+  var actionMap = {action: bindActionCreators(NEUQAction, dispatch)};
   return actionMap;
 }
 
-
-export  default connect(mapStateToProps,mapDispatchToProps)(App);
+export  default connect(mapStateToProps, mapDispatchToProps)(App);
 

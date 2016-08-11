@@ -4,6 +4,7 @@
 
 .home-wrapper {
   width: 100%;
+  position: relative;
 }
 
 .home-wrapper .sideBar {
@@ -13,7 +14,6 @@
   left: 0;
   top: 0px;
   height: 100%;
-  background: #cccccc;
   min-height: 1000px;
 }
 
@@ -32,6 +32,10 @@ body.canvas-menu .navbar-static-side, body.fixed-sidebar .navbar-static-side {
   background:#2f4050;
 }
 
+.sideBar .nav .J_menuItem:hover{
+  background:#333;
+}
+
 .home-inline-content{
   min-height: 960px;
 }
@@ -40,4 +44,14 @@ body.canvas-menu .navbar-static-side, body.fixed-sidebar .navbar-static-side {
   width: 100px;
 }
 
+.home-wrapper .navActive{
+  background: #222;
+  border-left: 5px solid #1ab394;
+}
 
+.home-wrapper .modal, .modal-container .modal-backdrop {
+  position: absolute;
+}
+.modal-body{
+  min-height: 90px;
+}

@@ -3,16 +3,26 @@
  * Created by qoder on 16/6/6.
  */
 import React from 'react';
-import ReactBootstrap, {Table} from 'react-bootstrap';
+import {Table} from 'react-bootstrap';
+import Tr from './tableItem';
 
 require('./index.css');
 const Listtable = React.createClass({
   render: function () {
+    const {page, action}=this.props;
+    const pages = page.map((each, index)=> {
+      each.index = index + 1;
+      return (
+        <Tr data={each} key={each.id} id={each.id} action={action}/>
+      )
+    });
+
     return (
-      <Table responsive hover>
+      <Table responsive>
         <thead>
         <tr>
           <th>#</th>
+          <th>工号</th>
           <th>姓名</th>
           <th>学院</th>
           <th>职位</th>
@@ -22,252 +32,11 @@ const Listtable = React.createClass({
         </tr>
         </thead>
         <tbody>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td className="opr-admin">
-            <span className="edit-admin">编辑</span>
-            <span className="text-danger">删除</span>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td className="opr-admin">
-            <span className="edit-admin">编辑</span>
-            <span className="text-danger">删除</span>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td className="opr-admin">
-            <span className="edit-admin">编辑</span>
-            <span className="text-danger">删除</span>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td className="opr-admin">
-            <span className="edit-admin">编辑</span>
-            <span className="text-danger">删除</span>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td className="opr-admin">
-            <span className="edit-admin">编辑</span>
-            <span className="text-danger">删除</span>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td className="opr-admin">
-            <span className="edit-admin">编辑</span>
-            <span className="text-danger">删除</span>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td className="opr-admin">
-            <span className="edit-admin">编辑</span>
-            <span className="text-danger">删除</span>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td className="opr-admin">
-            <span className="edit-admin">编辑</span>
-            <span className="text-danger">删除</span>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td className="opr-admin">
-            <span className="edit-admin">编辑</span>
-            <span className="text-danger">删除</span>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td className="opr-admin">
-            <span className="edit-admin">编辑</span>
-            <span className="text-danger">删除</span>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td className="opr-admin">
-            <span className="edit-admin">编辑</span>
-            <span className="text-danger">删除</span>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td className="opr-admin">
-            <span className="edit-admin">编辑</span>
-            <span className="text-danger">删除</span>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td className="opr-admin">
-            <span className="edit-admin">编辑</span>
-            <span className="text-danger">删除</span>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td className="opr-admin">
-            <span className="edit-admin">编辑</span>
-            <span className="text-danger">删除</span>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td className="opr-admin">
-            <span className="edit-admin">编辑</span>
-            <span className="text-danger">删除</span>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td className="opr-admin">
-            <span className="edit-admin">编辑</span>
-            <span className="text-danger">删除</span>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td className="opr-admin">
-            <span className="edit-admin">编辑</span>
-            <span className="text-danger">删除</span>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td className="opr-admin">
-            <span className="edit-admin">编辑</span>
-            <span className="text-danger">删除</span>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td className="opr-admin">
-            <span className="edit-admin">编辑</span>
-            <span className="text-danger">删除</span>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td>@fat</td>
-          <td className="opr-admin">
-            <span className="edit-admin">编辑</span>
-            <span className="text-danger">删除</span>
-          </td>
-        </tr>
-
+        {pages}
         </tbody>
       </Table>
     )
   }
 });
-
 
 export  default Listtable;
