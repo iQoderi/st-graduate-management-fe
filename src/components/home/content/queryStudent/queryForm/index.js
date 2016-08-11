@@ -81,7 +81,7 @@ const QuerySTForm = React.createClass({
   },
   render: function () {
     return (
-      <Form horizontal style={{width:'400px'}}>
+      <Form horizontal style={{width: '400px'}}>
         <FormGroup>
           <Col componentClass={ControlLabel} sm={2}>
             学院
@@ -127,7 +127,7 @@ const QuerySTForm = React.createClass({
             <FormControl type="text" placeholder="请输入学号"/>
           </Col>
         </FormGroup>
-        <span className="text-danger" style={{marginLeft:'70px',fontSize:'12px'}}>
+        <span className="text-danger" style={{marginLeft: '70px', fontSize: '12px'}}>
            *不需要的选项可以不用填写
         </span>
         <FormGroup>
