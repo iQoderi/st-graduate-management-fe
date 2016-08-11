@@ -8,6 +8,7 @@ import API from '../../../../../api/requsetConfig';
 import {verifyPass, verifyEmail, verifyPhone} from '../../../../../library/verify';
 import MD5 from 'md5';
 import _$ from '../../../../../library/getElement';
+import getToken from '../../../../../library/getToken';
 const QuerySTForm = React.createClass({
   addAdmin: function () {
     const _this = this;
@@ -64,6 +65,28 @@ const QuerySTForm = React.createClass({
           _this.isTips(json.data.Msg, 1500);
         }
       })
+  },
+  searchStu: function () {
+    console.log('called');
+    const body = {
+      // academy: '数学与统计学院',
+      // major: '信息与计算科学',
+      stuId: '5143209'
+    };
+    const token = getToken();
+    fetch(API.searchGraduate, {
+      method: 'POST',
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Token": token
+      },
+      body: JSON.stringify(body)
+    }).then((res)=> {
+      return res.json();
+    }).then((json)=> {
+      console.log(json);
+    })
   },
   isTips: function (tip, time) {
     clearTimeout(timer);
@@ -133,7 +156,7 @@ const QuerySTForm = React.createClass({
         <FormGroup>
           <Col smOffset={2} sm={10}>
             <Button
-              onClick={this.addAdmin}
+              onClick={this.searchStu}
               type="button" bsStyle="primary" className="normal-btn fr">
               搜索
             </Button>

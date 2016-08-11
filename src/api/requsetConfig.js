@@ -16,7 +16,8 @@ const API = {
   my: apiMaker('/home/my'),
   changePass: apiMaker('/home/changePass'),
   admin: apiMaker('/home/admin'),
-  changeAdminPass:apiMaker('/home/changeAdminPass')
+  changeAdminPass: apiMaker('/home/changeAdminPass'),
+  searchGraduate: apiMaker('/home/searchGraduate')
 };
 
 export  default API;

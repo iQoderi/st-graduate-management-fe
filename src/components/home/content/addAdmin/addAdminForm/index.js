@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import {Form, Col, FormGroup, FormControl, Button, Checkbox, ControlLabel} from 'react-bootstrap';
+import MustInput from '../../../../tools/mustInput';
 import 'whatwg-fetch';
 import API from '../../../../../api/requsetConfig';
 import {verifyPass, verifyEmail, verifyPhone} from '../../../../../library/verify';
@@ -82,10 +83,10 @@ const AddAdminForm = React.createClass({
   },
   render: function () {
     return (
-      <Form horizontal style={{width:'400px'}}>
+      <Form horizontal style={{width: '400px'}}>
         <FormGroup controlId="adminName">
           <Col componentClass={ControlLabel} sm={2}>
-            姓名
+            <MustInput/>姓名
           </Col>
           <Col sm={10}>
             <FormControl
@@ -94,7 +95,7 @@ const AddAdminForm = React.createClass({
         </FormGroup>
         <FormGroup>
           <Col componentClass={ControlLabel} sm={2}>
-            学院
+            <MustInput/>学院
           </Col>
           <Col sm={10}>
             <select className="form-control" id="adminAcademy">
@@ -113,7 +114,7 @@ const AddAdminForm = React.createClass({
         </FormGroup>
         <FormGroup>
           <Col componentClass={ControlLabel} sm={2}>
-            权限
+            <MustInput/>权限
           </Col>
           <Col sm={10}>
             <select className="form-control" id="adminRole">
@@ -124,7 +125,7 @@ const AddAdminForm = React.createClass({
         </FormGroup>
         <FormGroup controlId="adminCode">
           <Col componentClass={ControlLabel} sm={2}>
-            工号
+            <MustInput/>工号
           </Col>
           <Col sm={10}>
             <FormControl type="text" placeholder="请输入工号"/>
@@ -132,7 +133,7 @@ const AddAdminForm = React.createClass({
         </FormGroup>
         <FormGroup controlId="adminPhone">
           <Col componentClass={ControlLabel} sm={2}>
-            手机
+            <MustInput/>手机
           </Col>
           <Col sm={10}>
             <FormControl type="text" placeholder="请输入联系电话"/>
@@ -140,7 +141,7 @@ const AddAdminForm = React.createClass({
         </FormGroup>
         <FormGroup controlId="adminEmail">
           <Col componentClass={ControlLabel} sm={2}>
-            邮箱
+            <MustInput/>邮箱
           </Col>
           <Col sm={10}>
             <FormControl type="email" placeholder="请输入邮箱地址"/>
@@ -148,13 +149,15 @@ const AddAdminForm = React.createClass({
         </FormGroup>
         <FormGroup controlId="adminPassword">
           <Col componentClass={ControlLabel} sm={2}>
-            密码
+            <MustInput/>密码
           </Col>
           <Col sm={10}>
             <FormControl type="password" placeholder="请输入密码"/>
           </Col>
         </FormGroup>
-
+        <span className="text-danger" style={{marginLeft: '70px', fontSize: '12px'}}>
+           *号为必填项
+        </span>
         <FormGroup>
           <Col smOffset={2} sm={10}>
             <Button

@@ -24,6 +24,7 @@ import ImportExcelBox from  '../components/home/content/importExcel';
 import ExportExcelBox from  '../components/home/content/exportExcel';
 import AdminList from  '../containers/home/adminList.container';
 import AddAdmin from  '../containers/home/addAdmin.container';
+import AddGraduate from '../containers/home/addGraduate.container';
 import QueryMsg from  '../components/home/content/queryStudent';
 import goto from '../library/changeHash';
 import {gotoLogin} from '../library/logout';
@@ -63,6 +64,7 @@ const RouterApp = React.createClass({
             <Route path="queryMsg" component={QueryMsg}/>
             <Route path="adminList" component={AdminList}/>
             <Route path="addAdmin" component={AddAdmin}/>
+            <Route path="addGraduate" component={AddGraduate}/>
           </Route>
         </Route>
       </Router>

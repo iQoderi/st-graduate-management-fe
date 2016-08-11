@@ -11,6 +11,7 @@ import PersonalItem from '../sideBarItem/personal';
 import AddAdminItem from '../sideBarItem/addAdmin';
 import DropMenu from '../dropmenu';
 import AdminListItem from '../sideBarItem/adminList';
+import AddGraduate from '../sideBarItem/addGraduate';
 import 'whatwg-fetch';
 import API from '../../../api/requsetConfig';
 import goto from '../../../library/changeHash';
@@ -55,7 +56,7 @@ const SideBar = React.createClass({
               _this.setState({
                 role: json.data.users.role,
                 email: json.data.users.email,
-                sideItems: [<PersonalItem/>, < AddAdminItem/>, <AdminListItem/>, < SearchItem/>, <ImportExcelItem/>,
+                sideItems: [<PersonalItem/>, < AddAdminItem/>,<AdminListItem/>, <AddGraduate/>, < SearchItem/>, <ImportExcelItem/>,
                   < ExportExcelItem/>]
               });
             }
@@ -102,7 +103,7 @@ const SideBar = React.createClass({
               <span className="dropdown-toggle">
                 <span className="clear">
                   <span className="block m-t-xs"><strong className="font-bold">{this.state.email}</strong></span>
-                  <span className="text-muted text-xs block" style={{cursor:'pointer'}}>
+                  <span className="text-muted text-xs block" style={{cursor: 'pointer'}}>
                     <span onClick={this.showDropMenu}>{this.state.role}
                       <b className="caret"/>
                     </span>
