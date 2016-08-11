@@ -4,43 +4,16 @@
 import React from 'react';
 import {Form, Col, FormGroup, FormControl, Button, ControlLabel} from 'react-bootstrap';
 import 'whatwg-fetch';
-import API from '../../../../../api/requsetConfig';
 import _$ from '../../../../../library/getElement';
-import getToken from '../../../../../library/getToken';
 const QuerySTForm = React.createClass({
   timer: null,
   searchStu: function () {
-    const _this = this;
     const body = {
       academy: _$('sAcademy').value,
       major: _$('sMajor').value,
       stuId: _$('sStuId').value
     };
-    const token = getToken();
-    _this.loading();
-    fetch(API.searchGraduate, {
-      method: 'POST',
-      headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json",
-        "Token": token
-      },
-      body: JSON.stringify(body)
-    }).then((res)=> {
-      _this.loaded();
-      return res.json();
-    }).then((json)=> {
-      console.log(json);
-      if (json.code === 10000) {
-        if (json.data.count === 0) {
-          _this.isTips('搜索结果为空');
-        } else {
-          this.isTips('搜索毕业生成功');
-        }
-      } else {
-        _this.isTips(json.data.msg);
-      }
-    })
+    this.props.action.searchStu(1, 15, body);
   },
   isTips: function (tip, time = 1500) {
     clearTimeout(this.timer);

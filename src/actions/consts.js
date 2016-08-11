@@ -32,3 +32,8 @@ export const EDIT_MY_MESS = 'EDIT_MY_MESS';
 
 export const SHOW_SEARCH_STU = 'SHOW_SEARCH_STU';
 export const HIDE_SEARCH_STU = 'HIDE_SEARCH_STU';
+
+
+export const SEARCH_STU = "SEARCH_STU";
+export const SEARCH_STU_SUCC = "SEARCH_STU_SUCC";
+export const SEACH_STU_FAIL = "SEARCH_STU_FAIL";

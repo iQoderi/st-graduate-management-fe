@@ -1,12 +1,41 @@
 /**
  * Created by qoder on 16-8-12.
  */
-import React,{Component} from 'react';
-import {Table,Pagination} from 'react-bootstrap';
+import React, {Component} from 'react';
+import {Table, Pagination} from 'react-bootstrap';
 
-class  SearchResultTable extends Component{
-  render(){
-    return(
+class SearchResultTable extends Component {
+  constructor(props) {
+    super(props);
+    this.handleSelect = this.handleSelect.bind(this);
+  }
+
+  handleSelect(eventKey) {
+    this.props.action.searchStu(eventKey, 15, this.props.graduateList.body);
+  }
+
+  render() {
+    const {graduateList}=this.props;
+    const pages = graduateList.pages.map((graduate, index)=> {
+      graduate.index = index + 1;
+      return (
+        <tr>
+          <td>{graduate.index}</td>
+          <td>{graduate.name}</td>
+          <td>{graduate.academy}</td>
+          <td>{graduate.major}</td>
+          <td>{graduate.class}</td>
+          <td>{graduate.stuId}</td>
+          <td>{graduate.phone}</td>
+          <td>{graduate.company}</td>
+          <td>{graduate.job}</td>
+          <td>{graduate.skill}</td>
+          <td>{graduate.suggestion}</td>
+          <td>{graduate.recruit}</td>
+        </tr>
+      )
+    });
+    return (
       <div>
         <Table responsive>
           <thead>
@@ -26,6 +55,7 @@ class  SearchResultTable extends Component{
           </tr>
           </thead>
           <tbody>
+          {pages}
           </tbody>
         </Table>
         <div className="pager">
@@ -35,9 +65,9 @@ class  SearchResultTable extends Component{
             first
             last
             boundaryLinks
-            items={Math.ceil(50/15)}
+            items={Math.ceil(graduateList.count / 15)}
             maxButtons={5}
-            activePage={1}
+            activePage={graduateList.cur}
             onSelect={this.handleSelect}/>
         </div>
       </div>

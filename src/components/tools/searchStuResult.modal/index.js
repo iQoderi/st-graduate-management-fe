@@ -2,7 +2,7 @@
  * Created by qoder on 16-8-12.
  */
 import React, {Component} from 'react';
-import {ButtonToolbar, Button, Modal} from 'react-bootstrap';
+import {ButtonToolbar, Modal, Button} from 'react-bootstrap';
 import SearchResultTable from '../../home/content/queryStudent/searchResultTable';
 import './index.css';
 
@@ -15,30 +15,21 @@ class SearchStuModal extends Component {
       show: false
     };
     this.showModal = this.showModal.bind(this);
-    this.hideModal = this.hideModal.bind(this);
   }
 
   showModal() {
-    this.setState({show: true});
-  }
-
-  hideModal() {
-    this.setState({show: false});
+    this.props.action.showSearchStu();
   }
 
   render() {
+    const {isSearchStu, graduateList, action}=this.props;
     return (
       <ButtonToolbar>
-        <Button bsStyle="primary" onClick={this.showModal}>
-          Launch demo modal
-        </Button>
-
         <Modal
           {...this.props}
-          show={this.state.show}
+          show={isSearchStu}
           bsSize="large"
-          style={{width: '80%'}}
-          onHide={this.hideModal}
+          onHide={action.hideSearchStu}
           dialogClassName="custom-modal"
         >
           <Modal.Header closeButton>
@@ -47,7 +38,9 @@ class SearchStuModal extends Component {
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <SearchResultTable/>
+            <SearchResultTable
+              action={action}
+              graduateList={graduateList}/>
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.hideModal}>Close</Button>

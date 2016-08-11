@@ -13,6 +13,7 @@ require('./index.css');
 
 
 const AdminList = React.createClass({
+  timer: null,
   handleSelect(eventKey) {
     const per = 15;
     this.readPage(eventKey, per);
@@ -45,10 +46,10 @@ const AdminList = React.createClass({
   },
 
   isTips: function (tip, time) {
-    clearTimeout(timer);
+    clearTimeout(this.timer);
     const {showTips, hideTips}=this.props.action;
     showTips(tip);
-    var timer = setTimeout(this.props.action.hideTips, time);
+    this.timer = setTimeout(hideTips, time);
   },
   loading: function () {
     const {showLoading}=this.props.action;
@@ -66,9 +67,9 @@ const AdminList = React.createClass({
           action={this.props.action}
           data={this.props.changeAdminPass}
         />
-        <EditAdmin 
-          data={this.props.editAdmin} 
-          action={this.props.action} 
+        <EditAdmin
+          data={this.props.editAdmin}
+          action={this.props.action}
           pages={this.props.pages}/>
         <ListTable page={page} action={this.props.action}/>
         <div className="pager">
@@ -78,7 +79,7 @@ const AdminList = React.createClass({
             first
             last
             boundaryLinks
-            items={Math.ceil(count/15)}
+            items={Math.ceil(count / 15)}
             maxButtons={5}
             activePage={curPage}
             onSelect={this.handleSelect}/>

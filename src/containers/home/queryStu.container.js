@@ -10,12 +10,14 @@ import {
   hideLoading,
   hideTips,
   showSearchStu,
-  hideSearchStu
+  hideSearchStu,
+  searchStu
 } from  '../../actions/neuqst.actions.js';
 
 function mapStateToProps(state) {
   return {
-    isSearchStu: state.isSearchStu
+    isSearchStu: state.isSearchStu,
+    graduateList: state.graduateList
   }
 }
 
@@ -27,7 +29,8 @@ function mapDispatchToProps(dispatch) {
       hideLoading,
       hideTips,
       showSearchStu,
-      hideSearchStu
+      hideSearchStu,
+      searchStu
     }, dispatch)
   };
   return actionMap;

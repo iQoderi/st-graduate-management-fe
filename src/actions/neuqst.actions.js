@@ -4,6 +4,9 @@
 import * as  ACTIONS from './consts';
 import 'whatwg-fetch';
 import API from '../api/requsetConfig';
+import getToken from '../library/getToken';
+import 'whatwg-fetch';
+window.timer = null;
 
 export function showTips(tip) {
   return {
@@ -19,6 +22,15 @@ export function hideTips() {
   }
 }
 
+export function ayncCloseTips(tip, time = 1500) {
+  clearTimeout(timer);
+  return (dispatch)=> {
+    dispatch(showTips(tip));
+    timer = setTimeout(()=> {
+      dispatch(hideTips());
+    }, time);
+  }
+}
 
 export function showLoading() {
   return {
@@ -159,3 +171,50 @@ export function hideSearchStu() {
   }
 }
 
+export function searchStuSucc(pages, count, cur, body) {
+  return {
+    type: ACTIONS.SEARCH_STU_SUCC,
+    pages,
+    count,
+    cur,
+    body
+  }
+}
+
+
+export function searchStuFail() {
+  return {
+    type: ACTIONS.SEACH_STU_FAIL
+  }
+}
+
+export function searchStu(start = 1, per = 15, body) {
+  return (dispatch)=> {
+    dispatch(showLoading());
+    const token = getToken();
+    return fetch(`${API.searchGraduate}?start=${start}&&pageSize=${per}`, {
+      method: 'POST',
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Token": token
+      },
+      body: JSON.stringify(body)
+    }).then((res)=> {
+      dispatch(hideLoading());
+      return res.json();
+    }).then((json)=> {
+      if (json.code === 10000) {
+        if (json.data.count === 0) {
+          dispatch(ayncCloseTips('搜索结果为空'));
+        } else {
+          dispatch(searchStuSucc(json.data.graduate, json.data.count, start, body));
+          dispatch(showSearchStu());
+        }
+      } else {
+        dispatch(ayncCloseTips(json.data.msg));
+        dispatch(searchStuFail());
+      }
+    })
+  }
+}
