@@ -10,7 +10,7 @@ const ExportExcelBox = React.createClass({
   render: function () {
     return (
       <div className="AddAdmin-wrapper">
-        <ExportSTForm/>
+        <ExportSTForm action={this.props.action}/>
       </div>
     )
   }

@@ -222,20 +222,26 @@ export function exportStu(body) {
   return (dispatch)=> {
     dispatch(showLoading());
     const token = getToken();
-    console.log(token);
     return fetch(API.testExcel, {
-      method: 'GET',
+      method: 'POST',
       headers: {
-        "Content-Type": undefined,
+        "Content-Type": "application/json",
         "Token": token
-      }
+      },
+      body: JSON.stringify(body)
     })
       .then((res)=> {
         dispatch(hideLoading());
-        return res.json();
-      }).then((json)=> {
-        dispatch(ayncCloseTips('导出毕业生信息成功'));
-        console.log(json);
+        return res.blob();
+      }).then((blob)=> {
+        console.log(blob)
+        var a = document.createElement('a');
+        var url = window.URL.createObjectURL(blob);
+        // var filename = `${body.academy}-${body.major}毕业生就业择业`;
+        a.href = url;
+        // a.download = filename;
+        a.click();
+        window.URL.revokeObjectURL(url);
       })
   }
 }

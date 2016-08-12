@@ -15,7 +15,6 @@ class SearchResultTable extends Component {
   }
 
 
-
   render() {
     const {graduateList}=this.props;
     const pages = graduateList.pages.map((graduate, index)=> {
@@ -76,5 +75,6 @@ class SearchResultTable extends Component {
     )
   }
 }
+
 
 export  default  SearchResultTable;

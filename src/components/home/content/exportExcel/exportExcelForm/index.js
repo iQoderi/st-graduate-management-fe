@@ -1,23 +1,43 @@
 /**
  * Created by qoder on 16-6-26.
  */
-import React from 'react';
+import React,{Component} from 'react';
 import {Form, Col, FormGroup, FormControl, Button, Checkbox, ControlLabel} from 'react-bootstrap';
-import 'whatwg-fetch';
-// import API from '../../../../../api/requsetConfig';
-// import {verifyPass, verifyEmail, verifyPhone} from '../../../../../library/verify';
-// import MD5 from 'md5';
-// import _$ from '../../../../../library/getElement';
-const ExportSTForm = React.createClass({
-  render: function () {
+import _$ from '../../../../../library/getElement';
+class ExportSTForm extends Component {
+  constructor(props) {
+    super(props);
+    this.exportStu = this.exportStu.bind(this);
+    this.verifyInfo = this.verifyInfo.bind(this);
+  }
+
+  verifyInfo() {
+    const body = {};
+    if (_$('eAcademy').value) {
+      body.academy = _$('eAcademy').value;
+    }
+    if (_$('eMajor').value) {
+      body.major = _$('eMajor').value;
+    }
+
+    return body;
+  }
+
+  exportStu() {
+    const body = this.verifyInfo();
+    console.log(body);
+    this.props.action.exportStu(body);
+  }
+
+  render() {
     return (
-      <Form horizontal style={{width:'400px'}}>
+      <Form horizontal style={{width: '400px'}}>
         <FormGroup>
           <Col componentClass={ControlLabel} sm={2}>
             学院
           </Col>
           <Col sm={10}>
-            <select className="form-control">
+            <select className="form-control" id="eAcademy">
               <option>全部</option>
               <option>经济学院</option>
               <option>管理学院</option>
@@ -29,7 +49,7 @@ const ExportSTForm = React.createClass({
             </select>
           </Col>
         </FormGroup>
-        <FormGroup>
+        <FormGroup controlId="eMajor">
           <Col componentClass={ControlLabel} sm={2}>
             专业
           </Col>
@@ -37,25 +57,15 @@ const ExportSTForm = React.createClass({
             <FormControl type="text" placeholder="请输入专业名称"/>
           </Col>
         </FormGroup>
-        <FormGroup>
-          <Col componentClass={ControlLabel} sm={2}>
-            身份
-          </Col>
-          <Col sm={10}>
-            <select className="form-control">
-              <option>全部</option>
-              <option>留学生</option>
-              <option>毕业生</option>
-            </select>
-          </Col>
-        </FormGroup>
-        <span className="text-danger" style={{marginLeft:'70px',fontSize:'12px'}}>
+        <span className="text-danger" style={{marginLeft: '70px', fontSize: '12px'}}>
            *不需要的选项可以不用填写
         </span>
         <FormGroup>
           <Col smOffset={2} sm={10}>
             <Button
-              type="button" bsStyle="primary" className="normal-btn fr">
+              onClick={this.exportStu}
+              type="button" bsStyle="primary"
+              className="normal-btn fr">
               导出
             </Button>
           </Col>
@@ -63,7 +73,7 @@ const ExportSTForm = React.createClass({
       </Form>
     )
   }
-});
+}
 
 
 export  default ExportSTForm;
