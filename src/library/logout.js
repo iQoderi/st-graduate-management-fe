@@ -12,11 +12,11 @@ function clearLocalStorage() {
 }
 
 export function logout() {
-  var flag = window.confirm('您确认要退出东北大学秦皇岛大学生就业择业平台?')
-  if (flag) {
+  // var flag = window.confirm('您确认要退出东北大学秦皇岛大学生就业择业平台?')
+  // if (flag) {
     goto('/auth/start');
     // clearLocalStorage();
-  }
+  // }
 }
 
 export function gotoReg() {

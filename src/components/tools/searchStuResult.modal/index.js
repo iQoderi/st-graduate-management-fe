@@ -27,8 +27,9 @@ class SearchStuModal extends Component {
   }
 
   render() {
-    const {isSearchStu, graduateList, action}=this.props;
-    const token = getToken();
+    const {isSearchStu, graduateList, action,myMsg}=this.props;
+    console.log(myMsg)
+
     return (
       <ButtonToolbar>
         <Modal
@@ -49,12 +50,18 @@ class SearchStuModal extends Component {
               graduateList={graduateList}/>
           </Modal.Body>
           <Modal.Footer>
+            {myMsg.role==='管理员'||myMsg.role==='辅导员'? (<Button
+            onClick={this.exportsStu}
+            bsStyle='primary'
+            style={{width: '80px'}}>
+            导出
+          </Button>):(
             <Button
-              onClick={this.exportsStu}
+              onClick={action.hideSearchStu}
               bsStyle='primary'
-                    style={{width: '80px'}}>
-              导出
-            </Button>
+              style={{width: '80px'}}>
+              关闭
+            </Button>)}
           </Modal.Footer>
         </Modal>
       </ButtonToolbar>

@@ -13,7 +13,8 @@ import {
 function mapStateToProps(state) {
   return {
     isSearchStu: state.isSearchStu,
-    graduateList: state.graduateList
+    graduateList: state.graduateList,
+    myMsg:state.myMsg
   }
 }
 
