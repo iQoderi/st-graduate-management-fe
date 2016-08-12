@@ -15,7 +15,6 @@ require('./loginBox.css');
 const LoginBox = React.createClass({
   handleLogin: function () {
     var _this = this;
-    const {showTips, hideTips}=this.props.action;
     if (!verifyEmail(this.refs.loginEmail.value)) {
       _this.isTips('邮箱格式不合法', 2000);
     } else {
@@ -77,6 +76,9 @@ const LoginBox = React.createClass({
   loaded: function () {
     const {hideLoading}=this.props.action;
     hideLoading();
+  },
+  componentDidMount: function () {
+    this.props.action.clearAll();
   },
   render: function () {
     return (

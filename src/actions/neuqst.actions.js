@@ -72,13 +72,6 @@ export function hideChanPass() {
 }
 
 
-export function changePage(index = 1, size = 10) {
-  return {
-    type: ACTIONS.CHANGE_PAGE,
-    get: fetch(API.admin + '?start=' + index + '&pageSize=' + size)
-  }
-}
-
 export function changePageSucc(page = [], curPage = 1, count = 0) {
   return {
     type: ACTIONS.CHANGE_PAGE_SUCCESS,
@@ -186,6 +179,14 @@ export function searchStuFail() {
   }
 }
 
+/**
+ * 搜索毕业生
+ * @param start
+ * @param per
+ * @param body
+ * @returns {function(*)}
+ */
+
 export function searchStu(start = 1, per = 15, body) {
   return (dispatch)=> {
     dispatch(showLoading());
@@ -217,7 +218,11 @@ export function searchStu(start = 1, per = 15, body) {
   }
 }
 
-
+/**
+ * 导出excel
+ * @param body
+ * @returns {function(*)}
+ */
 export function exportStu(body) {
   return (dispatch)=> {
     dispatch(showLoading());
@@ -242,6 +247,20 @@ export function exportStu(body) {
         a.click();
         window.URL.revokeObjectURL(url);
       })
+  }
+}
+
+
+export function clearAll() {
+  return (dispatch)=> {
+    dispatch(hideLoading());
+    dispatch(hideTips());
+    dispatch(hideSearchStu());
+    dispatch(hideDropMenu());
+    dispatch(hideChangeAdminPass());
+    dispatch(hideConfirm());
+    dispatch(hideEditAdmin());
+    dispatch(hideChanPass());
   }
 }
 
