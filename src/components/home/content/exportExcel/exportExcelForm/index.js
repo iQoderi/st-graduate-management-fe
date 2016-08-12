@@ -19,13 +19,15 @@ class ExportSTForm extends Component {
     if (_$('eMajor').value) {
       body.major = _$('eMajor').value;
     }
+    if (_$('eClass').value) {
+      body.class = _$('eClass').value;
+    }
 
     return body;
   }
 
   exportStu() {
     const body = this.verifyInfo();
-    console.log(body);
     this.props.action.exportStu(body);
   }
 
@@ -55,6 +57,14 @@ class ExportSTForm extends Component {
           </Col>
           <Col sm={10}>
             <FormControl type="text" placeholder="请输入专业名称"/>
+          </Col>
+        </FormGroup>
+        <FormGroup controlId="eClass">
+          <Col componentClass={ControlLabel} sm={2}>
+            班级
+          </Col>
+          <Col sm={10}>
+            <FormControl type="text" placeholder="请输入班级名称"/>
           </Col>
         </FormGroup>
         <span className="text-danger" style={{marginLeft: '70px', fontSize: '12px'}}>

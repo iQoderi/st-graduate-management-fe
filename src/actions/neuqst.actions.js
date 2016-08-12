@@ -234,14 +234,15 @@ export function exportStu(body) {
         dispatch(hideLoading());
         return res.blob();
       }).then((blob)=> {
-        console.log(blob)
         var a = document.createElement('a');
         var url = window.URL.createObjectURL(blob);
-        // var filename = `${body.academy}-${body.major}毕业生就业择业`;
+        var filename = `东北大学秦皇岛分校大学生毕业生就业择业表.xlsx`;
         a.href = url;
-        // a.download = filename;
+        a.download = filename;
         a.click();
         window.URL.revokeObjectURL(url);
       })
   }
 }
+
+

@@ -84,7 +84,7 @@ class AddGraduateForm extends Component {
       if (!verifyQQ(_$('gQQ').value)) {
         return false;
       } else {
-        resource.phone = _$('gQQ').value;
+        resource.qq= _$('gQQ').value;
       }
     }
 

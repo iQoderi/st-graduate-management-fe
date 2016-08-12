@@ -5,11 +5,6 @@ import QueryStu from '../../components/home/content/queryStudent';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {
-  showLoading,
-  showTips,
-  hideLoading,
-  hideTips,
-  showSearchStu,
   hideSearchStu,
   searchStu,
   exportStu
@@ -25,11 +20,6 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   var actionMap = {
     action: bindActionCreators({
-      showLoading,
-      showTips,
-      hideLoading,
-      hideTips,
-      showSearchStu,
       hideSearchStu,
       searchStu,
       exportStu

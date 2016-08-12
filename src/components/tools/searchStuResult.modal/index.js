@@ -13,16 +13,13 @@ class SearchStuModal extends Component {
   // 构造
   constructor(props) {
     super(props);
-    // 初始状态
-    this.state = {
-      show: false
-    };
     this.showModal = this.showModal.bind(this);
     this.exportsStu = this.exportsStu.bind(this);
   }
 
   exportsStu() {
-    this.props.action.exportStu();
+    const {action,graduateList}=this.props;
+    action.exportStu(graduateList.body);
   }
 
   showModal() {
@@ -52,21 +49,11 @@ class SearchStuModal extends Component {
               graduateList={graduateList}/>
           </Modal.Body>
           <Modal.Footer>
-            <Button bsStyle='primary'
-                    style={{
-                      width: '80px',
-                      marginLeft: '20px',
-                      float: 'right'
-                    }}>
-              <a
-                className="export-href"
-                href={`${API.testExcel}/?Token=${token}`} target="_blank">导出当前页</a>
-            </Button>
-            <Button bsStyle='primary'
-                    style={{width: '80px', float: 'right'}}>
-              <a
-                className="export-href"
-                href={`${API.testExcel}/?Token=${token}`} target="_blank">导出全部</a>
+            <Button
+              onClick={this.exportsStu}
+              bsStyle='primary'
+                    style={{width: '80px'}}>
+              导出
             </Button>
           </Modal.Footer>
         </Modal>
