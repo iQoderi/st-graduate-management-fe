@@ -4,7 +4,6 @@
  */
 import React from 'react';
 
-// import App from '../components/GraduateApp';
 import App from '../containers/App';
 
 import AuthBox from  '../components/auth/auth';
@@ -16,7 +15,7 @@ import SendEmailSuccess from '../components/auth/SendEmailSuccess';
 import SendNewEmail from '../containers/auth/reSendEmail.container';
 import ResetPass from  '../containers/auth/resetPassByEm.contaier';
 import CompleteMsg from  '../containers/auth/completeMsg.container';
-import {Router, Route, hashHistory, IndexRoute, browserHistory} from 'react-router';
+import {Router, Route, hashHistory, IndexRoute} from 'react-router';
 
 import Home from '../components/home/homePage';
 import PersonalCenter from  '../containers/home/personalCenter.container';

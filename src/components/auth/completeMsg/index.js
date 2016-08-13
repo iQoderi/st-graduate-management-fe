@@ -45,7 +45,6 @@ const CompleteMsg = React.createClass({
       this.refs.c_major.value, this.refs.c_class.value,
       this.refs.c_num.value, this.refs.c_qqNum.value, this.refs.c_phone.value];
     var _this = this;
-    const {is_loading, is_tips, action}=this.props;
     if (isLegal(data)) {
       var options = {
         email: '841599872@qq.com',

@@ -17,7 +17,6 @@ import API from '../../../../api/requsetConfig';
 
 const PersonalCenter = React.createClass({
   editMyMsg: function () {
-    // const _this=this;
     const {editMyMess}=this.props.action;
     editMyMess(true);
   },
@@ -49,7 +48,6 @@ const PersonalCenter = React.createClass({
     }).then((res)=> {
       return res.json();
     }).then((json)=> {
-      console.log(json.data.users.role);
       if (json.data.users.role === '学生') {
         getMyMess(json.data.users.students);
       } else {

@@ -7,7 +7,8 @@ import {bindActionCreators} from 'redux';
 import {
   hideSearchStu,
   searchStu,
-  exportStu
+  exportStu,
+  deleteGraduate
 } from  '../../actions/neuqst.actions.js';
 
 function mapStateToProps(state) {
@@ -23,7 +24,8 @@ function mapDispatchToProps(dispatch) {
     action: bindActionCreators({
       hideSearchStu,
       searchStu,
-      exportStu
+      exportStu,
+      deleteGraduate
     }, dispatch)
   };
   return actionMap;

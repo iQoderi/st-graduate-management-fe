@@ -7,10 +7,11 @@ import 'whatwg-fetch';
 import API from '../../../api/requsetConfig';
 import {verifyPass} from '../../../library/verify';
 import MD5 from 'md5';
-import {logout} from '../../../library/logout';
+import {logoutWithNoTips} from '../../../library/logout';
 import getToken from '../../../library/getToken';
 import _$ from '../../../library/getElement';
 const ChanAdminPass = React.createClass({
+  timer:null,
   changePass: function () {
     var _this = this;
     const time=1500;
@@ -52,15 +53,15 @@ const ChanAdminPass = React.createClass({
 
         if (json.code !== 10000 && json.code !== 10013) {
           _this.isTips(json.data.Msg, time);
-          logout();
+          logoutWithNoTips();
         }
       })
   },
   isTips: function (tip, time) {
-    clearTimeout(timer);
+    clearTimeout(tiis.timer);
     const {showTips, hideTips}=this.props.action;
     showTips(tip);
-    var timer = setTimeout(this.props.action.hideTips, time);
+    this.timer = setTimeout(hideTips, time);
   },
   loading: function () {
     const {showLoading}=this.props.action;

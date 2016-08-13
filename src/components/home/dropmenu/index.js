@@ -8,7 +8,6 @@ require('./index.css');
 const DropMenu = React.createClass({
   render: function () {
     const {role}=this.props;
-    console.log(role);
     return (
       <ul
         style={{display:this.props.Show}}
@@ -17,7 +16,7 @@ const DropMenu = React.createClass({
         </li>
         <li><a href="javascript:;" onClick={this.props.showChanPass}>修改密码</a>
         </li>
-        {role === ('管理员' || '辅导员') ? "" : (<li><a href="javascript:;">更多资料</a></li>)}
+        {role ==='管理员' ||role==='辅导员' ? "" : (<li><a href="javascript:;">更多资料</a></li>)}
         <li className="divider"/>
         <li><a href="javascript:;" onClick={logout}>安全退出</a>
         </li>

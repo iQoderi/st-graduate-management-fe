@@ -10,6 +10,7 @@ import 'whatwg-fetch';
 require('./index.css');
 
 const Confirm = React.createClass({
+  timer:null,
   cancelConfirm: function () {
     const {hideConfirm}=this.props.action;
     hideConfirm();
@@ -31,7 +32,7 @@ const Confirm = React.createClass({
         if (json.code === 10000) {
           changePageSucc(json.data.pages, start, json.data.count)
         } else {
-          this.isTips(json.data.Msg, 10000);
+          this.isTips(json.data.Msg, 1000);
         }
       })
   },
@@ -62,10 +63,10 @@ const Confirm = React.createClass({
       })
   },
   isTips: function (tip, time) {
-    clearTimeout(timer);
+    clearTimeout(this.timer);
     const {showTips, hideTips}=this.props.action;
     showTips(tip);
-    var timer = setTimeout(this.props.action.hideTips, time);
+    this.timer = setTimeout(hideTips, time);
   },
   loading: function () {
     const {showLoading}=this.props.action;

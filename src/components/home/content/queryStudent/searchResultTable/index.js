@@ -8,13 +8,16 @@ class SearchResultTable extends Component {
   constructor(props) {
     super(props);
     this.handleSelect = this.handleSelect.bind(this);
+    this.deleteGraduate=this.deleteGraduate.bind(this);
   }
 
   handleSelect(eventKey) {
     this.props.action.searchStu(eventKey, 15, this.props.graduateList.body);
   }
 
-
+  deleteGraduate(id){
+   this.props.action.deleteGraduate(id);
+  }
   render() {
     const {graduateList}=this.props;
     const pages = graduateList.pages.map((graduate, index)=> {
@@ -33,6 +36,13 @@ class SearchResultTable extends Component {
           <td>{graduate.skill}</td>
           <td>{graduate.suggestion}</td>
           <td>{graduate.recruit}</td>
+          <td>
+            <a
+              onClick={()=>{this.deleteGraduate(graduate.id)}}
+              href="javaScript:;" className="text-danger">
+              删除
+            </a>
+          </td>
         </tr>
       )
     });
@@ -53,6 +63,7 @@ class SearchResultTable extends Component {
             <th>职能</th>
             <th>就业建议</th>
             <th>公司招聘</th>
+            <th>操作</th>
           </tr>
           </thead>
           <tbody>

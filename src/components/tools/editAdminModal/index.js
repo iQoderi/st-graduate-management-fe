@@ -14,6 +14,7 @@ import API from '../../../api/requsetConfig';
 import getToken from '../../../library/getToken';
 
 const EditAdmin = React.createClass({
+  timer:null,
   close(){
     this.props.action.hideEditAdmin();
   },
@@ -62,7 +63,7 @@ const EditAdmin = React.createClass({
         this.loaded();
         if (json.code === 10000) {
           this.isTips('修改管理员信息成功', time);
-          const {curPage, page}=this.props.pages;
+          const {curPage}=this.props.pages;
           const per = 15;
           this.readPage(curPage,per);
         } else {
@@ -92,10 +93,10 @@ const EditAdmin = React.createClass({
       })
   },
   isTips: function (tip, time) {
-    clearTimeout(timer);
+    clearTimeout(this.timer);
     const {showTips, hideTips}=this.props.action;
     showTips(tip);
-    var timer = setTimeout(this.props.action.hideTips, time);
+   this.timer = setTimeout(hideTips, time);
   },
   loading: function () {
     const {showLoading}=this.props.action;

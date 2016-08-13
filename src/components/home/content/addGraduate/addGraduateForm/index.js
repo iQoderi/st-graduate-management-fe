@@ -2,7 +2,7 @@
  * Created by qoder on 16/8/11.
  */
 import React, {Component} from 'react';
-import {Form, Col, FormGroup, FormControl, Button, Checkbox, ControlLabel} from 'react-bootstrap';
+import {Form, Col, FormGroup, FormControl, Button, ControlLabel} from 'react-bootstrap';
 import MustInput from '../../../../tools/mustInput';
 import 'whatwg-fetch';
 import API from '../../../../../api/requsetConfig';
@@ -26,7 +26,7 @@ class AddGraduateForm extends Component {
     clearTimeout(this.timer);
     const {showTips, hideTips}=this.props.action;
     showTips(tip);
-    this.timer = setTimeout(this.props.action.hideTips, time);
+    this.timer = setTimeout(hideTips, time);
   }
 
   loading() {

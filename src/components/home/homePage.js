@@ -17,7 +17,7 @@ const Home = React.createClass({
             <ChanPassModal/>
             <div className="home-inline-content">
               {this.props.children ||
-              <span style={{marginLeft: '20px', marginTop: '20px'}}>
+              <span style={{marginLeft: '30px', marginTop: '30px'}}>
                   欢迎来到东北大学秦皇岛分校大学生就业择业中心
                 </span>
               }

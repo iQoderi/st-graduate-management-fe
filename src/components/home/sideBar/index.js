@@ -15,11 +15,12 @@ import AddGraduate from '../sideBarItem/addGraduate';
 import 'whatwg-fetch';
 import API from '../../../api/requsetConfig';
 import goto from '../../../library/changeHash';
-import {logout} from '../../../library/logout';
+import {logoutWithNoTips} from '../../../library/logout';
 const Avator = require('../../../images/avatar.png');
 
 
 const SideBar = React.createClass({
+  timer:null,
   getInitialState: function () {
     return {
       role: "",
@@ -66,15 +67,15 @@ const SideBar = React.createClass({
           }
         } else {
           _this.isTips(json.data.Msg, 1500);
-          logout();
+          logoutWithNoTips();
         }
       })
   },
   isTips: function (tip, time) {
-    clearTimeout(timer);
+    clearTimeout(this.timer);
     const {showTips, hideTips}=this.props.action;
     showTips(tip);
-    var timer = setTimeout(this.props.action.hideTips, time);
+    this.timer = setTimeout(hideTips, time);
   },
   loading: function () {
     const {showLoading}=this.props.action;

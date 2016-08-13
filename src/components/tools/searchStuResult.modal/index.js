@@ -4,8 +4,6 @@
 import React, {Component} from 'react';
 import {ButtonToolbar, Modal, Button} from 'react-bootstrap';
 import SearchResultTable from '../../home/content/queryStudent/searchResultTable';
-import API from '../../../api/requsetConfig';
-import getToken from '../../../library/getToken';
 
 import './index.css';
 
@@ -28,8 +26,6 @@ class SearchStuModal extends Component {
 
   render() {
     const {isSearchStu, graduateList, action,myMsg}=this.props;
-    console.log(myMsg)
-
     return (
       <ButtonToolbar>
         <Modal
