@@ -20,7 +20,7 @@ import {Router, Route, hashHistory, IndexRoute, browserHistory} from 'react-rout
 
 import Home from '../components/home/homePage';
 import PersonalCenter from  '../containers/home/personalCenter.container';
-import ImportExcelBox from  '../components/home/content/importExcel';
+import ImportExcelBox from  '../containers/home/ImportExcelBox.container';
 import ExportExcelBox from  '../containers/home/exportExcel.container';
 import AdminList from  '../containers/home/adminList.container';
 import AddAdmin from  '../containers/home/addAdmin.container';

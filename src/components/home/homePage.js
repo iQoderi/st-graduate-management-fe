@@ -16,9 +16,9 @@ const Home = React.createClass({
             <NavgaionBar/>
             <ChanPassModal/>
             <div className="home-inline-content">
-              {this.props.children||
-                <span style={{marginLeft:'20px',marginTop:'20px'}}>
-                  '欢迎来到东北大学秦皇岛分校大学生就业择业中心'
+              {this.props.children ||
+              <span style={{marginLeft: '20px', marginTop: '20px'}}>
+                  欢迎来到东北大学秦皇岛分校大学生就业择业中心
                 </span>
               }
             </div>
