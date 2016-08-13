@@ -264,4 +264,28 @@ export function clearAll() {
   }
 }
 
+export function uploadExcel(excelFile) {
+  return (dispatch)=>{
+    var data=new FormData();
+    data.append('excel',excelFile);
+    dispatch(showLoading());
+    const token=getToken();
+    return fetch(API.uploadExcel,{
+      method:'POST',
+      headers:{
+        "Token":token
+      },
+      body:data
+    }).then((res)=>{
+      dispatch(hideLoading());
+      return res.json()
+    }).then((json)=>{
+      if(json.code===10000){
+        dispatch(ayncCloseTips('上传excel成功'));
+      }else{
+        dispatch(ayncCloseTips(json.data.msg));
+      }
+    })
+  }
+}
 

@@ -7,16 +7,16 @@ require('./index.css');
 class ImportExcelBox extends Component {
   constructor(props) {
     super(props);
-    this.handleFile = this.handleFile.bind(this);
+    this.handleSelectFile = this.handleSelectFile.bind(this);
     this.handleDrop = this.handleDrop.bind(this);
     this.verifyFileType = this.verifyFileType.bind(this);
+    this.uploadExcel=this.uploadExcel.bind(this);
   }
 
   verifyFileType(file) {
     if (file) {
       const type = file.name.split(".").pop();
-      console.log(type);
-      if (type != 'xlsx') {
+      if (type === 'xlsx') {
         return file;
       } else {
         this.props.action.ayncCloseTips('请上传xlxs格式的文件');
@@ -27,20 +27,23 @@ class ImportExcelBox extends Component {
     }
   }
 
-  handleFile() {
+  handleSelectFile() {
     const file = this.verifyFileType(document.getElementById('inputExcel').files[0]);
     if (file) {
-      return file;
+      this.uploadExcel(file);
     } else {
       return false;
     }
   }
 
+  uploadExcel(file){
+    this.props.action.uploadExcel(file);
+  }
   handleDrop(e) {
     e.preventDefault();
     const file = this.verifyFileType(e.dataTransfer.files[0]);
     if (file) {
-      return file;
+      this.uploadExcel(file);
     } else {
       return false;
     }
@@ -52,7 +55,7 @@ class ImportExcelBox extends Component {
         onDrop={this.handleDrop}
         className="importDevice">
         <input
-          onChange={this.handleFile}
+          onChange={this.handleSelectFile}
           ref="inputExcel"
           id="inputExcel"
           type="file" className="excel-file ng-isolate-scope"

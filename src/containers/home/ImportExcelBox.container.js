@@ -4,7 +4,7 @@
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import ImportExcel from '../../components/home/content/importExcel';
-import {ayncCloseTips} from '../../actions/neuqst.actions';
+import {ayncCloseTips,uploadExcel} from '../../actions/neuqst.actions';
 function mapStateToProps(state) {
   return {}
 }
@@ -12,7 +12,8 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   var actionMap = {
     action: bindActionCreators({
-      ayncCloseTips
+      ayncCloseTips,
+      uploadExcel
     }, dispatch)
   };
 
