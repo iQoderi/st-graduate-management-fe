@@ -251,7 +251,10 @@ export function exportStu(body) {
   }
 }
 
-
+/**
+ * 清除action
+ * @returns {function(*)}
+ */
 export function clearAll() {
   return (dispatch)=> {
     dispatch(hideLoading());

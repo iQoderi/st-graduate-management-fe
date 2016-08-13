@@ -25,6 +25,7 @@ import AdminList from  '../containers/home/adminList.container';
 import AddAdmin from  '../containers/home/addAdmin.container';
 import AddGraduate from '../containers/home/addGraduate.container';
 import QueryMsg from  '../containers/home/queryStu.container';
+import MoreINfo from '../containers/home/moreInfo.container';
 import goto from '../library/changeHash';
 import {gotoLogin} from '../library/logout';
 
@@ -65,6 +66,7 @@ const RouterApp = React.createClass({
             <Route path="addAdmin" component={AddAdmin}/>
             <Route path="addGraduate" component={AddGraduate}/>
           </Route>
+          <Route path="moreInfo" component={MoreINfo}/>
         </Route>
       </Router>
     )
