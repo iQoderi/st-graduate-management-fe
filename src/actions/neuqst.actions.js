@@ -6,6 +6,7 @@ import 'whatwg-fetch';
 import API from '../api/requsetConfig';
 import getToken from '../library/getToken';
 import 'whatwg-fetch';
+
 window.timer = null;
 
 export function showTips(tip) {
@@ -278,7 +279,7 @@ export function uploadExcel(excelFile) {
       body:data
     }).then((res)=>{
       dispatch(hideLoading());
-      return res.json()
+      return res.json();
     }).then((json)=>{
       if(json.code===10000){
         dispatch(ayncCloseTips('上传excel成功'));
