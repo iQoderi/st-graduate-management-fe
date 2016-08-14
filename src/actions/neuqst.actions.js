@@ -180,6 +180,20 @@ export function searchStuFail() {
   }
 }
 
+
+export function showExcelModal() {
+  return {
+    type: ACTIONS.SHOW_EXCELTPL_MODAl,
+  }
+}
+
+
+export function closeExcelModal() {
+  return {
+    type: ACTIONS.CLOSE_EXCELTPL_MODAl
+  }
+}
+
 /**
  * 搜索毕业生
  * @param start
@@ -274,24 +288,24 @@ export function clearAll() {
  * @returns {function(*)}
  */
 export function uploadExcel(excelFile) {
-  return (dispatch)=>{
-    var data=new FormData();
-    data.append('excel',excelFile);
+  return (dispatch)=> {
+    var data = new FormData();
+    data.append('excel', excelFile);
     dispatch(showLoading());
-    const token=getToken();
-    return fetch(API.uploadExcel,{
-      method:'POST',
-      headers:{
-        "Token":token
+    const token = getToken();
+    return fetch(API.uploadExcel, {
+      method: 'POST',
+      headers: {
+        "Token": token
       },
-      body:data
-    }).then((res)=>{
+      body: data
+    }).then((res)=> {
       dispatch(hideLoading());
       return res.json();
-    }).then((json)=>{
-      if(json.code===10000){
+    }).then((json)=> {
+      if (json.code === 10000) {
         dispatch(ayncCloseTips('上传excel成功'));
-      }else{
+      } else {
         dispatch(ayncCloseTips(json.data.msg));
       }
     })
@@ -304,32 +318,32 @@ export function uploadExcel(excelFile) {
  * @returns {function(*)}
  */
 export function deleteGraduate(id) {
-  return (dispatch,getStore)=>{
+  return (dispatch, getStore)=> {
     console.log(getStore());
     dispatch(showLoading());
-    const token=getToken();
-    const body={id:id};
-    return fetch(API.adminAddGraduate,{
-      method:'DELETE',
-      headers:{
-        "Accept":"application/json",
-        "Content-Type":"application/json",
-        "Token":token
+    const token = getToken();
+    const body = {id: id};
+    return fetch(API.adminAddGraduate, {
+      method: 'DELETE',
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Token": token
       },
-      body:JSON.stringify(body)
-    }).then((res)=>{
+      body: JSON.stringify(body)
+    }).then((res)=> {
       dispatch(hideLoading());
       return res.json();
-    }).then((json)=>{
-      if(json.code===10000){
-        const data=getStore().graduateList;
-        if(data.pages.length<=1){
-          dispatch(searchStu(data.cur-1,15,data.body));
-        }else{
-          dispatch(searchStu(data.cur,15,data.body));
+    }).then((json)=> {
+      if (json.code === 10000) {
+        const data = getStore().graduateList;
+        if (data.pages.length <= 1) {
+          dispatch(searchStu(data.cur - 1, 15, data.body));
+        } else {
+          dispatch(searchStu(data.cur, 15, data.body));
         }
         dispatch(ayncCloseTips('删除成功'));
-      }else {
+      } else {
         dispatch(ayncCloseTips(json.data.msg));
       }
     })

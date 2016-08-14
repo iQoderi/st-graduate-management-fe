@@ -2,7 +2,7 @@
   height: 160px;
   width: 300px;
   border: 3px dashed #CCCCCC;
-  margin: 200px auto;
+  margin: 200px auto 0 auto;
   cursor: pointer;
   text-align: center;
   background: url("../../../../images/addexcel.png") no-repeat center;
@@ -24,5 +24,20 @@
   left: 0;
   right: 0;
   margin: auto; }
+
+.import-excel-container .open-modal {
+  position: absolute;
+  right: -10px;
+  bottom: -30px; }
+
+.tplImg {
+  width: 100%;
+  height: 80px; }
+
+.download-tpl-btn {
+  color: #FFFFFF; }
+
+.download-tpl-btn:hover {
+  color: #FFFFFF; }
 
 /*# sourceMappingURL=index.css.map */

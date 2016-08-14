@@ -15,6 +15,8 @@ import myMsg from './getMyMess.reducer';
 import isEditMsg from './editMyMess.reducer';
 import isSearchStu from './isSearchStu.reducer';
 import graduateList from './graduateList.reducer';
+import isShowExcelTpl from './excelTplModl.reducer';
+
 const neuqstReducer = combineReducers({
   is_loading,
   is_tips,
@@ -27,7 +29,8 @@ const neuqstReducer = combineReducers({
   myMsg,
   isEditMsg,
   isSearchStu,
-  graduateList
+  graduateList,
+  isShowExcelTpl
 });
 
 module.exports = neuqstReducer;
