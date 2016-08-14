@@ -21,5 +21,4 @@ var configStore = function (initialState) {
   return store;
 };
 
-
 export  default configStore;

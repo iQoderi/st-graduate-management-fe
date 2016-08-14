@@ -15,12 +15,13 @@ import AddGraduate from '../sideBarItem/addGraduate';
 import 'whatwg-fetch';
 import API from '../../../api/requsetConfig';
 import goto from '../../../library/changeHash';
+import getToken from '../../../library/getToken';
 import {logoutWithNoTips} from '../../../library/logout';
 const Avator = require('../../../images/avatar.png');
 
 
 const SideBar = React.createClass({
-  timer:null,
+  timer: null,
   getInitialState: function () {
     return {
       role: "",
@@ -30,7 +31,7 @@ const SideBar = React.createClass({
   },
   componentDidMount: function () {
     const _this = this;
-    const token = localStorage.getItem('neuqst.token');
+    const token = getToken();
     const {getMyMess}=this.props.action;
     _this.loading();
     fetch(API.my, {
@@ -57,7 +58,8 @@ const SideBar = React.createClass({
               _this.setState({
                 role: json.data.users.role,
                 email: json.data.users.email,
-                sideItems: [<PersonalItem/>, < AddAdminItem/>,<AdminListItem/>, <AddGraduate/>, < SearchItem/>, <ImportExcelItem/>,
+                sideItems: [<PersonalItem/>, < AddAdminItem/>, <AdminListItem/>, <AddGraduate/>, < SearchItem/>,
+                  <ImportExcelItem/>,
                   < ExportExcelItem/>]
               });
             }
@@ -94,7 +96,7 @@ const SideBar = React.createClass({
     hideDropMenu();
   },
   render: function () {
-    const {action, is_dropMenu}=this.props;
+    const {action, is_dropMenu, myMsg}=this.props;
     return (
       <nav className="navbar-default navbar-static-side" role="navigation">
         <ul className="nav nav-side" id="side-menu">
@@ -103,7 +105,7 @@ const SideBar = React.createClass({
               <span><img alt="image" className="img-circle" src={Avator}/></span>
               <span className="dropdown-toggle">
                 <span className="clear">
-                  <span className="block m-t-xs"><strong className="font-bold">{this.state.email}</strong></span>
+                  <span className="block m-t-xs"><strong className="font-bold">{myMsg.email || '未设置'}</strong></span>
                   <span className="text-muted text-xs block" style={{cursor: 'pointer'}}>
                     <span onClick={this.showDropMenu}>{this.state.role}
                       <b className="caret"/>

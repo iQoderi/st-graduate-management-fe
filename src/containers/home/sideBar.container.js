@@ -12,12 +12,14 @@ import {
   showTips,
   hideLoading,
   hideTips,
-  getMyMess
+  getMyMess,
+  getMyMsg
 } from  '../../actions/neuqst.actions.js';
 
 function mapStateToProps(state) {
   return {
-    is_dropMenu: state.is_dropMenu
+    is_dropMenu: state.is_dropMenu,
+    myMsg: state.myMsg
   }
 }
 
@@ -32,6 +34,7 @@ function mapDispatchToProps(dispatch) {
       hideLoading: hideLoading,
       hideTips: hideTips,
       getMyMess,
+      getMyMsg
     }, dispatch)
   };
   return actionMap;

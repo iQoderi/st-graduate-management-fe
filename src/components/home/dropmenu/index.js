@@ -10,13 +10,13 @@ const DropMenu = React.createClass({
     const {role}=this.props;
     return (
       <ul
-        style={{display:this.props.Show}}
+        style={{display: this.props.Show}}
         className="dropdown-menu2 animated fadeInRight m-t-xs">
         <li><Link to="home/personal">个人资料</Link>
         </li>
         <li><a href="javascript:;" onClick={this.props.showChanPass}>修改密码</a>
         </li>
-        {role ==='管理员' ||role==='辅导员' ? "" : (<li><a href="javascript:;">更多资料</a></li>)}
+        {role === '管理员' || role === '辅导员' ? "" : (<li><Link to="/moreInfo">更多资料</Link></li>)}
         <li className="divider"/>
         <li><a href="javascript:;" onClick={logout}>安全退出</a>
         </li>

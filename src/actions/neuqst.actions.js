@@ -349,3 +349,28 @@ export function deleteGraduate(id) {
     })
   }
 }
+
+/**
+ * 获取个人信息
+ * @returns {function(*)}
+ */
+export function getMyMsg() {
+  return (dispatch)=> {
+    dispatch(showLoading());
+    const token = getToken();
+    return fetch(API.my, {
+      headers: {
+        "Token": token
+      }
+    }).then((res)=> {
+      dispatch(hideLoading());
+      return res.json();
+    }).then((json)=> {
+      if (json.code === 10000) {
+        dispatch(getMyMess(json.data.users));
+      } else {
+        dispatch(ayncCloseTips(json.data.msg));
+      }
+    })
+  }
+}

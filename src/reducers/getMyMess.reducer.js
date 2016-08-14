@@ -3,7 +3,7 @@
  */
 import {GET_MY_MESS} from '../actions/consts';
 
-const initialState = null;
+const initialState = {};
 
 
 const myMsg = function (state = initialState, action) {
