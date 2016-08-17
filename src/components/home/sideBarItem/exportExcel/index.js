@@ -9,7 +9,7 @@ const ExportExcelItem=React.createClass({
   render:function () {
     return (
       <li>
-        <Link className="J_menuItem" to="/home/exportMsg" activeClassName="navActive">
+        <Link className="J_menuItem" to="/home/exportMsg" >
           <i className="fa fa-download"/>
           <span className="nav-label">导出学生信息</span>
         </Link>

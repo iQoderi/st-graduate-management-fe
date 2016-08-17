@@ -8,7 +8,7 @@ class AddGraduateItem extends Component {
   render() {
     return (
       <li>
-        <Link className="J_menuItem" to="/home/addGraduate" activeClassName="navActive">
+        <Link className="J_menuItem" to="/home/addGraduate" >
           <i className="fa fa-plus"/>
           <span className="nav-label">添加毕业生</span></Link>
       </li>

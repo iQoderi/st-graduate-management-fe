@@ -7,7 +7,7 @@ const AddAdminItem=React.createClass({
   render:function () {
     return (
       <li>
-        <Link className="J_menuItem" to="/home/addAdmin" activeClassName="navActive">
+        <Link className="J_menuItem" to="/home/addAdmin">
           <i className="fa fa-plus"/>
           <span className="nav-label">添加管理员</span></Link>
       </li>

@@ -7,7 +7,7 @@ const PersonalItem=React.createClass({
   render:function () {
     return (
       <li>
-        <Link className="J_menuItem" to="/home/personal" activeClassName="navActive">
+        <Link className="J_menuItem" to="/home/personal" >
           <i className="fa fa-user"/>
           <span className="nav-label">个人中心</span></Link>
       </li>
