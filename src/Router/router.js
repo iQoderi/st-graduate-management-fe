@@ -27,7 +27,6 @@ import AddGraduate from '../containers/home/addGraduate.container';
 import QueryMsg from  '../containers/home/queryStu.container';
 import MoreINfo from '../containers/home/moreInfo.container';
 import goto from '../library/changeHash';
-import {gotoLogin} from '../library/logout';
 
 const RouterApp = React.createClass({
   ifSendEmail: function () {
@@ -36,12 +35,12 @@ const RouterApp = React.createClass({
       goto('/auth/forgetPass');
     }
   },
-  ifLogin: function () {
+ /* ifLogin: function () {
     if (!localStorage.getItem('neuqst.token')) {
       alert('您还未登陆，请先登陆');
       gotoLogin();
     }
-  },
+  },*/
   render: function () {
     return (
       <Router history={hashHistory}>
@@ -56,7 +55,7 @@ const RouterApp = React.createClass({
             <Route path="reSendEmail" component={SendNewEmail}/>
           </Route>
           <Route path="/registration/success" component={SendEmailSuccess}/>
-          <Route path="/user/CompleteMsg" component={CompleteMsg} onEnter={this.ifLogin}/>
+          <Route path="/user/CompleteMsg" component={CompleteMsg}/>
           <Route path="/home" component={Home} onEnter={this.ifLogin}>
             <Route path="personal" component={PersonalCenter}/>
             <Route path="importMsg" component={ImportExcelBox}/>
