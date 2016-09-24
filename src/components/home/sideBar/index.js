@@ -111,7 +111,9 @@ const SideBar = React.createClass({
                       <b className="caret"/>
                     </span>
                     <span onMouseLeave={this.hideDropMenu}>
-                      <DropMenu Show={is_dropMenu} showChanPass={action.showChanPass} role={this.state.role}/>
+                      <DropMenu
+                        myMsg={myMsg}
+                        Show={is_dropMenu} showChanPass={action.showChanPass} role={this.state.role}/>
                     </span>
                   </span>
                 </span>
