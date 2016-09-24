@@ -27,4 +27,5 @@ function mapDispatchToProps(dispatch) {
   return actionMap;
 }
 
+
 export  default connect(mapStateToProps, mapDispatchToProps)(AddAdmin);

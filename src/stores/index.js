@@ -1,8 +1,9 @@
 /**
  * Created by qoder on 16/6/11.
  */
-import{createStore, applyMiddleware} from 'redux';
+import{import, applyMiddleware} from 'redux';
 import thunkMiddleware from 'redux-thunk';
+import {createStore} from 'redux';
 const neuqstReducer = require('../reducers');
 
 const createStoreWithMiddleware = applyMiddleware(
