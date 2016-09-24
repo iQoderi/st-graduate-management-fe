@@ -4,12 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/test2.js" line="9" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f964d0d3-88ff-4195-a261-3cc0c8b37916" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/home/addAdmin.container.js" afterPath="$PROJECT_DIR$/src/containers/home/addAdmin.container.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/library/logout.js" afterPath="$PROJECT_DIR$/src/library/logout.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/stores/index.js" afterPath="$PROJECT_DIR$/src/stores/index.js" />
-    </list>
+    <list default="true" id="f964d0d3-88ff-4195-a261-3cc0c8b37916" name="Default" comment="" />
     <ignored path="st-graduate-management-fe.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
