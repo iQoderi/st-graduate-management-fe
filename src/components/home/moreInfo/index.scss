@@ -1,6 +1,18 @@
-.more-info-wrapper{
-  margin: 200px auto;
+.more-info-wrapper {
+  margin: 30px auto;
   text-align: center;
   color: #666666;
-  font-size: 20px;
+  position: relative;
+  h3 {
+    font-size: 20px;
+  }
+  a{
+    position: absolute;
+    top: 0px;
+    right: 30px;
+  }
+  .graduate-form-wrapper{
+    width: 400px;
+    margin: 100px auto;
+  }
 }

@@ -5,6 +5,7 @@ import * as  ACTIONS from './consts';
 import 'whatwg-fetch';
 import API from '../api/requsetConfig';
 import getToken from '../library/getToken';
+import goto from '../library/changeHash';
 import 'whatwg-fetch';
 
 window.timer = null;
@@ -368,6 +369,112 @@ export function getMyMsg() {
     }).then((json)=> {
       if (json.code === 10000) {
         dispatch(getMyMess(json.data.users));
+      } else {
+        dispatch(ayncCloseTips(json.data.msg));
+      }
+    })
+  }
+}
+
+/**
+ * 获取自己的毕业信息
+ * @param graduate
+ * @returns {{type, graduate: *}}
+ */
+export function getGraduateSucc(graduate) {
+  return {
+    type: ACTIONS.GET_GRADUATE_SUCC,
+    graduate
+  }
+}
+
+
+export function getGraduateFail() {
+  return {
+    type: ACTIONS.GET_GRADUATE_FAIL
+  }
+}
+
+export function getGraduate(isJump) {
+  return (dispatch)=> {
+    const token = getToken();
+    return fetch(API.graduate, {
+      headers: {
+        'token': token
+      }
+    }).then((res)=> {
+      return res.json();
+    }).then((json)=> {
+      if (json.code === 0) {
+        dispatch(getGraduateSucc(json.data.graduate));
+        if (isJump) {
+          goto('/moreInfo');
+          dispatch(hideDropMenu());
+        }
+      } else {
+        dispatch(ayncCloseTips(json.data.msg));
+        dispatch(getGraduateFail());
+      }
+    })
+  }
+}
+
+/**
+ * 添加毕业生信息
+ * @param graduate
+ * @returns {function(*)}
+ */
+export function addGraduateMsg(graduate) {
+  return (dispatch)=> {
+    const token = getToken();
+    dispatch(showLoading());
+    return fetch(API.graduate, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'token': token
+      },
+      body: JSON.stringify(graduate)
+    }).then((res)=> {
+      dispatch(hideLoading());
+      return res.json();
+    }).then((json)=> {
+      if (json.code === 10000) {
+        dispatch(ayncCloseTips('完善毕业生信息完成'));
+        dispatch(getGraduate());
+      } else {
+        dispatch(ayncCloseTips(json.data.msg));
+      }
+    })
+  }
+}
+
+/**
+ * 更新
+ * @param graduate
+ * @returns {function(*)}
+ */
+export function updateGraduate(graduate) {
+  return (dispatch)=> {
+    const token = getToken();
+    dispatch(showLoading());
+    return fetch(API.graduate, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'token': token
+      },
+      body: JSON.stringify(graduate)
+    }).then((res)=> {
+      dispatch(hideLoading());
+      return res.json();
+    }).then((json)=> {
+      console.log(json);
+      if (json.code === 10000) {
+        dispatch(ayncCloseTips('更新毕业生信息完成'));
+        dispatch(getGraduate());
       } else {
         dispatch(ayncCloseTips(json.data.msg));
       }

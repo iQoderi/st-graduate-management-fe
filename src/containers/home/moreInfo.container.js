@@ -4,16 +4,21 @@
 import MoreINfo from '../../components/home/moreInfo';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {} from  '../../actions/neuqst.actions.js';
+import {getGraduate, addGraduateMsg, updateGraduate,ayncCloseTips} from  '../../actions/neuqst.actions.js';
 
 function mapStateToProps(state) {
-  return {}
+  return {
+    graduate: state.graduate
+  }
 }
 
 function mapDispatchToProps(dispatch) {
   var actionMap = {
     action: bindActionCreators({
-
+      getGraduate,
+      addGraduateMsg,
+      updateGraduate,
+      ayncCloseTips
     }, dispatch)
   };
 

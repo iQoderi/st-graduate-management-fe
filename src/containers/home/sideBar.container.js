@@ -13,7 +13,8 @@ import {
   hideLoading,
   hideTips,
   getMyMess,
-  getMyMsg
+  getMyMsg,
+  getGraduate
 } from  '../../actions/neuqst.actions.js';
 
 function mapStateToProps(state) {
@@ -34,7 +35,8 @@ function mapDispatchToProps(dispatch) {
       hideLoading: hideLoading,
       hideTips: hideTips,
       getMyMess,
-      getMyMsg
+      getMyMsg,
+      getGraduate
     }, dispatch)
   };
   return actionMap;

@@ -113,7 +113,10 @@ const SideBar = React.createClass({
                     <span onMouseLeave={this.hideDropMenu}>
                       <DropMenu
                         myMsg={myMsg}
-                        Show={is_dropMenu} showChanPass={action.showChanPass} role={this.state.role}/>
+                        hideDropMenu={this.hideDropMenu}
+                        Show={is_dropMenu}
+                        getGraduate={action.getGraduate}
+                        showChanPass={action.showChanPass} role={this.state.role}/>
                     </span>
                   </span>
                 </span>

@@ -5,10 +5,10 @@ import React from 'react';
 import {Link} from 'react-router';
 import {logout} from '../../../library/logout';
 require('./index.css');
+
 const DropMenu = React.createClass({
   render: function () {
-    const {role, myMsg}=this.props;
-    console.log(this.props);
+    const {myMsg}=this.props;
     return (
       <ul
         style={{display: this.props.Show}}
@@ -17,7 +17,9 @@ const DropMenu = React.createClass({
         </li>
         <li><a href="javascript:;" onClick={this.props.showChanPass}>修改密码</a>
         </li>
-        {myMsg.role != '毕业生' ? "" : (<li><Link to="/moreInfo">更多资料</Link></li>)}
+        {myMsg.role != '毕业生' ? "" : (<li
+          onClick={this.props.getGraduate}
+        ><a href="javascript:;">更多资料</a></li>)}
         <li className="divider"/>
         <li><a href="javascript:;" onClick={logout}>安全退出</a>
         </li>

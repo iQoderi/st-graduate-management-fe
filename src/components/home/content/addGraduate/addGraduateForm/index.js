@@ -99,7 +99,7 @@ class AddGraduateForm extends Component {
     }
 
     if (!resource.skill) {
-      this.isTips('请填写毕业生只能');
+      this.isTips('请填写毕业生职能');
       return false;
     }
 
