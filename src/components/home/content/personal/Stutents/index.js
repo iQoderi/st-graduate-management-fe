@@ -13,7 +13,7 @@ class Student extends Component {
   render() {
     const {data}=this.props;
     return (
-      <Panel style={{border:'none'}}>
+      <Panel style={{border: 'none'}}>
         <ListGroup fill>
           <ListGroupItem>姓名:<span className='personal-item-detail'>{data.name}</span></ListGroupItem>
           <ListGroupItem>学号:<span className='personal-item-detail'>{data.studentId}</span></ListGroupItem>
@@ -23,7 +23,7 @@ class Student extends Component {
           <ListGroupItem>身份:<span className='personal-item-detail'>{data.role}</span></ListGroupItem>
           <ListGroupItem>邮箱:<span className='personal-item-detail'>{data.email}</span></ListGroupItem>
           <ListGroupItem>手机号:<span className='personal-item-detail'>{data.phone}</span></ListGroupItem>
-          <ListGroupItem>QQ号:<span className='personal-item-detail'>{data.QQNumber}</span></ListGroupItem>
+          <ListGroupItem>QQ(微信):<span className='personal-item-detail'>{data.QQNumber}</span></ListGroupItem>
         </ListGroup>
       </Panel>
     )

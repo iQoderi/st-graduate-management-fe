@@ -84,7 +84,7 @@ class AddGraduateForm extends Component {
       if (!verifyQQ(_$('gQQ').value)) {
         return false;
       } else {
-        resource.qq= _$('gQQ').value;
+        resource.qq = _$('gQQ').value;
       }
     }
 
@@ -202,10 +202,10 @@ class AddGraduateForm extends Component {
         </FormGroup>
         <FormGroup controlId="gQQ">
           <Col componentClass={ControlLabel} sm={2}>
-            QQ
+            QQ或微信
           </Col>
           <Col sm={10}>
-            <FormControl type="text" placeholder="请输入毕业生QQ"/>
+            <FormControl type="text" placeholder="请输入毕业生QQ或者微信"/>
           </Col>
         </FormGroup>
         <FormGroup controlId="gCompany">

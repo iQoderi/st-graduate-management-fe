@@ -158,7 +158,7 @@ const CompleteMsg = React.createClass({
               <div className="from-group">
                 <input
                   ref="c_qqNum"
-                  placeholder="QQ号" autocomplete="off" type="text"/>
+                  placeholder="QQ或者微信号" autocomplete="off" type="text"/>
               </div>
             </div>
             <div className="control-group">

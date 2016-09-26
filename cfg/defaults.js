@@ -59,6 +59,7 @@ function getDefaultModules() {
 module.exports = {
   srcPath: srcPath,
   publicPath: '/assets/',
+  // publicPath: 'http://odljp7x9v.bkt.clouddn.com/assets/',
   port: dfltPort,
   getDefaultModules: getDefaultModules
 };

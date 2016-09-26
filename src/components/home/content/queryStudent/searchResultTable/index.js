@@ -8,16 +8,17 @@ class SearchResultTable extends Component {
   constructor(props) {
     super(props);
     this.handleSelect = this.handleSelect.bind(this);
-    this.deleteGraduate=this.deleteGraduate.bind(this);
+    this.deleteGraduate = this.deleteGraduate.bind(this);
   }
 
   handleSelect(eventKey) {
     this.props.action.searchStu(eventKey, 15, this.props.graduateList.body);
   }
 
-  deleteGraduate(id){
-   this.props.action.deleteGraduate(id);
+  deleteGraduate(id) {
+    this.props.action.deleteGraduate(id);
   }
+
   render() {
     const {graduateList}=this.props;
     const pages = graduateList.pages.map((graduate, index)=> {
@@ -30,7 +31,7 @@ class SearchResultTable extends Component {
           <td>{graduate.major}</td>
           <td>{graduate.class}</td>
           <td>{graduate.stuId}</td>
-          <td>{graduate.phone}</td>
+          <td>{graduate.qq}</td>
           <td>{graduate.company}</td>
           <td>{graduate.job}</td>
           <td>{graduate.skill}</td>
@@ -38,7 +39,9 @@ class SearchResultTable extends Component {
           <td>{graduate.recruit}</td>
           <td>
             <a
-              onClick={()=>{this.deleteGraduate(graduate.id)}}
+              onClick={()=> {
+                this.deleteGraduate(graduate.id)
+              }}
               href="javaScript:;" className="text-danger">
               删除
             </a>
@@ -57,7 +60,7 @@ class SearchResultTable extends Component {
             <th>专业</th>
             <th>班级</th>
             <th>学号</th>
-            <th>手机</th>
+            <th>QQ或微信</th>
             <th>就业公司</th>
             <th>就业岗位</th>
             <th>职能</th>

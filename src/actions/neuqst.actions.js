@@ -320,7 +320,6 @@ export function uploadExcel(excelFile) {
  */
 export function deleteGraduate(id) {
   return (dispatch, getStore)=> {
-    console.log(getStore());
     dispatch(showLoading());
     const token = getToken();
     const body = {id: id};
@@ -471,7 +470,6 @@ export function updateGraduate(graduate) {
       dispatch(hideLoading());
       return res.json();
     }).then((json)=> {
-      console.log(json);
       if (json.code === 10000) {
         dispatch(ayncCloseTips('更新毕业生信息完成'));
         dispatch(getGraduate());

@@ -30,7 +30,6 @@ const PersonalCenter = React.createClass({
     }).then((res)=> {
       return res.json();
     }).then((json)=> {
-      console.log(json.data.users.role);
       if (json.data.users.role === '学生') {
         getMyMess(json.data.users.students);
       } else {

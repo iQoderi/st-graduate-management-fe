@@ -12,7 +12,10 @@ let defaultSettings = require('./defaults');
 let BowerWebpackPlugin = require('bower-webpack-plugin');
 
 let config = Object.assign({}, baseConfig, {
-  entry: path.join(__dirname, '../src/index'),
+  entry: {
+    bundle: path.join(__dirname, '../src/index'),
+    vendor: ['react', 'react-dom', 'react-bootstrap'],
+  },
   cache: false,
   devtool: false,
   plugins: [
@@ -26,7 +29,9 @@ let config = Object.assign({}, baseConfig, {
     new webpack.optimize.UglifyJsPlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.[hash].js'),
+    new webpack.optimize.LimitChunkCountPlugin({maxChunks: 25}),  // 限制了打包出来的chunk的个数
+    new webpack.optimize.MinChunkSizePlugin({minChunkSize: 100}),    //限制了打包chunk的最小大小
   ],
   module: defaultSettings.getDefaultModules()
 });
@@ -37,7 +42,7 @@ config.module.loaders.push({
   loader: 'babel',
   include: [].concat(
     config.additionalPaths,
-    [ path.join(__dirname, '/../src') ]
+    [path.join(__dirname, '/../src')]
   )
 });
 

@@ -1,13 +1,14 @@
 'use strict';
 let path = require('path');
 let defaultSettings = require('./defaults');
-
+let md5 = require('md5');
 // Additional npm or bower modules to include in builds
 // Add all foreign plugins you may need into this array
 // @example:
 // let npmBase = path.join(__dirname, '../node_modules');
 // let additionalPaths = [ path.join(npmBase, 'react-bootstrap') ];
 let additionalPaths = [];
+let hash = md5(Date.now());
 
 module.exports = {
   additionalPaths: additionalPaths,
@@ -16,6 +17,7 @@ module.exports = {
   devtool: 'eval',
   output: {
     path: path.join(__dirname, '/../dist/assets'),
+    // filename: 'app.[hash].js',
     filename: 'app.js',
     publicPath: `.${defaultSettings.publicPath}`
   },
