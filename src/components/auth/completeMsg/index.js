@@ -114,7 +114,7 @@ const CompleteMsg = React.createClass({
             </div>
             <div className="control-group">
               <div className="from-group">
-                <input placeholder="姓名"
+                <input placeholder="姓名(仅供教师查看)"
                        ref="c_name"
                        autocomplete="off" type="text"/>
               </div>
@@ -165,7 +165,7 @@ const CompleteMsg = React.createClass({
               <div className="from-group">
                 <input
                   ref="c_phone"
-                  placeholder="手机号" autocomplete="off" type="text"/>
+                  placeholder="手机号(仅供教师查看)" autocomplete="off" type="text"/>
               </div>
             </div>
             <div className="control-group radio-2">

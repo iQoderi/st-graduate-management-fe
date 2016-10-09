@@ -16,7 +16,7 @@ class SearchStuModal extends Component {
   }
 
   exportsStu() {
-    const {action,graduateList}=this.props;
+    const {action, graduateList}=this.props;
     action.exportStu(graduateList.body);
   }
 
@@ -25,7 +25,7 @@ class SearchStuModal extends Component {
   }
 
   render() {
-    const {isSearchStu, graduateList, action,myMsg}=this.props;
+    const {isSearchStu, graduateList, action, myMsg}=this.props;
     return (
       <ButtonToolbar>
         <Modal
@@ -43,21 +43,22 @@ class SearchStuModal extends Component {
           <Modal.Body>
             <SearchResultTable
               action={action}
+              myMsg={myMsg}
               graduateList={graduateList}/>
           </Modal.Body>
           <Modal.Footer>
-            {myMsg.role==='管理员'||myMsg.role==='辅导员'? (<Button
-            onClick={this.exportsStu}
-            bsStyle='primary'
-            style={{width: '80px'}}>
-            导出
-          </Button>):(
-            <Button
-              onClick={action.hideSearchStu}
+            {myMsg.role === '管理员' || myMsg.role === '辅导员' ? (<Button
+              onClick={this.exportsStu}
               bsStyle='primary'
               style={{width: '80px'}}>
-              关闭
-            </Button>)}
+              导出
+            </Button>) : (
+              <Button
+                onClick={action.hideSearchStu}
+                bsStyle='primary'
+                style={{width: '80px'}}>
+                关闭
+              </Button>)}
           </Modal.Footer>
         </Modal>
       </ButtonToolbar>

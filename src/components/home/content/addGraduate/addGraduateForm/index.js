@@ -48,7 +48,8 @@ class AddGraduateForm extends Component {
       stuId: _$('gStuId').value,
       company: _$('gCompany').value,
       job: _$('gJob').value,
-      skill: _$('gSkill').value
+      skill: _$('gSkill').value,
+      phone: _$('gPhone').value
     };
     if (!resource.name) {
       this.isTips('请填写毕业生姓名');
@@ -72,12 +73,15 @@ class AddGraduateForm extends Component {
       this.isTips('请填写毕业生学号');
       return false;
     }
-    if (_$('gPhone').value) {
-      if (!verifyPhone(_$('gPhone').value)) {
-        return false;
-      } else {
-        resource.phone = _$('gPhone').value;
-      }
+
+    if (!resource.phone) {
+      this.isTips('请填写毕业生手机号');
+      return false;
+    }
+
+    if (!verifyPhone(_$('gPhone').value)) {
+      this.isTips('手机号格式不合法');
+      return false;
     }
 
     if (_$('gQQ').value) {
@@ -194,7 +198,7 @@ class AddGraduateForm extends Component {
         </FormGroup>
         <FormGroup controlId="gPhone">
           <Col componentClass={ControlLabel} sm={2}>
-            手机
+            <MustInput/>手机
           </Col>
           <Col sm={10}>
             <FormControl type="tel" placeholder="请输入毕业生手机号"/>

@@ -20,13 +20,13 @@ class SearchResultTable extends Component {
   }
 
   render() {
-    const {graduateList}=this.props;
+    const {graduateList, myMsg}=this.props;
     const pages = graduateList.pages.map((graduate, index)=> {
       graduate.index = index + 1;
       return (
         <tr>
           <td>{graduate.index}</td>
-          <td>{graduate.name}</td>
+          <td style={{display: myMsg.role === '管理员' ? 'table-cell' : 'none'}}>{graduate.name}</td>
           <td>{graduate.academy}</td>
           <td>{graduate.major}</td>
           <td>{graduate.class}</td>
@@ -55,7 +55,7 @@ class SearchResultTable extends Component {
           <thead>
           <tr>
             <th>#</th>
-            <th>姓名</th>
+            <th style={{display: myMsg.role === '管理员' ? 'table-cell' : 'none'}}>姓名</th>
             <th>学院</th>
             <th>专业</th>
             <th>班级</th>

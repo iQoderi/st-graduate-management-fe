@@ -9,7 +9,7 @@
 const path = require('path');
 const srcPath = path.join(__dirname, '/../src');
 const dfltPort = 8000;
-
+const env = require('./cfg');
 /**
  * Get the default modules object for webpack
  * @return {Object}
@@ -58,8 +58,8 @@ function getDefaultModules() {
 
 module.exports = {
   srcPath: srcPath,
-  publicPath: '/assets/',
-  // publicPath: 'http://odljp7x9v.bkt.clouddn.com/assets/',
+  // publicPath: '/assets/',
+  publicPath: env === 'dev' ? '/assets/' : 'http://odljp7x9v.bkt.clouddn.com/assets/',
   port: dfltPort,
   getDefaultModules: getDefaultModules
 };
