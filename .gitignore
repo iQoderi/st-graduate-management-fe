@@ -30,5 +30,5 @@ node_modules
 bower_components/
 
 # secrt
-secrt.js
 
+secrt.js
