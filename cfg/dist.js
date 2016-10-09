@@ -1,7 +1,5 @@
 'use strict';
 
-'use strict';
-
 let path = require('path');
 let webpack = require('webpack');
 
