@@ -4,14 +4,15 @@
     <bookmark url="file://$PROJECT_DIR$/test2.js" line="9" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f964d0d3-88ff-4195-a261-3cc0c8b37916" name="Default" comment="隐藏密码">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="f964d0d3-88ff-4195-a261-3cc0c8b37916" name="Default" comment="隐藏密码" />
+    <list id="84474adb-1ed0-4892-89c7-0deed9c0a873" name="New changelist" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/secrt.js" afterPath="$PROJECT_DIR$/secrt.js" />
     </list>
     <ignored path="st-graduate-management-fe.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -408,6 +409,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="f964d0d3-88ff-4195-a261-3cc0c8b37916" name="Default" comment="" />
+      <changelist id="84474adb-1ed0-4892-89c7-0deed9c0a873" name="New changelist" comment="" />
       <created>1463244277615</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -492,7 +494,7 @@
       <workItem from="1474887863229" duration="2385000" />
       <workItem from="1476002321614" duration="3108000" />
       <workItem from="1476007751104" duration="295000" />
-      <workItem from="1476008231620" duration="572000" />
+      <workItem from="1476008231620" duration="689000" />
     </task>
     <task id="LOCAL-00001" summary="homepage 主题界面完成">
       <created>1465191509086</created>
@@ -760,11 +762,18 @@
       <option name="project" value="LOCAL" />
       <updated>1476008895388</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="隐藏密码">
+      <created>1476008967752</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1476008967752</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="424702000" />
+    <option name="totallyTimeSpent" value="424819000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -855,6 +864,7 @@
     <MESSAGE value="基本完成" />
     <MESSAGE value="隐藏密码" />
     <option name="LAST_COMMIT_MESSAGE" value="隐藏密码" />
+    <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
