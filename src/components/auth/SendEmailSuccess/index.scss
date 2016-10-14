@@ -8,14 +8,13 @@
     font-size: 18px;
   }
 }
-*{}
 
 .form-container .form-behavior {
   overflow: hidden;
   margin: 0 auto;
   margin-top: 200px;
   margin-bottom: 75px;
-  width: 960px;
+  max-width: 960px;
 }
 
 @media screen and (max-height: 1000px) {
@@ -60,6 +59,19 @@
   margin: 0 auto;
   line-height: 1.8;
 }
+
+@media all and (max-width: 420px) {
+  .email-tips {
+    width: 90%;
+  }
+
+  .form-container{
+    .form-container .form-behavior{
+      margin-top: 80px;
+    }
+  }
+}
+
 
 .form-container .form-inner {
   max-width: 360px;
