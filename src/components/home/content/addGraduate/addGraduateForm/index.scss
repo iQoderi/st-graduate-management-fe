@@ -1,1 +1,15 @@
+#addGraduate-form{
+  width: 400px;
+  #addGraduate-must-input{
+    margin-left: 70px;
+  }
+}
 
+@media all and (max-width: 420px) {
+  #addGraduate-form{
+    width: 90%;
+    #addGraduate-must-input{
+      margin-left: 0;
+    }
+  }
+}

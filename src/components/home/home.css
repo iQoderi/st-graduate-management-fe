@@ -50,4 +50,9 @@ body.canvas-menu .navbar-static-side, body.fixed-sidebar .navbar-static-side {
 .modal-body {
   min-height: 90px; }
 
+@media all and (max-width: 780px) {
+  .custom-modal {
+    width: 95%;
+    margin: 100px auto; } }
+
 /*# sourceMappingURL=home.css.map */

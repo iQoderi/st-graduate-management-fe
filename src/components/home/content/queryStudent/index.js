@@ -8,15 +8,17 @@ require('./index.css');
 
 const QueryMsg = React.createClass({
   render: function () {
-    const {action, myMsg,isSearchStu, graduateList}=this.props;
+    const {action, myMsg, isSearchStu, graduateList}=this.props;
     return (
       <div className="AddAdmin-wrapper search-stu-wrapper">
         <QuerySTForm action={action}/>
-        <SearchStuModal
-          myMsg={myMsg}
-          isSearchStu={isSearchStu}
-          graduateList={graduateList}
-          action={action}/>
+        <div style={{marginTop: '100px'}}>
+          <SearchStuModal
+            myMsg={myMsg}
+            isSearchStu={isSearchStu}
+            graduateList={graduateList}
+            action={action}/>
+        </div>
       </div>
     )
   }

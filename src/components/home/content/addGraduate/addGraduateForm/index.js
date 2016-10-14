@@ -146,7 +146,7 @@ class AddGraduateForm extends Component {
 
   render() {
     return (
-      <Form horizontal style={{width: '400px'}}>
+      <Form horizontal id="addGraduate-form">
         <FormGroup controlId="gName">
           <Col componentClass={ControlLabel} sm={2}>
             <MustInput/>姓名
@@ -254,7 +254,7 @@ class AddGraduateForm extends Component {
             <FormControl componentClass="textarea" placeholder="请输入毕业生就业公司的招聘信息"/>
           </Col>
         </FormGroup>
-        <span className="text-danger" style={{marginLeft: '70px', fontSize: '12px'}}>
+        <span className="text-danger" id="addGraduate-must-input">
            *号为必填项
         </span>
         <FormGroup>
