@@ -5,6 +5,10 @@
   font-size: 14px;
   margin: 10px 20px 0 0; }
 
+@media all and (max-width: 420px) {
+  .brand .logout {
+    margin-right: 10px;
+    margin-top: 0; } }
 .user-info {
   position: relative;
   text-align: center;
@@ -36,6 +40,9 @@
       outline: none; }
     .user-info .control-group select {
       padding: 5px 15px; }
+    @media all and (max-width: 420px) {
+      .user-info .control-group input[type='radio'] {
+        padding: 0; } }
     .user-info .control-group .save {
       border: 1px solid #F8BA0B;
       background-color: #F8BA0B;
@@ -49,6 +56,12 @@
     .user-info .control-group .cancel {
       color: #666666;
       margin-left: 15px; }
+    @media all and (max-width: 330px) {
+      .user-info .control-group .save {
+        width: 180px;
+        margin-left: 25px; }
+      .user-info .control-group .cancel {
+        margin-left: 0px; } }
 
 .c-footer {
   text-align: center; }
