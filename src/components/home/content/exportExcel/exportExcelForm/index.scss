@@ -1,0 +1,15 @@
+#export-form{
+  width: 400px;
+  #export-must-input{
+    margin-left: 75px;
+  }
+}
+
+@media all and (max-width: 420px) {
+  #export-form{
+    width: 90%;
+    #export-must-input{
+      margin-left: 0;
+    }
+  }
+}

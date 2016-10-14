@@ -1,9 +1,11 @@
 /**
  * Created by qoder on 16-6-26.
  */
-import React,{Component} from 'react';
+import React, {Component} from 'react';
 import {Form, Col, FormGroup, FormControl, Button, Checkbox, ControlLabel} from 'react-bootstrap';
 import _$ from '../../../../../library/getElement';
+import './index.css';
+
 class ExportSTForm extends Component {
   constructor(props) {
     super(props);
@@ -33,7 +35,7 @@ class ExportSTForm extends Component {
 
   render() {
     return (
-      <Form horizontal style={{width: '400px'}}>
+      <Form horizontal id="export-form">
         <FormGroup>
           <Col componentClass={ControlLabel} sm={2}>
             学院
@@ -67,7 +69,7 @@ class ExportSTForm extends Component {
             <FormControl type="text" placeholder="请输入班级名称"/>
           </Col>
         </FormGroup>
-        <span className="text-danger" style={{marginLeft: '70px', fontSize: '12px'}}>
+        <span className="text-danger" id="export-must-input" style={{fontSize: '12px'}}>
            *不需要的选项可以不用填写
         </span>
         <FormGroup>

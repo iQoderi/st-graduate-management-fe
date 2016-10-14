@@ -1,9 +1,17 @@
 #search-student-form{
   width: 400px;
+  #queryStudent-must-input{
+    margin-left: 70px;
+    font-size: 12px;
+  }
 }
 
 @media all and (max-width: 420px) {
   #search-student-form{
     width: 90%;
+    #queryStudent-must-input{
+      margin-left:0;
+      font-size: 12px;
+    }
   }
 }

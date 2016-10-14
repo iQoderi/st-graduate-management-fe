@@ -68,7 +68,7 @@ const QuerySTForm = React.createClass({
             <FormControl type="text" placeholder="请输入学号"/>
           </Col>
         </FormGroup>
-        <span className="text-danger" style={{marginLeft: '70px', fontSize: '12px'}}>
+        <span className="text-danger" id="queryStudent-must-input">
            *不需要的选项可以不用填写
         </span>
         <FormGroup>
