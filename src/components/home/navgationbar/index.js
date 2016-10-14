@@ -65,9 +65,7 @@ class NavgationBar extends Component {
           </ul>
         </nav>
         <nav className="nav-phone">
-          <i className="fa fa-navicon close-icon" onClick={()=> {
-            this.handleDropMenu()
-          }}/>
+          <i className="fa fa-navicon close-icon" onClick={this.handleDropMenu}/>
         </nav>
       </div>
     )

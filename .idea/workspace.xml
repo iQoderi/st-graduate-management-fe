@@ -5,24 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f964d0d3-88ff-4195-a261-3cc0c8b37916" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/home/home.container.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reducers/phoneMenu.reducer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cfg/cfg.js" afterPath="$PROJECT_DIR$/cfg/cfg.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Router/router.js" afterPath="$PROJECT_DIR$/src/Router/router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/consts.js" afterPath="$PROJECT_DIR$/src/actions/consts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/neuqst.actions.js" afterPath="$PROJECT_DIR$/src/actions/neuqst.actions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/homePage.js" afterPath="$PROJECT_DIR$/src/components/home/homePage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/navgationbar/index.css" afterPath="$PROJECT_DIR$/src/components/home/navgationbar/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/navgationbar/index.css.map" afterPath="$PROJECT_DIR$/src/components/home/navgationbar/index.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/navgationbar/index.js" afterPath="$PROJECT_DIR$/src/components/home/navgationbar/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/navgationbar/index.scss" afterPath="$PROJECT_DIR$/src/components/home/navgationbar/index.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/tools/PhoneDropMenu/index.css" afterPath="$PROJECT_DIR$/src/components/tools/PhoneDropMenu/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/tools/PhoneDropMenu/index.css.map" afterPath="$PROJECT_DIR$/src/components/tools/PhoneDropMenu/index.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/tools/PhoneDropMenu/index.js" afterPath="$PROJECT_DIR$/src/components/tools/PhoneDropMenu/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/tools/PhoneDropMenu/index.scss" afterPath="$PROJECT_DIR$/src/components/tools/PhoneDropMenu/index.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/App.js" afterPath="$PROJECT_DIR$/src/containers/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/index.js" afterPath="$PROJECT_DIR$/src/reducers/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/home/home.container.js" afterPath="$PROJECT_DIR$/src/containers/home/home.container.js" />
     </list>
     <list id="84474adb-1ed0-4892-89c7-0deed9c0a873" name="New changelist" comment="" />
     <ignored path="st-graduate-management-fe.iws" />
@@ -46,8 +34,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/tools/PhoneDropMenu/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="64" column="55" selection-start-line="64" selection-start-column="55" selection-end-line="64" selection-end-column="55" />
+            <state relative-caret-position="558">
+              <caret line="76" column="81" selection-start-line="76" selection-start-column="81" selection-end-line="76" selection-end-column="81" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#41#80#0" expanded="true" />
@@ -56,24 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/home/navgationbar/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#39#78#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="homePage.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="homePage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/home/homePage.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
-              <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+              <caret line="19" column="80" selection-start-line="19" selection-start-column="80" selection-end-line="19" selection-end-column="80" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -84,8 +59,8 @@
       <file leaf-file-name="home.container.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/home/home.container.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="198">
+              <caret line="11" column="9" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="9" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#41#77#0" expanded="true" />
@@ -94,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cfg.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="cfg.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cfg/cfg.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -198,13 +173,13 @@
         <option value="$PROJECT_DIR$/src/reducers/phoneMenu.reducer.js" />
         <option value="$PROJECT_DIR$/src/containers/App.js" />
         <option value="$PROJECT_DIR$/src/Router/router.js" />
-        <option value="$PROJECT_DIR$/src/containers/home/home.container.js" />
         <option value="$PROJECT_DIR$/src/reducers/index.js" />
-        <option value="$PROJECT_DIR$/src/components/tools/PhoneDropMenu/index.js" />
         <option value="$PROJECT_DIR$/src/components/home/navgationbar/index.scss" />
-        <option value="$PROJECT_DIR$/cfg/cfg.js" />
         <option value="$PROJECT_DIR$/src/components/home/navgationbar/index.js" />
+        <option value="$PROJECT_DIR$/src/containers/home/home.container.js" />
         <option value="$PROJECT_DIR$/src/components/home/homePage.js" />
+        <option value="$PROJECT_DIR$/src/components/tools/PhoneDropMenu/index.js" />
+        <option value="$PROJECT_DIR$/cfg/cfg.js" />
       </list>
     </option>
   </component>
@@ -308,72 +283,6 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="home">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="st-graduate-management-fe">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="components">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="st-graduate-management-fe">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="components">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="home">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="st-graduate-management-fe">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="components">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="home">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="navgationbar">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -618,7 +527,7 @@
       <workItem from="1476002321614" duration="3108000" />
       <workItem from="1476007751104" duration="295000" />
       <workItem from="1476008231620" duration="689000" />
-      <workItem from="1476433868657" duration="12493000" />
+      <workItem from="1476433868657" duration="13034000" />
     </task>
     <task id="LOCAL-00001" summary="homepage 主题界面完成">
       <created>1465191509086</created>
@@ -921,11 +830,18 @@
       <option name="project" value="LOCAL" />
       <updated>1476446287811</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="dropmenu 显示隐藏完成">
+      <created>1476449101530</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1476449101530</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="437312000" />
+    <option name="totallyTimeSpent" value="437853000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -990,7 +906,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="整合分页" />
     <MESSAGE value="删除admin完成" />
     <MESSAGE value="编辑admin信息完成" />
     <MESSAGE value="修改admin密码成功" />
@@ -1015,7 +930,8 @@
     <MESSAGE value="适配手机" />
     <MESSAGE value="完整信息适配手机完成" />
     <MESSAGE value="添加了手机端dropmenu" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了手机端dropmenu" />
+    <MESSAGE value="dropmenu 显示隐藏完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="dropmenu 显示隐藏完成" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
   </component>
   <component name="XDebuggerManager">
@@ -1031,14 +947,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
@@ -1441,18 +1349,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cfg/cfg.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/home/home.container.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="198">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="9" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#41#77#0" expanded="true" />
@@ -1460,21 +1360,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/tools/PhoneDropMenu/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="64" column="55" selection-start-line="64" selection-start-column="55" selection-end-line="64" selection-end-column="55" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#41#80#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/home/navgationbar/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="664">
+          <caret line="67" column="59" selection-start-line="67" selection-start-column="59" selection-end-line="67" selection-end-column="59" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#39#78#0" expanded="true" />
@@ -1482,13 +1371,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/home/sideBar.container.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="9" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/home/homePage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
-          <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+          <caret line="19" column="80" selection-start-line="19" selection-start-column="80" selection-end-line="19" selection-end-column="80" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/tools/PhoneDropMenu/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="76" column="81" selection-start-line="76" selection-start-column="81" selection-end-line="76" selection-end-column="81" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#41#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cfg/cfg.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>

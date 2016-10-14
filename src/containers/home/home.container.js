@@ -8,7 +8,8 @@ import {showPhoneMenu, hidePhoneMenu} from  '../../actions/neuqst.actions.js';
 
 function mapStateToProps(state) {
   return {
-    phoneMenu: state.phoneMenu
+    phoneMenu: state.phoneMenu,
+    myMsg: state.myMsg
   }
 }
 

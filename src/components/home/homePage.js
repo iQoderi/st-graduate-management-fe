@@ -8,7 +8,7 @@ import './home.css';
 
 class Home extends Component {
   render() {
-    const {action, phoneMenu}=this.props;
+    const {action, phoneMenu, myMsg}=this.props;
     return (
       <div className="home-wrapper">
         <div className="sideBar">
@@ -17,7 +17,7 @@ class Home extends Component {
         <div className="home-content">
           <div className="row border-bottom">
             <NavgaionBar phoneMenu={phoneMenu} action={action}/>
-            <PhoneDropMenu action={action} phoneMenu={phoneMenu}/>
+            <PhoneDropMenu action={action} phoneMenu={phoneMenu} myMsg={myMsg}/>
             <ChanPassModal/>
             <div className="home-inline-content">
               {this.props.children ||
