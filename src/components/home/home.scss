@@ -7,6 +7,7 @@
   position: relative;
 }
 
+
 .home-wrapper .sideBar {
   float: left;
   width: 220px;
@@ -17,6 +18,17 @@
   min-height: 1000px;
 }
 
+
+@media all and (max-width: 780px){
+  .home-wrapper .sideBar{
+    display: none;
+  }
+  .home-wrapper{
+    .home-content {
+      padding: 0;
+    }
+  }
+}
 body.canvas-menu .navbar-static-side, body.fixed-sidebar .navbar-static-side {
   width: 220px;
   z-index: 2001;

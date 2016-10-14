@@ -15,6 +15,24 @@
   z-index: 100001;
 }
 
+@media all and (max-width: 420px) {
+  .loading-2 {
+    background: #222222;
+    opacity: 0.8;
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    .loading-word {
+      color: #fff;
+    }
+    .container1 > div, .container2 > div, .container3 > div {
+      width: 6px;
+      height: 6px;
+      background: #fff;
+    }
+  }
+}
+
 .spinner2 {
   width: 40px;
   height: 40px;
@@ -149,14 +167,14 @@
   }
 }
 
- .loading-word {
-    color: #666666;
-    font-size: 14px;
-    position: absolute;
-    bottom: 10px;
-    display: block;
-    text-align: center;
-    margin: auto;
-    left: 0;
-    right: 0;
+.loading-word {
+  color: #666666;
+  font-size: 14px;
+  position: absolute;
+  bottom: 10px;
+  display: block;
+  text-align: center;
+  margin: auto;
+  left: 0;
+  right: 0;
 }

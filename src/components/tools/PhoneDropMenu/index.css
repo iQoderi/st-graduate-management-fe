@@ -1,0 +1,29 @@
+.phone-drop-menu {
+  position: fixed;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.7;
+  z-index: 10000; }
+  .phone-drop-menu .drop-menu-list {
+    width: 100%;
+    height: 100%; }
+    .phone-drop-menu .drop-menu-list li {
+      width: 100%;
+      height: 45px;
+      line-height: 45px; }
+      .phone-drop-menu .drop-menu-list li a {
+        color: #fff;
+        padding: 11px;
+        display: block;
+        text-align: center;
+        font-size: 16px; }
+    .phone-drop-menu .drop-menu-list .border {
+      height: 1px;
+      width: 80%;
+      background: #fff;
+      margin: 10px auto; }
+
+/*# sourceMappingURL=index.css.map */

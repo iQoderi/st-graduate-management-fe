@@ -1,17 +1,50 @@
 .navbar-header {
   width: 60%;
 }
-.nav{
+
+@media all and (max-width: 780px) {
+  .row{
+    padding: 0;
+    margin: 0;
+  }
+  .border-bottom {
+    .navbar {
+      display: none;
+    }
+
+    .nav-phone {
+      height: 45px;
+      line-height: 45px;
+      background: #fff;
+      position: fixed;
+      z-index: 1000000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      .close-icon{
+        float: right;
+        margin: 10px 10px 10px 0;
+        font-size: 25px;
+        color: #666;
+      }
+    }
+  }
+}
+
+.nav {
   margin-right: 25px;
 }
+
 .btn-primary {
   background-color: #1ab394;
   border-color: #1ab394;
   color: #FFF;
 }
+
 .btn {
   border-radius: 3px;
 }
+
 .minimalize-styl-2 {
   padding: 4px 12px;
   margin: 14px 5px 5px 30px;
@@ -20,27 +53,31 @@
 }
 
 .border-bottom {
-  border-bottom: 1px solid #e7eaec!important;
+  border-bottom: 1px solid #e7eaec !important;
   box-sizing: border-box;
 }
 
-.nav.navbar-right>li>a {
+.nav.navbar-right > li > a {
   color: #999c9e;
 }
 
 .nav.navbar-top-links a {
   font-size: 14px;
 }
+
 .navbar-top-links li a {
   padding: 20px 10px;
   min-height: 50px;
 }
-.nav li>a {
+
+.nav li > a {
   display: block;
 }
+
 .navbar-top-links li {
   display: inline-block;
 }
-.nav>li {
+
+.nav > li {
   position: relative;
 }

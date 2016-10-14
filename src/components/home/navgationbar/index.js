@@ -3,12 +3,12 @@
  */
 import React from 'react';
 require('./index.css');
-import {logout,gotoLogin,gotoReg} from '../../../library/logout';
+import {logout, gotoLogin, gotoReg} from '../../../library/logout';
 const NavgaionBar = React.createClass({
   render: function () {
     return (
       <div className="border-bottom">
-        <nav className="navbar navbar-static-top" role="navigation" style={{marginBottom:0}}>
+        <nav className="navbar navbar-static-top" role="navigation" style={{marginBottom: 0}}>
           <div className="navbar-header"><a className="navbar-minimalize minimalize-styl-2 btn btn-primary ">
             <i className="fa fa-bars"/></a>
           </div>
@@ -22,7 +22,7 @@ const NavgaionBar = React.createClass({
               </a>
             </li>
             <li className="dropdown">
-              <a 
+              <a
                 onClick={gotoReg}
                 className="dropdown-toggle count-info" data-toggle="dropdown" href="javascript:;">
                 <i className="fa fa-registered"/>
@@ -38,6 +38,9 @@ const NavgaionBar = React.createClass({
               </a>
             </li>
           </ul>
+        </nav>
+        <nav className="nav-phone">
+          <i className="fa fa-navicon close-icon"></i>
         </nav>
       </div>
     )

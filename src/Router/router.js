@@ -35,12 +35,6 @@ const RouterApp = React.createClass({
       goto('/auth/forgetPass');
     }
   },
- /* ifLogin: function () {
-    if (!localStorage.getItem('neuqst.token')) {
-      alert('您还未登陆，请先登陆');
-      gotoLogin();
-    }
-  },*/
   render: function () {
     return (
       <Router history={hashHistory}>

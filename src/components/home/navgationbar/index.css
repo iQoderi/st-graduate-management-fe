@@ -1,6 +1,27 @@
 .navbar-header {
   width: 60%; }
 
+@media all and (max-width: 780px) {
+  .row {
+    padding: 0;
+    margin: 0; }
+
+  .border-bottom .navbar {
+    display: none; }
+  .border-bottom .nav-phone {
+    height: 45px;
+    line-height: 45px;
+    background: #fff;
+    position: fixed;
+    z-index: 1000000;
+    top: 0;
+    left: 0;
+    width: 100%; }
+    .border-bottom .nav-phone .close-icon {
+      float: right;
+      margin: 10px 10px 10px 0;
+      font-size: 25px;
+      color: #666; } }
 .nav {
   margin-right: 25px; }
 

@@ -3,7 +3,9 @@ import NavgaionBar from './navgationbar'
 import SideBar from  '../../containers/home/sideBar.container';
 import Footer from './footer/index';
 import ChanPassModal from '../../containers/tool/chanPassModal.container';
-require('./home.css');
+import PhoneDropMenu from '../../components/tools/PhoneDropMenu';
+
+import './home.css';
 const Home = React.createClass({
   render: function () {
     return (
@@ -14,6 +16,7 @@ const Home = React.createClass({
         <div className="home-content">
           <div className="row border-bottom">
             <NavgaionBar/>
+            <PhoneDropMenu/>
             <ChanPassModal/>
             <div className="home-inline-content">
               {this.props.children ||
