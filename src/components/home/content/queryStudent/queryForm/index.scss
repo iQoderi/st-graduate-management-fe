@@ -1,0 +1,9 @@
+#search-student-form{
+  width: 400px;
+}
+
+@media all and (max-width: 420px) {
+  #search-student-form{
+    width: 90%;
+  }
+}

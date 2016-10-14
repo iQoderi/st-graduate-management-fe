@@ -5,6 +5,8 @@ import React from 'react';
 import {Form, Col, FormGroup, FormControl, Button, ControlLabel} from 'react-bootstrap';
 import 'whatwg-fetch';
 import _$ from '../../../../../library/getElement';
+import './index.css';
+
 const QuerySTForm = React.createClass({
   timer: null,
   searchStu: function () {
@@ -31,7 +33,7 @@ const QuerySTForm = React.createClass({
   },
   render: function () {
     return (
-      <Form horizontal style={{width: '400px'}}>
+      <Form horizontal id="search-student-form">
         <FormGroup>
           <Col componentClass={ControlLabel} sm={2}>
             学院

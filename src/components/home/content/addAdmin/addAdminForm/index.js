@@ -12,6 +12,13 @@ import _$ from '../../../../../library/getElement';
 import './index.css';
 
 class AddAdminForm extends Component{
+    constructor(props) {
+      super(props);
+      this.addAdmin=this.addAdmin.bind(this);
+      this.loaded=this.loaded.bind(this);
+      this.loading=this.loading.bind(this);
+      this.isTips=this.isTips.bind(this);
+    }
   addAdmin() {
     const _this = this;
     const time = 1000;
