@@ -16,3 +16,9 @@
   color: #666666;
 }
 
+@media all and (max-width: 420px) {
+  .copyright {
+    display: none;
+  }
+}
+

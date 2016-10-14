@@ -13,7 +13,6 @@ import MD5 from 'md5';
 const RegBox = React.createClass({
   handleReg: function () {
     var _this = this;
-    const {showTips, hideTips}=this.props.action;
     if (!verifyEmail(this.refs.regEmail.value)) {
       _this.isTips('邮箱格式不合法', 2000);
     } else {

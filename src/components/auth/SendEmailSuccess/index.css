@@ -7,6 +7,10 @@
   .brand span {
     font-size: 18px; }
 
+@media all and (max-width: 420px) {
+  .brand {
+    font-size: 20px;
+    padding-left: 2.5%; } }
 .form-container .form-behavior {
   overflow: hidden;
   margin: 0 auto;
@@ -58,6 +62,12 @@
   max-width: 360px;
   margin: 0 auto; }
 
+@media all and (max-width: 420px) {
+  .form-container .form-inner {
+    width: 95%; } }
+@media all and (max-width: 420px) {
+  .form-container .form-inner {
+    width: 95%; } }
 .help-section {
   margin-top: 30px; }
 

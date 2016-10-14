@@ -9,6 +9,13 @@
   }
 }
 
+@media all and (max-width: 420px) {
+  .brand {
+    font-size: 20px;
+    padding-left: 2.5%;
+  }
+}
+
 .form-container .form-behavior {
   overflow: hidden;
   margin: 0 auto;
@@ -65,17 +72,28 @@
     width: 90%;
   }
 
-  .form-container{
-    .form-container .form-behavior{
+  .form-container {
+    .form-container .form-behavior {
       margin-top: 80px;
     }
   }
 }
 
-
 .form-container .form-inner {
   max-width: 360px;
   margin: 0 auto;
+}
+
+@media all and (max-width: 420px) {
+  .form-container .form-inner {
+    width: 95%;
+  }
+}
+
+@media all and (max-width: 420px) {
+  .form-container .form-inner {
+    width: 95%;
+  }
 }
 
 .help-section {
