@@ -58,7 +58,7 @@ const ChanAdminPass = React.createClass({
       })
   },
   isTips: function (tip, time) {
-    clearTimeout(tiis.timer);
+    clearTimeout(this.timer);
     const {showTips, hideTips}=this.props.action;
     showTips(tip);
     this.timer = setTimeout(hideTips, time);

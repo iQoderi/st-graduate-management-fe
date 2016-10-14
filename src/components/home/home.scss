@@ -59,6 +59,19 @@ body.canvas-menu .navbar-static-side, body.fixed-sidebar .navbar-static-side {
   border-left: 5px solid #1ab394;
 }
 
+.welcome-word {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+@media all and (max-width: 780px) {
+  .welcome-word {
+    margin-top: 50px;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
 .home-wrapper .modal, .modal-container .modal-backdrop {
   position: absolute;
 }
@@ -73,8 +86,9 @@ body.canvas-menu .navbar-static-side, body.fixed-sidebar .navbar-static-side {
     margin: 100px auto;
   }
 
-  .modal-dialog{
+  .modal-dialog {
     width: 95%;
     margin: 70px auto;
   }
 }
+

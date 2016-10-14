@@ -64,7 +64,7 @@ class MoreInfoForm extends Component {
   render() {
     let graduate = this.props.graduate || {};
     return (
-      <Form horizontal style={{width: '400px'}}>
+      <Form horizontal id="moreInfo-form">
         <FormGroup controlId="myCompany">
           <Col componentClass={ControlLabel} sm={2}>
             <MustInput/>公司

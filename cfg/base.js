@@ -2,7 +2,6 @@
 let path = require('path');
 let defaultSettings = require('./defaults');
 let md5 = require('md5');
-let env=require('./cfg');
 // Additional npm or bower modules to include in builds
 // Add all foreign plugins you may need into this array
 // @example:
@@ -18,7 +17,7 @@ module.exports = {
   devtool: 'eval',
   output: {
     path: path.join(__dirname, '/../dist/assets'),
-    filename:env==='dev'?'app.js':'app.[hash].js',
+    filename:process.env.REACT_WEBPACK_ENV==='dev'?'app.js':'app.[hash].js',
     // filename: 'app.js',
     publicPath: `.${defaultSettings.publicPath}`
   },

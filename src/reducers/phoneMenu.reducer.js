@@ -3,7 +3,7 @@
  */
 import {SHOW_PHONE_MENU, HIDE_PHONE_MENU} from '../actions/consts';
 
-export  default function phoneMenu(state = true, action) {
+export  default function phoneMenu(state = false, action) {
   switch (action.type) {
     case SHOW_PHONE_MENU:
       return true;

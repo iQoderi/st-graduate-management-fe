@@ -3,16 +3,23 @@
  */
 import React, {Component} from 'react';
 import {Link} from 'react-router';
+import {logout} from '../../../library/logout';
 import './index.css';
 
 class PhoneDropMenu extends Component {
   constructor(props) {
     super(props);
     this.hideDropMenu = this.hideDropMenu.bind(this);
+    this.showChanPass = this.showChanPass.bind(this);
   }
 
   hideDropMenu() {
     this.props.action.hidePhoneMenu();
+  }
+
+  showChanPass() {
+    this.hideDropMenu();
+    this.props.action.showChanPass();
   }
 
   render() {
@@ -59,7 +66,13 @@ class PhoneDropMenu extends Component {
           path: '/home/queryMsg',
           name: '查询信息'
         }
-      ]
+      ];
+      if (myMsg.role === '毕业生') {
+        menuLinks.splice(1, 0, {
+          path: '/moreInfo',
+          name: '更多信息'
+        });
+      }
     }
 
     const menuItems = menuLinks.map((link, index)=> {
@@ -75,8 +88,8 @@ class PhoneDropMenu extends Component {
           {menuItems}
           <div className="border"></div>
           <li onClick={this.hideDropMenu}><Link to="/home/personal">{myMsg.email}</Link></li>
-          <li onClick={this.hideDropMenu}><Link to="/home/personal">修改密码</Link></li>
-          <li onClick={this.hideDropMenu}><Link to="/auth/start">退出登录</Link></li>
+          <li onClick={this.hideDropMenu}><a href="javascript:;" onClick={this.showChanPass}>修改密码</a></li>
+          <li onClick={this.hideDropMenu}><a href="javascript:;" onClick={logout}>退出登录</a></li>
         </ul>
       </div>
     )

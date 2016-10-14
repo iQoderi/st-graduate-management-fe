@@ -11,12 +11,14 @@ import {
   FormControl,
   ControlLabel
 } from 'react-bootstrap';
+import './index.css';
+
 
 class StuForm extends Component {
   render() {
     const {data}=this.props;
     return (
-      <Form horizontal style={{width:'400px'}}>
+      <Form horizontal id="addStu-form">
         <FormGroup controlId="MStuName">
           <Col componentClass={ControlLabel} sm={2}>
             姓名

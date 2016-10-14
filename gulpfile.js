@@ -13,6 +13,7 @@ const inject = require('gulp-inject');
 const open = require('open');
 const secrt = require('./secrt');
 
+
 const config = {
   qiniu: {
     ak: secrt.qiniu.ak,

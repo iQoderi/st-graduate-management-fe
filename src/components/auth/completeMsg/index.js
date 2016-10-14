@@ -43,7 +43,7 @@ const CompleteMsg = React.createClass({
     var data = [
       this.refs.c_name.value, this.refs.c_academy.value,
       this.refs.c_major.value, this.refs.c_class.value,
-      this.refs.c_num.value, this.refs.c_qqNum.value, this.refs.c_phone.value];
+      this.refs.c_num.value,this.refs.c_phone.value];
     var _this = this;
     if (isLegal(data)) {
       var options = {
@@ -85,7 +85,7 @@ const CompleteMsg = React.createClass({
   },
   isTips: function (tip, time) {
     clearTimeout(timer);
-    const {showTips, hideTips}=this.props.action;
+    const {showTips}=this.props.action;
     showTips(tip);
     var timer = setTimeout(this.props.action.hideTips, time);
   },
@@ -158,7 +158,7 @@ const CompleteMsg = React.createClass({
               <div className="from-group">
                 <input
                   ref="c_qqNum"
-                  placeholder="QQ或者微信号" autocomplete="off" type="text"/>
+                  placeholder="QQ或者微信号(选填)" autocomplete="off" type="text"/>
               </div>
             </div>
             <div className="control-group">

@@ -21,9 +21,9 @@ class Home extends Component {
             <ChanPassModal/>
             <div className="home-inline-content">
               {this.props.children ||
-              <span style={{marginLeft: '30px', marginTop: '30px'}}>
+              <div className="welcome-word">
                   欢迎来到东北大学秦皇岛分校大学生就业择业中心
-                </span>
+                </div>
               }
             </div>
             <Footer/>

@@ -10,11 +10,13 @@ import {
   ControlLabel
 } from 'react-bootstrap';
 
+import './index.css';
+
 class AdminForm extends Component {
   render() {
     const {data}=this.props;
     return (
-      <Form horizontal style={{width:'400px'}}>
+      <Form horizontal id="editAdmin-form">
         <FormGroup controlId="MAdminName">
           <Col componentClass={ControlLabel} sm={2}>
             姓名

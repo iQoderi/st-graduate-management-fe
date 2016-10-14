@@ -6,13 +6,30 @@
   h3 {
     font-size: 20px;
   }
-  a{
+  a {
     position: absolute;
     top: 0px;
     right: 30px;
   }
-  .graduate-form-wrapper{
+  .graduate-form-wrapper {
     width: 400px;
     margin: 100px auto;
+  }
+}
+
+@media all and (max-width: 420px) {
+  .more-info-wrapper {
+    width: 90%;
+    margin: 15px auto;
+    a {
+      right: 15px;
+    }
+    .graduate-form-wrapper {
+      width: 95%;
+      margin: 30px auto;
+    }
+    .control-label {
+      float: left;
+    }
   }
 }
