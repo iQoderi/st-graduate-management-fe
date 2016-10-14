@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f964d0d3-88ff-4195-a261-3cc0c8b37916" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/home/content/addAdmin/addAdminForm/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/home/content/addAdmin/addAdminForm/index.css.map" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cfg/cfg.js" afterPath="$PROJECT_DIR$/cfg/cfg.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/homePage.js" afterPath="$PROJECT_DIR$/src/components/home/homePage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/navgationbar/index.js" afterPath="$PROJECT_DIR$/src/components/home/navgationbar/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/tools/PhoneDropMenu/index.js" afterPath="$PROJECT_DIR$/src/components/tools/PhoneDropMenu/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/containers/home/home.container.js" afterPath="$PROJECT_DIR$/src/containers/home/home.container.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/index.html" afterPath="$PROJECT_DIR$/dist/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/content/addAdmin/addAdminForm/index.js" afterPath="$PROJECT_DIR$/src/components/home/content/addAdmin/addAdminForm/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/content/addAdmin/addAdminForm/index.scss" afterPath="$PROJECT_DIR$/src/components/home/content/addAdmin/addAdminForm/index.scss" />
     </list>
     <list id="84474adb-1ed0-4892-89c7-0deed9c0a873" name="New changelist" comment="" />
     <ignored path="st-graduate-management-fe.iws" />
@@ -69,7 +69,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cfg.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cfg.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cfg/cfg.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -80,14 +80,37 @@
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
+        <entry file="file://$PROJECT_DIR$/src/components/home/content/addAdmin/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="36" column="11" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
+            <state relative-caret-position="54">
+              <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#40#78#0" expanded="true" />
+                <element signature="e#39#66#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/home/content/addAdmin/addAdminForm/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="158" column="63" selection-start-line="158" selection-start-column="63" selection-end-line="158" selection-end-column="63" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#39#77#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/home/content/addAdmin/addAdminForm/index.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -109,8 +132,8 @@
       <list>
         <option value="HTML File" />
         <option value="XSLT Stylesheet" />
-        <option value="SCSS File" />
         <option value="JavaScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -129,8 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/containers/home/sideBar.container.js" />
-        <option value="$PROJECT_DIR$/src/components/home/sideBar/index.js" />
         <option value="$PROJECT_DIR$/src/components/home/dropmenu/index.js" />
         <option value="$PROJECT_DIR$/cfg/dist.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
@@ -180,6 +201,8 @@
         <option value="$PROJECT_DIR$/src/components/home/homePage.js" />
         <option value="$PROJECT_DIR$/src/components/tools/PhoneDropMenu/index.js" />
         <option value="$PROJECT_DIR$/cfg/cfg.js" />
+        <option value="$PROJECT_DIR$/src/components/home/content/addAdmin/addAdminForm/index.js" />
+        <option value="$PROJECT_DIR$/src/components/home/content/addAdmin/addAdminForm/index.scss" />
       </list>
     </option>
   </component>
@@ -260,7 +283,7 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="containers">
+            <PATH_ELEMENT USER_OBJECT="components">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -278,7 +301,7 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="containers">
+            <PATH_ELEMENT USER_OBJECT="components">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -296,7 +319,19 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="dist">
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="components">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="home">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="content">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -310,7 +345,57 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="cfg">
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="components">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="home">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="content">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="addAdmin">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="st-graduate-management-fe">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="components">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="home">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="content">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="addAdmin">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="addAdminForm">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -527,7 +612,7 @@
       <workItem from="1476002321614" duration="3108000" />
       <workItem from="1476007751104" duration="295000" />
       <workItem from="1476008231620" duration="689000" />
-      <workItem from="1476433868657" duration="13034000" />
+      <workItem from="1476433868657" duration="13719000" />
     </task>
     <task id="LOCAL-00001" summary="homepage 主题界面完成">
       <created>1465191509086</created>
@@ -837,11 +922,18 @@
       <option name="project" value="LOCAL" />
       <updated>1476449101530</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="home 页面绑定个人信息container">
+      <created>1476449649316</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1476449649316</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="437853000" />
+    <option name="totallyTimeSpent" value="438538000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -906,7 +998,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="删除admin完成" />
     <MESSAGE value="编辑admin信息完成" />
     <MESSAGE value="修改admin密码成功" />
     <MESSAGE value="增加了查询毕业信息和导出学生信息的form" />
@@ -931,7 +1022,8 @@
     <MESSAGE value="完整信息适配手机完成" />
     <MESSAGE value="添加了手机端dropmenu" />
     <MESSAGE value="dropmenu 显示隐藏完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="dropmenu 显示隐藏完成" />
+    <MESSAGE value="home 页面绑定个人信息container" />
+    <option name="LAST_COMMIT_MESSAGE" value="home 页面绑定个人信息container" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
   </component>
   <component name="XDebuggerManager">
@@ -947,48 +1039,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/secrt.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/auth/login/loginBox.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/auth/reSendEmail/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-956">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1204,7 +1254,7 @@
         <state relative-caret-position="-1368">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1276,7 +1326,7 @@
         <state relative-caret-position="54">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1297,7 +1347,7 @@
         <state relative-caret-position="90">
           <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1325,7 +1375,7 @@
         <state relative-caret-position="226">
           <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1335,8 +1385,8 @@
         <state relative-caret-position="648">
           <caret line="36" column="11" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#40#78#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#40#78#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1365,8 +1415,8 @@
         <state relative-caret-position="664">
           <caret line="67" column="59" selection-start-line="67" selection-start-column="59" selection-end-line="67" selection-end-column="59" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#39#78#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#39#78#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1406,6 +1456,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/home/content/addAdmin/addAdminForm/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/home/content/addAdmin/addAdminForm/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="158" column="63" selection-start-line="158" selection-start-column="63" selection-end-line="158" selection-end-column="63" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#39#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/home/content/addAdmin/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/home/content/addAdmin/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#39#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/home/content/addAdmin/addAdminForm/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding />
         </state>
       </provider>

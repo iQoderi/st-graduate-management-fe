@@ -1,0 +1,15 @@
+#addAdminForm{
+  width: 400px;
+  #addAdmin-must-input{
+    margin-left: 75px;
+  }
+}
+
+@media all and (max-width: 420px) {
+  #addAdminForm{
+    width: 90%;
+    #addAdmin-must-input{
+      margin-left: 0;
+    }
+  }
+}

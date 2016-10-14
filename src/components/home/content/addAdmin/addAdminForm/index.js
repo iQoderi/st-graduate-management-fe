@@ -1,7 +1,7 @@
 /**
  * Created by qoder on 16-6-6.
  */
-import React from 'react';
+import React,{Component} from 'react';
 import {Form, Col, FormGroup, FormControl, Button, Checkbox, ControlLabel} from 'react-bootstrap';
 import MustInput from '../../../../tools/mustInput';
 import 'whatwg-fetch';
@@ -9,9 +9,10 @@ import API from '../../../../../api/requsetConfig';
 import {verifyPass, verifyEmail, verifyPhone} from '../../../../../library/verify';
 import MD5 from 'md5';
 import _$ from '../../../../../library/getElement';
-require('./index.css');
-const AddAdminForm = React.createClass({
-  addAdmin: function () {
+import './index.css';
+
+class AddAdminForm extends Component{
+  addAdmin() {
     const _this = this;
     const time = 1000;
     if (!_$('adminName').value) {
@@ -66,24 +67,24 @@ const AddAdminForm = React.createClass({
           _this.isTips(json.data.Msg, 1500);
         }
       })
-  },
-  isTips: function (tip, time) {
+  }
+  isTips(tip, time){
     clearTimeout(timer);
     const {showTips, hideTips}=this.props.action;
     showTips(tip);
     var timer = setTimeout(this.props.action.hideTips, time);
-  },
-  loading: function () {
+  }
+  loading(){
     const {showLoading}=this.props.action;
     showLoading();
-  },
-  loaded: function () {
+  }
+  loaded(){
     const {hideLoading}=this.props.action;
     hideLoading();
-  },
-  render: function () {
+  }
+  render() {
     return (
-      <Form horizontal style={{width: '400px'}}>
+      <Form horizontal id="addAdminForm">
         <FormGroup controlId="adminName">
           <Col componentClass={ControlLabel} sm={2}>
             <MustInput/>姓名
@@ -155,7 +156,7 @@ const AddAdminForm = React.createClass({
             <FormControl type="password" placeholder="请输入密码"/>
           </Col>
         </FormGroup>
-        <span className="text-danger" style={{marginLeft: '70px', fontSize: '12px'}}>
+        <span className="text-danger" id="addAdmin-must-input">
            *号为必填项
         </span>
         <FormGroup>
@@ -170,7 +171,7 @@ const AddAdminForm = React.createClass({
       </Form>
     )
   }
-});
+}
 
 
 export  default AddAdminForm;
