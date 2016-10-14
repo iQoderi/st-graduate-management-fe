@@ -30,3 +30,9 @@
     }
   }
 }
+
+@media all and (min-width: 780px) {
+  .phone-drop-menu{
+    display: none;
+  }
+}

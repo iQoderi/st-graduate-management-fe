@@ -43,3 +43,7 @@ export const CLOSE_EXCELTPL_MODAl = 'CLOSE_EXCELTPL_MODAL';
 
 export const GET_GRADUATE_SUCC = 'GET_GRADUATE_SUCC';
 export const GET_GRADUATE_FAIL = 'GET_GRADUATE_FAIL';
+
+//显示隐藏手机端dropmenu
+export const SHOW_PHONE_MENU = 'SHOW_PHONE_MENU';
+export const HIDE_PHONE_MENU = 'HIDE_PHONE_MENU';

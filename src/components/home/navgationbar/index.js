@@ -1,11 +1,36 @@
 /**
  * Created by qoder on 16-6-4.
  */
-import React from 'react';
-require('./index.css');
+import React, {Component} from 'react';
 import {logout, gotoLogin, gotoReg} from '../../../library/logout';
-const NavgaionBar = React.createClass({
-  render: function () {
+require('./index.css');
+
+class NavgationBar extends Component {
+  constructor(props) {
+    super(props);
+    this.showDropMenu = this.showDropMenu.bind(this);
+    this.hideDropMenu = this.hideDropMenu.bind(this);
+    this.handleDropMenu = this.handleDropMenu.bind(this);
+  }
+
+  showDropMenu() {
+    this.props.action.showPhoneMenu();
+  }
+
+  hideDropMenu() {
+    this.props.action.hidePhoneMenu();
+  }
+
+  handleDropMenu() {
+    const {phoneMenu}=this.props;
+    if (phoneMenu) {
+      this.hideDropMenu();
+    } else {
+      this.showDropMenu();
+    }
+  }
+
+  render() {
     return (
       <div className="border-bottom">
         <nav className="navbar navbar-static-top" role="navigation" style={{marginBottom: 0}}>
@@ -40,12 +65,14 @@ const NavgaionBar = React.createClass({
           </ul>
         </nav>
         <nav className="nav-phone">
-          <i className="fa fa-navicon close-icon"></i>
+          <i className="fa fa-navicon close-icon" onClick={()=> {
+            this.handleDropMenu()
+          }}/>
         </nav>
       </div>
     )
   }
-});
+}
 
 
-export default NavgaionBar;
+export default NavgationBar;

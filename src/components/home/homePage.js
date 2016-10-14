@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {Component} from 'react';
 import NavgaionBar from './navgationbar'
 import SideBar from  '../../containers/home/sideBar.container';
 import Footer from './footer/index';
 import ChanPassModal from '../../containers/tool/chanPassModal.container';
 import PhoneDropMenu from '../../components/tools/PhoneDropMenu';
-
 import './home.css';
-const Home = React.createClass({
-  render: function () {
+
+class Home extends Component {
+  render() {
+    const {action, phoneMenu}=this.props;
     return (
       <div className="home-wrapper">
         <div className="sideBar">
@@ -15,8 +16,8 @@ const Home = React.createClass({
         </div>
         <div className="home-content">
           <div className="row border-bottom">
-            <NavgaionBar/>
-            <PhoneDropMenu/>
+            <NavgaionBar phoneMenu={phoneMenu} action={action}/>
+            <PhoneDropMenu action={action} phoneMenu={phoneMenu}/>
             <ChanPassModal/>
             <div className="home-inline-content">
               {this.props.children ||
@@ -31,7 +32,7 @@ const Home = React.createClass({
       </div>
     )
   }
-});
+}
 
 
 export default Home;

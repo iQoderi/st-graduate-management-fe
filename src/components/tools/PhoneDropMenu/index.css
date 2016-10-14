@@ -26,4 +26,8 @@
       background: #fff;
       margin: 10px auto; }
 
+@media all and (min-width: 780px) {
+  .phone-drop-menu {
+    display: none; } }
+
 /*# sourceMappingURL=index.css.map */

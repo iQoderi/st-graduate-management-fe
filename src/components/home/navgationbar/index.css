@@ -16,12 +16,17 @@
     z-index: 1000000;
     top: 0;
     left: 0;
-    width: 100%; }
+    width: 100%;
+    border-bottom: 1px solid #f2f2f2;
+    box-shadow: 0 0 5px #f2f2f2; }
     .border-bottom .nav-phone .close-icon {
       float: right;
       margin: 10px 10px 10px 0;
       font-size: 25px;
       color: #666; } }
+@media all and (min-width: 780px) {
+  .nav-phone {
+    display: none; } }
 .nav {
   margin-right: 25px; }
 

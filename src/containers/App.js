@@ -12,7 +12,8 @@ function mapStateToProps(state) {
     is_loading: state.is_loading,
     is_tips: state.is_tips,
     confirm: state.confirm,
-    pages: state.pages
+    pages: state.pages,
+    phoneMenu: state.phoneMenu
   }
 }
 

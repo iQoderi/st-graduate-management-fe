@@ -3,4 +3,4 @@
  */
 const  env='dev';
 // const  env='production';
-// module.exports=env;
+module.exports=env;

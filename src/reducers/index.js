@@ -17,6 +17,7 @@ import isSearchStu from './isSearchStu.reducer';
 import graduateList from './graduateList.reducer';
 import isShowExcelTpl from './excelTplModl.reducer';
 import graduate from './graduate.reducer';
+import phoneMenu from './phoneMenu.reducer';
 
 const neuqstReducer = combineReducers({
   is_loading,
@@ -32,7 +33,8 @@ const neuqstReducer = combineReducers({
   isSearchStu,
   graduateList,
   isShowExcelTpl,
-  graduate
+  graduate,
+  phoneMenu
 });
 
 module.exports = neuqstReducer;

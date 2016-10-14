@@ -11,6 +11,7 @@ class PhoneDropMenu extends Component {
   }
 
   render() {
+    const {phoneMenu}=this.props;
     const adminLinks = [
       {
         path: '/home/personal',
@@ -54,14 +55,14 @@ class PhoneDropMenu extends Component {
       }
     ];
 
-    const menuItems=adminLinks.map((link,index)=>{
+    const menuItems = adminLinks.map((link, index)=> {
       return (
         <li key={index}><Link to={link.path}>{link.name}</Link></li>
       )
     });
 
     return (
-      <div className="phone-drop-menu">
+      <div className="phone-drop-menu" style={{display:phoneMenu?'block':'none'}}>
         <ul className="drop-menu-list">
           {menuItems}
           <div className="border"></div>

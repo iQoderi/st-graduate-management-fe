@@ -479,3 +479,20 @@ export function updateGraduate(graduate) {
     })
   }
 }
+
+/**
+ * 手机菜单
+ * @returns {{type}}
+ */
+export function showPhoneMenu() {
+  return {
+    type: ACTIONS.SHOW_PHONE_MENU
+  }
+}
+
+export function hidePhoneMenu() {
+  return {
+    type: ACTIONS.HIDE_PHONE_MENU
+  }
+}
+

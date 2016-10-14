@@ -17,7 +17,7 @@ import ResetPass from  '../containers/auth/resetPassByEm.contaier';
 import CompleteMsg from  '../containers/auth/completeMsg.container';
 import {Router, Route, hashHistory, IndexRoute} from 'react-router';
 
-import Home from '../components/home/homePage';
+import Home from '../containers/home/home.container';
 import PersonalCenter from  '../containers/home/personalCenter.container';
 import ImportExcelBox from  '../containers/home/ImportExcelBox.container';
 import ExportExcelBox from  '../containers/home/exportExcel.container';
