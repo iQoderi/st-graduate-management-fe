@@ -1,0 +1,10 @@
+#editAdmin-form{
+  width: 400px;
+}
+
+
+@media all and (max-width: 420px) {
+  #editAdmin-form{
+    width: 90%;
+  }
+}

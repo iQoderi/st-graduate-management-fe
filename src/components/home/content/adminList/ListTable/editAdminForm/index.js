@@ -14,6 +14,7 @@ import {verifyPass, verifyEmail, verifyPhone} from '../../../../../../library/ve
 import MD5 from 'md5';
 import _$ from '../../../../../../library/getElement';
 require('./index.css');
+
 const EditAdminForm = React.createClass({
   addAdmin: function () {
     const _this = this;
@@ -38,7 +39,7 @@ const EditAdminForm = React.createClass({
       _this.isTips('密码格式不正确', time);
       return false;
     }
-    
+
     const options = {
       name: _$('adminName').value,
       email: _$('adminEmail').value,
@@ -88,7 +89,7 @@ const EditAdminForm = React.createClass({
   render: function () {
     const {name, academy, role, code, phone}=this.props.data;
     return (
-      <Form horizontal style={{width:'400px'}}>
+      <Form horizontal id="editAdmin-form">
         <FormGroup controlId="adminName2">
           <Col componentClass={ControlLabel} sm={2}>
             姓名

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import NavgaionBar from './navgationbar'
 import SideBar from  '../../containers/home/sideBar.container';
+import Personal from '../../containers/home/personalCenter.container';
 import Footer from './footer/index';
 import ChanPassModal from '../../containers/tool/chanPassModal.container';
 import PhoneDropMenu from '../../components/tools/PhoneDropMenu';
@@ -20,11 +21,7 @@ class Home extends Component {
             <PhoneDropMenu action={action} phoneMenu={phoneMenu} myMsg={myMsg}/>
             <ChanPassModal/>
             <div className="home-inline-content">
-              {this.props.children ||
-              <div className="welcome-word">
-                  欢迎来到东北大学秦皇岛分校大学生就业择业中心
-                </div>
-              }
+              {this.props.children ||<Personal/>}
             </div>
             <Footer/>
           </div>

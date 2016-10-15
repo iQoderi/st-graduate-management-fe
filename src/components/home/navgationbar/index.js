@@ -65,6 +65,7 @@ class NavgationBar extends Component {
           </ul>
         </nav>
         <nav className="nav-phone">
+          <span style={{paddingLeft: '10px'}}>NEUQ大学生就业择业中心</span>
           <i className="fa fa-navicon close-icon" onClick={this.handleDropMenu}/>
         </nav>
       </div>

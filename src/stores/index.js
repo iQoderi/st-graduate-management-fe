@@ -6,8 +6,22 @@ import thunkMiddleware from 'redux-thunk';
 import {createStore} from 'redux';
 const neuqstReducer = require('../reducers');
 
+
+const crashReporter = store=>next=>action=> {
+  try {
+    console.log(store.getState());
+    return next(action);
+  } catch (err) {
+    const neuqState = store.getState();
+    const user = neuqState.myMsg;
+    bughd("user", user);
+    bughd('notify',err);
+  }
+};
+
 const createStoreWithMiddleware = applyMiddleware(
-  thunkMiddleware
+  thunkMiddleware,
+  crashReporter
 )(createStore);
 
 var configStore = function (initialState) {
