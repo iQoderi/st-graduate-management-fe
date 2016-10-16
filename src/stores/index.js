@@ -9,7 +9,6 @@ const neuqstReducer = require('../reducers');
 
 const crashReporter = store=>next=>action=> {
   try {
-    console.log(store.getState());
     return next(action);
   } catch (err) {
     const neuqState = store.getState();
