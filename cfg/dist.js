@@ -2,10 +2,11 @@
 
 let path = require('path');
 let webpack = require('webpack');
-
+let md5=require('md5');
+let ExtractTextPlugin=require('extract-text-webpack-plugin');
 let baseConfig = require('./base');
 let defaultSettings = require('./defaults');
-
+const hash = md5(Date.now());
 
 // Add needed plugins here
 let BowerWebpackPlugin = require('bower-webpack-plugin');
@@ -31,6 +32,7 @@ let config = Object.assign({}, baseConfig, {
     new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.[hash].js'),
     new webpack.optimize.LimitChunkCountPlugin({maxChunks: 25}),  // 限制了打包出来的chunk的个数
     new webpack.optimize.MinChunkSizePlugin({minChunkSize: 100}),    //限制了打包chunk的最小大小
+    new ExtractTextPlugin('style.[hash].css')
   ],
   module: defaultSettings.getDefaultModules()
 });
