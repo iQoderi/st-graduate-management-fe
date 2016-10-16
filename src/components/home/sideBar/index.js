@@ -33,45 +33,47 @@ const SideBar = React.createClass({
     const _this = this;
     const token = getToken();
     const {getMyMess}=this.props.action;
-    _this.loading();
-    fetch(API.my, {
-      headers: {
-        Token: token
-      }
-    })
-      .then((res)=> {
-        return res.json();
-      })
-      .then((json)=> {
-        _this.loaded();
-        if (json.code === 10000) {
-          if (json.data.users.isCompleteMsg) {
-            if (json.data.users.role === '学生') {
-              getMyMess(json.data.users.students);
-              _this.setState({
-                role: json.data.users.role,
-                email: json.data.users.email,
-                sideItems: [<PersonalItem/>, <SearchItem/>]
-              });
-            } else {
-              getMyMess(json.data.users.teacher);
-              _this.setState({
-                role: json.data.users.role,
-                email: json.data.users.email,
-                sideItems: [<PersonalItem/>, < AddAdminItem/>, <AdminListItem/>, <AddGraduate/>, < SearchItem/>,
-                  <ImportExcelItem/>,
-                  < ExportExcelItem/>]
-              });
-            }
-          } else {
-            _this.isTips('您还没有完善信息，请先完善信息');
-            goto('/user/CompleteMsg', 1000)
-          }
-        } else {
-          _this.isTips(json.data.Msg, 1500);
-          logoutWithNoTips();
+    if(token){
+      _this.loading();
+      fetch(API.my, {
+        headers: {
+          Token: token
         }
       })
+        .then((res)=> {
+          return res.json();
+        })
+        .then((json)=> {
+          _this.loaded();
+          if (json.code === 10000) {
+            if (json.data.users.isCompleteMsg) {
+              if (json.data.users.role === '学生') {
+                getMyMess(json.data.users.students);
+                _this.setState({
+                  role: json.data.users.role,
+                  email: json.data.users.email,
+                  sideItems: [<PersonalItem/>, <SearchItem/>]
+                });
+              } else {
+                getMyMess(json.data.users.teacher);
+                _this.setState({
+                  role: json.data.users.role,
+                  email: json.data.users.email,
+                  sideItems: [<PersonalItem/>, < AddAdminItem/>, <AdminListItem/>, <AddGraduate/>, < SearchItem/>,
+                    <ImportExcelItem/>,
+                    < ExportExcelItem/>]
+                });
+              }
+            } else {
+              _this.isTips('您还没有完善信息，请先完善信息');
+              goto('/user/CompleteMsg', 1000)
+            }
+          } else {
+            _this.isTips(json.data.Msg, 1500);
+            logoutWithNoTips();
+          }
+        })
+    }
   },
   isTips: function (tip, time) {
     clearTimeout(this.timer);

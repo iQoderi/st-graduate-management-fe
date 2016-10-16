@@ -7,6 +7,7 @@ import {createStore} from 'redux';
 const neuqstReducer = require('../reducers');
 
 
+
 const crashReporter = store=>next=>action=> {
   try {
     return next(action);
@@ -14,7 +15,7 @@ const crashReporter = store=>next=>action=> {
     const neuqState = store.getState();
     const user = neuqState.myMsg;
     bughd("user", user);
-    bughd('notify',err);
+    bughd('notify', err);
   }
 };
 

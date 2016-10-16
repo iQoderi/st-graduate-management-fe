@@ -356,8 +356,8 @@ export function deleteGraduate(id) {
  */
 export function getMyMsg() {
   return (dispatch)=> {
-    dispatch(showLoading());
     const token = getToken();
+    dispatch(showLoading());
     return fetch(API.my, {
       headers: {
         "Token": token
