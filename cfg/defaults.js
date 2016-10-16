@@ -8,6 +8,7 @@
 
 const path = require('path');
 const srcPath = path.join(__dirname, '/../src');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 const dfltPort = 8000;
 /**
  * Get the default modules object for webpack
@@ -25,7 +26,8 @@ function getDefaultModules() {
     loaders: [
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader'
+        // loader: 'style-loader!css-loader'
+        loader: process.env.REACT_WEBPACK_ENV === 'dev' ? 'style-loader!css-loader' : ExtractTextPlugin.extract('style-loader', 'css-loader')
       },
       {
         test: /\.sass/,
@@ -58,7 +60,7 @@ function getDefaultModules() {
 module.exports = {
   srcPath: srcPath,
   // publicPath: '/assets/',
-  publicPath: process.env.REACT_WEBPACK_ENV=== 'dev' ? '/assets/' : 'http://odljp7x9v.bkt.clouddn.com/assets/',
+  publicPath: process.env.REACT_WEBPACK_ENV === 'dev' ? '/assets/' : 'http://odljp7x9v.bkt.clouddn.com/assets/',
   port: dfltPort,
   getDefaultModules: getDefaultModules
 };

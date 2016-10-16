@@ -65,10 +65,13 @@ gulp.task('uploadStatic', ()=> {
 });
 
 gulp.task('inject', ()=> {
-  const sources = gulp.src([distFile.assets + 'vendor.*.js', distFile.assets + 'app.*.js']);
+  const sources = gulp.src([distFile.assets + 'vendor.*.js', distFile.assets + 'app.*.js', distFile.assets + 'style.*.css']);
   return gulp.src(distFile.html)
     .pipe(inject(sources, {
       transform: (filepath)=> {
+        if (filepath.slice(-4) === '.css') {
+          return `<link rel="stylesheet" href='${config.qiniu.url}${config.qiniu.dir}${filepath.split('/')[filepath.split('/').length - 1]}'/>`
+        }
         if (filepath.slice(-3) === '.js') {
           return `<script src='${config.qiniu.url}${config.qiniu.dir}${filepath.split('/')[filepath.split('/').length - 1]}'></script>`
         }
