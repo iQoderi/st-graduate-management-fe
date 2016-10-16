@@ -23,7 +23,6 @@ function checkMess(loading, loaded) {
       });
     return my;
   } else {
-    alert('您还未登录,登录');
     goto('/auth/login');
   }
 }

@@ -12,7 +12,6 @@ const getToken = function () {
     const token = localStorage.getItem('neuqst.token');
     return token;
   } else {
-    alert('您还没有登录,请登录');
     logoutWithNoTips();
   }
 };

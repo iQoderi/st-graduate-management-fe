@@ -26,15 +26,9 @@ import AddAdmin from  '../containers/home/addAdmin.container';
 import AddGraduate from '../containers/home/addGraduate.container';
 import QueryMsg from  '../containers/home/queryStu.container';
 import MoreINfo from '../containers/home/moreInfo.container';
-import goto from '../library/changeHash';
+import getToken from '../library/getToken';
 
 const RouterApp = React.createClass({
-  ifSendEmail: function () {
-    if (window.location.href.split('?id=').length < 2) {
-      alert('请先发送重置密码邮件');
-      goto('/auth/forgetPass');
-    }
-  },
   render: function () {
     return (
       <Router history={hashHistory}>
@@ -50,7 +44,7 @@ const RouterApp = React.createClass({
           </Route>
           <Route path="/registration/success" component={SendEmailSuccess}/>
           <Route path="/user/CompleteMsg" component={CompleteMsg}/>
-          <Route path="/home" component={Home} onEnter={this.ifLogin}>
+          <Route path="/home" component={Home}>
             <Route path="personal" component={PersonalCenter}/>
             <Route path="importMsg" component={ImportExcelBox}/>
             <Route path="exportMsg" component={ExportExcelBox}/>
