@@ -1,9 +1,54 @@
+'use strict';
+
 import React from 'react';
 import './index.css';
 import Logo from '../../../images/website/wLogo.png';
 import stLogo from '../../../images/website/stLogo.jpg';
 
-const WFooter = (props)=> {
+const WFooter = ()=> {
+  let friendLinks = [
+    {
+      title: '研究生分院',
+      link: 'http://graduate.neuq.edu.cn/',
+    },
+    {
+      title: '经济学院',
+      link: 'http://jjxy.neuq.edu.cn/',
+    },
+    {
+      title: '管理学院',
+      link: 'http://glxy.neuq.edu.cn/'
+    },
+    {
+      title: '计算机与通信工程学院',
+      link: 'http://jsjytx.neuq.edu.cn/'
+    },
+    {
+      title: '控制工程学院',
+      link: 'http://kzgc.neuq.edu.cn/'
+    },
+    {
+      title: '语言学院',
+      link: 'http://yyxy.neuq.edu.cn/'
+    },
+    {
+      title: '数学与统计学院',
+      link: 'http://stxy.neuq.edu.cn/'
+    },
+    {
+      title: '资源与材料学院',
+      link: 'http://zycl.neuq.edu.cn/'
+    },
+    {
+      title: '体育部',
+      link: 'http://tyb.neuq.edu.cn/'
+    }
+  ];
+  friendLinks=friendLinks.map((link,index)=>{
+    return(
+      <li className="fl"><a href={link.link} target="_blank">{link.title}</a></li>
+    )
+  });
   return (
     <div className="w-footer-wrapper">
       <div id="w-footer">
@@ -11,20 +56,7 @@ const WFooter = (props)=> {
           <div className="footerl fl">
             <h3>友情链接</h3>
             <ul>
-              <li className="fl"><a href="#">信息公开</a></li>
-              <li className="fl"><a href="#">招标采购</a></li>
-              <li className="fl"><a href="#">服务信息</a></li>
-              <li className="fl"><a href="#">远程访问</a></li>
-              <li className="fl"><a href="#">办公电话</a></li>
-              <li className="fl"><a href="#">信息公开</a></li>
-              <li className="fl"><a href="#">招标采购</a></li>
-              <li className="fl"><a href="#">服务信息</a></li>
-              <li className="fl"><a href="#">远程访问</a></li>
-              <li className="fl"><a href="#">办公电话</a></li>
-              <li className="fl"><a href="#">远程访问</a></li>
-              <li className="fl"><a href="#">办公电话</a></li>
-              <li className="fl"><a href="#"></a></li>
-              <li className="fl"><a href="#"></a></li>
+              {friendLinks}
             </ul>
           </div>
           <div className="footerc fl">

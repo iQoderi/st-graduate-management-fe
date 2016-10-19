@@ -5,10 +5,11 @@
   left: 0;
 }
 
-.comwidth{
+.comwidth {
   width: 1200px;
   margin: 0 auto;
 }
+
 #w-footer {
   color: #ffffff;
   margin-top: 30px;
@@ -23,6 +24,7 @@
 
 .footerl {
   width: 400px;
+  height: 185px;
   padding-left: 25px;
 }
 
@@ -33,7 +35,7 @@
 
 .footerl li {
   min-width: 25%;
-  width: 30px;
+  width: 160px;
   line-height: 30px;
 }
 
@@ -51,7 +53,7 @@
 
 .footerc {
   width: 500px;
-  height: 114px;
+  height: 185px;
 }
 
 .footerc img {
@@ -62,6 +64,7 @@
 }
 
 .footerr {
+  height: 114px;
   border: 0 !important;
 }
 
