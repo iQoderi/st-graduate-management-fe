@@ -29,7 +29,6 @@ import MoreINfo from '../containers/home/moreInfo.container';
 
 //首页
 import Website from '../components/webSite';
-import WContent from '../components/webSite/wContent';
 import WHomepage from '../components/webSite/wContent/homepage';
 import WIntroduce from '../components/webSite/wContent/Introduce';
 import WConnectUs from '../components/webSite/wContent/connectUs';
