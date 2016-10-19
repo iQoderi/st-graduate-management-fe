@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f964d0d3-88ff-4195-a261-3cc0c8b37916" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/website/jobSite/helm.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/website/jobSite/neujob.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/website/jobSite/neuqjob.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/website/jobSite/newjobs.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/webSite/wContent/homepage/recommendSite/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/webSite/wContent/homepage/recommendSite/index.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/webSite/index.scss" afterPath="$PROJECT_DIR$/src/components/webSite/index.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/webSite/wContent/homepage/index.js" afterPath="$PROJECT_DIR$/src/components/webSite/wContent/homepage/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/App.css" afterPath="$PROJECT_DIR$/src/styles/App.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/reset.css" afterPath="$PROJECT_DIR$/src/styles/reset.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/webSite/wContent/homepage/recommendSite/index.scss" afterPath="$PROJECT_DIR$/src/components/webSite/wContent/homepage/recommendSite/index.scss" />
     </list>
     <list id="84474adb-1ed0-4892-89c7-0deed9c0a873" name="New changelist" comment="" />
     <ignored path="st-graduate-management-fe.iws" />
@@ -51,8 +42,8 @@
       <file leaf-file-name="index.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/webSite/wContent/homepage/recommendSite/index.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
+            <state relative-caret-position="171">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -694,14 +685,7 @@
       <workItem from="1476777912324" duration="4670000" />
       <workItem from="1476786611959" duration="597000" />
       <workItem from="1476875693849" duration="5458000" />
-      <workItem from="1476884610232" duration="8363000" />
-    </task>
-    <task id="LOCAL-00009" summary="连接了redux管理数据">
-      <created>1465642591121</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1465642591121</updated>
+      <workItem from="1476884610232" duration="8382000" />
     </task>
     <task id="LOCAL-00010" summary="tips连接redux">
       <created>1465735379237</created>
@@ -1039,11 +1023,18 @@
       <option name="project" value="LOCAL" />
       <updated>1476891959713</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="推荐就业网完成">
+      <created>1476895755933</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1476895755934</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="482324000" />
+    <option name="totallyTimeSpent" value="482343000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1108,7 +1099,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="查看和下载导入excel模板完成" />
     <MESSAGE value="增加了毕业生自定义信息" />
     <MESSAGE value="修改了接口地址" />
     <MESSAGE value="动态显示更多资料" />
@@ -1133,7 +1123,8 @@
     <MESSAGE value="website 首页头部完成" />
     <MESSAGE value="website 路由完成" />
     <MESSAGE value="banner完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="banner完成" />
+    <MESSAGE value="推荐就业网完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="推荐就业网完成" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
   </component>
   <component name="XDebuggerManager">
@@ -1527,8 +1518,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/webSite/wContent/homepage/recommendSite/index.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
+        <state relative-caret-position="171">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
       </provider>
