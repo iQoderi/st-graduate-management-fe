@@ -26,7 +26,9 @@ import AddAdmin from  '../containers/home/addAdmin.container';
 import AddGraduate from '../containers/home/addGraduate.container';
 import QueryMsg from  '../containers/home/queryStu.container';
 import MoreINfo from '../containers/home/moreInfo.container';
-import getToken from '../library/getToken';
+
+//首页
+import Website from '../components/webSite';
 
 const RouterApp = React.createClass({
   render: function () {
@@ -54,6 +56,7 @@ const RouterApp = React.createClass({
             <Route path="addGraduate" component={AddGraduate}/>
           </Route>
           <Route path="moreInfo" component={MoreINfo}/>
+          <Route path="website" components={Website}/>
         </Route>
       </Router>
     )

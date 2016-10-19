@@ -15,7 +15,7 @@
     "release:patch": "npm version patch && npm publish && git push --follow-tags",
     "serve": "node server.js --env=dev",
     "serve:dist": "node server.js --env=dist",
-    "start": "webpack-dev-server --hot",
+    "start": "node server.js --env=dev",
     "test": "karma start",
     "test:watch": "karma start --autoWatch=true --singleRun=false",
     "upload": "gulp upload",

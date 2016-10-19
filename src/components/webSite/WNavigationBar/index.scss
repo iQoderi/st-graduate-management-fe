@@ -1,0 +1,28 @@
+.nav {
+  height: 46px;
+  border-top: 1px #1D7AD9 solid;
+  cursor: pointer;
+  background: #004ea1;
+  text-align: center;
+  font-size: 16px;
+}
+
+.nav > ul > li {
+  width: 150px;
+  color: #ffffff;
+  line-height: 46px;
+  float: left;
+  position: relative;
+  a{
+    color: #FFF;
+  }
+}
+
+.nav > ul > li:hover {
+  background: #073f7b;
+}
+
+.com-width{
+  width: 1200px;
+  margin: 0 auto;
+}

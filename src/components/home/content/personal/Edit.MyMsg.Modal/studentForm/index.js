@@ -91,12 +91,12 @@ class StuForm extends Component {
         </FormGroup>
         <FormGroup controlId="MStuQQNum">
           <Col componentClass={ControlLabel} sm={2}>
-            QQ号
+            QQ或微信
           </Col>
           <Col sm={10}>
             <FormControl
               defaultValue={data.QQNumber}
-              type="text" placeholder="请输入QQ号"/>
+              type="text" placeholder="请输入QQ号或者微信号"/>
           </Col>
         </FormGroup>
         <FormGroup>

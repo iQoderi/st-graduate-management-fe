@@ -257,7 +257,7 @@ export function exportStu(body) {
       }).then((blob)=> {
         var a = document.createElement('a');
         var url = window.URL.createObjectURL(blob);
-        var filename = `东北大学秦皇岛分校大学生毕业生就业择业表.xlsx`;
+        var filename = `东北大学秦皇岛分校大学生毕业生择业就业表.xlsx`;
         a.href = url;
         a.download = filename;
         a.click();

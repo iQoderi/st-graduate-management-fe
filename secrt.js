@@ -4,18 +4,18 @@
  */
 const secrt = {
   qiniu: {
-    ak: 'xxx',
-    sk: 'xxx',
-    bucket: 'xxx',
-    url: 'xxx',
-    dir: 'xxx'
+    ak: 'aqU04gUOGu9yMX6R6KS33rDLSlrrxoa4XKByqAaw',
+    sk: 'g3br-F3D53huzCVD4jkFhkID0HZaX3MJjiSqkF58',
+    bucket: 'neuqst',
+    url: 'http://odljp7x9v.bkt.clouddn.com/',
+    dir: 'assets/'
   },
   remoteServer: {
-    host: 'xxx',
+    host: '123.206.16.40',
     // port: 'xx',
-    user: 'xxx',
-    pass: 'xxx',
-    remoteDir: 'xxx',
+    user: 'ubuntu',
+    pass: 'Qoder5143209',
+    remoteDir: '/var/www/NEUQSXTJGRADUATE',
   }
 };
 

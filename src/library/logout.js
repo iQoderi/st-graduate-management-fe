@@ -13,7 +13,7 @@ function clearLocalStorage() {
 }
 
 export function logout() {
-  var flag = window.confirm('您确认要退出东北大学秦皇岛大学生就业择业平台?');
+  var flag = window.confirm('您确认要退出东北大学秦皇岛大学生择业就业平台?');
   if (flag) {
     goto('/auth/start');
     clearLocalStorage();
@@ -23,7 +23,7 @@ export function logout() {
 
 
 export function gotoReg() {
-  var flag = window.confirm('您确认要退出东北大学秦皇岛大学生就业择业平台?');
+  var flag = window.confirm('您确认要退出东北大学秦皇岛大学生择业就业平台?');
   if (flag) {
     goto('/auth/register');
     clearLocalStorage();
@@ -31,7 +31,7 @@ export function gotoReg() {
 }
 
 export function gotoLogin() {
-  var flag = window.confirm('您确认要退出东北大学秦皇岛大学生就业择业平台?');
+  var flag = window.confirm('您确认要退出东北大学秦皇岛大学生择业就业平台?');
   if (flag) {
     goto('/auth/login');
     clearLocalStorage();

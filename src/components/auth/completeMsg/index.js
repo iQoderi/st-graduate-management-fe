@@ -101,7 +101,7 @@ const CompleteMsg = React.createClass({
     return (
       <div>
         <h1 className="brand">NEUQ.
-          <span>大学生就业择业平台</span>
+          <span>大学生择业就业平台</span>
           <Link to="/auth/login" className="logout">退出</Link>
         </h1>
         <div className="user-info">
