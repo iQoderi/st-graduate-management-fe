@@ -1,0 +1,49 @@
+.recommendSite-wrapper {
+  width: 1200px;
+  margin: 30px auto;
+}
+
+.friendLink_title {
+  border-bottom: 3px solid #004ea1;
+  padding-left: 5px;
+  color: #1c1c1c;
+  font-size: 22px;
+  line-height: 51px;
+  a {
+    background: none;
+    color: #666;
+    line-height: 60px;
+    padding-right: 10px;
+    height: 50px;
+    float: right;
+    font-size: 14px;
+  }
+  a:hover {
+    color: #004ea1;
+  }
+}
+
+.friendLink_img {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  li {
+    float: left;
+    margin-right: 65px;
+    img {
+      border: none;
+      display: block;
+      width: 228px;
+      height: 69px;
+      border: 1px solid #004ea1;
+      border-radius: 2px;
+    }
+  }
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+}
+
