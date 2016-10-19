@@ -1,4 +1,4 @@
-.nav {
+.w-nav {
   height: 46px;
   border-top: 1px #1D7AD9 solid;
   cursor: pointer;
@@ -7,7 +7,7 @@
   font-size: 16px;
 }
 
-.nav > ul > li {
+.w-nav > ul > li {
   width: 150px;
   color: #ffffff;
   line-height: 46px;
@@ -15,11 +15,12 @@
   position: relative;
   a {
     color: #FFF;
+    display: block;
     text-decoration: none;
   }
 }
 
-.nav > ul > li:hover {
+.w-nav > ul > li:hover {
   background: #073f7b;
 }
 

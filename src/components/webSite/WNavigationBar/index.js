@@ -8,13 +8,13 @@ import './index.css';
 class WNavigationBar extends Component {
   render() {
     return (
-      <div id="nav" className="nav maxwidth">
+      <div id="w-nav" className="w-nav">
         <ul className="com-width">
           <li><Link to="/website/homepage">首页</Link></li>
-          <li><Link to="/website/homepage">平台简介</Link></li>
+          <li><Link to="/website/introduce">平台简介</Link></li>
           <li><Link to="/website/homepage">个人中心</Link></li>
           <li><Link to="/website/homepage">就业查询</Link></li>
-          <li><Link to="/website/homepage">联系方式</Link></li>
+          <li><Link to="/website/connectUs">联系方式</Link></li>
         </ul>
       </div>
     )

@@ -59,7 +59,6 @@ function getDefaultModules() {
 
 module.exports = {
   srcPath: srcPath,
-  // publicPath: '/assets/',
   publicPath: process.env.REACT_WEBPACK_ENV === 'dev' ? '/assets/' : 'http://odljp7x9v.bkt.clouddn.com/assets/',
   port: dfltPort,
   getDefaultModules: getDefaultModules

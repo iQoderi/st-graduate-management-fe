@@ -6,7 +6,7 @@ import stLogo from '../../../images/website/stLogo.jpg';
 const WFooter = (props)=> {
   return (
     <div className="w-footer-wrapper">
-      <div className="maxwidth" id="w-footer">
+      <div id="w-footer">
         <div className="comwidth clearfix w-footer">
           <div className="footerl fl">
             <h3>友情链接</h3>
@@ -35,7 +35,7 @@ const WFooter = (props)=> {
           </div>
         </div>
       </div>
-      <div className="topbar maxwidth w-footer-bottom">
+      <div className="topbar w-footer-bottom">
         版权所有 &copy; 2016 东北大学秦皇岛分校数学与统计学院
       </div>
     </div>

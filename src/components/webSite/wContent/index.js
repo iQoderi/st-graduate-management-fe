@@ -4,7 +4,9 @@ import './index.css';
 class WContent extends Component {
   render() {
     return (
-      <h1>conent</h1>
+      <div>
+        {this.props.children}
+      </div>
     )
   }
 }
