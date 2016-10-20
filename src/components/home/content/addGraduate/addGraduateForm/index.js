@@ -188,7 +188,7 @@ class AddGraduateForm extends Component {
         </FormGroup>
         <FormGroup controlId="gMajor">
           <Col componentClass={ControlLabel} sm={2}>
-            <MustInput/>专业
+            <MustInput/>本科专业
           </Col>
           <Col sm={10}>
             <FormControl type="text" placeholder="请输入毕业生专业"/>
@@ -228,23 +228,23 @@ class AddGraduateForm extends Component {
         </FormGroup>
         <FormGroup controlId="gCompany">
           <Col componentClass={ControlLabel} sm={2}>
-            <MustInput/>公司
+            <MustInput/>公司(学校)
           </Col>
           <Col sm={10}>
-            <FormControl type="text" placeholder="请输入毕业生就业公司"/>
+            <FormControl type="text" placeholder="请输入毕业生就业公司或者考研出国学校"/>
           </Col>
         </FormGroup>
         <FormGroup controlId="gJob">
           <Col componentClass={ControlLabel} sm={2}>
-            <MustInput/>岗位
+            <MustInput/>岗位(专业)
           </Col>
           <Col sm={10}>
-            <FormControl type="text" placeholder="请输入毕业生就业岗位"/>
+            <FormControl type="text" placeholder="请输入毕业生就业岗位或者读研出国专业"/>
           </Col>
         </FormGroup>
         <FormGroup controlId="gSkill">
           <Col componentClass={ControlLabel} sm={2}>
-            <MustInput/>职能
+            <MustInput/>职能(方向)
           </Col>
           <Col sm={10}>
             <FormControl type="text" placeholder="请输入毕业生职能"/>
@@ -256,7 +256,8 @@ class AddGraduateForm extends Component {
             建议
           </Col>
           <Col sm={10}>
-            <FormControl componentClass="textarea" placeholder="请输入毕业生的就业建议"/>
+            <FormControl componentClass="textarea"
+                         placeholder="请输入毕业生建议"/>
           </Col>
         </FormGroup>
 
@@ -265,14 +266,15 @@ class AddGraduateForm extends Component {
             招聘
           </Col>
           <Col sm={10}>
-            <FormControl componentClass="textarea" placeholder="请输入毕业生就业公司的招聘信息"/>
+            <FormControl componentClass="textarea"
+                         placeholder="请输入毕业生就业公司的招聘信息或者读研出国学校最新招生信息"/>
           </Col>
         </FormGroup>
         <span className="text-danger" id="addGraduate-must-input">
            *号为必填项
         </span>
         <FormGroup>
-          <Col smOffset={2} sm={10}>
+          <Col sm={10}>
             <Button
               onClick={this.submitInfo}
               type="button" bsStyle="primary" className="normal-btn fr">

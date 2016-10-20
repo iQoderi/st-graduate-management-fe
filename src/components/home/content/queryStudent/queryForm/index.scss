@@ -1,8 +1,16 @@
 #search-student-form{
-  width: 400px;
+  width: 500px;
   #queryStudent-must-input{
-    margin-left: 70px;
+    margin-left: 90px;
     font-size: 12px;
+  }
+
+  .form-control{
+    width: 350px;
+  }
+
+  button{
+    margin-right: 60px;
   }
 }
 

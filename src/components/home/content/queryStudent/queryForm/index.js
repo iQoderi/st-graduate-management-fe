@@ -14,7 +14,8 @@ const QuerySTForm = React.createClass({
       academy: _$('sAcademy').value,
       major: _$('sMajor').value,
       stuId: _$('sStuId').value,
-      role: _$('sRole').value
+      role: _$('sRole').value,
+      class:_$('sClass').value
     };
     this.props.action.searchStu(1, 15, body);
   },
@@ -72,6 +73,14 @@ const QuerySTForm = React.createClass({
           </Col>
           <Col sm={10}>
             <FormControl type="text" placeholder="请输入专业名称"/>
+          </Col>
+        </FormGroup>
+         <FormGroup controlId="sClass">
+          <Col componentClass={ControlLabel} sm={2}>
+            班级
+          </Col>
+          <Col sm={10}>
+            <FormControl type="text" placeholder="请输入班级名称"/>
           </Col>
         </FormGroup>
         <FormGroup controlId="sStuId">

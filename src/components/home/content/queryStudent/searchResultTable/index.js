@@ -61,13 +61,13 @@ class SearchResultTable extends Component {
             <th>专业</th>
             <th>班级</th>
             <th>学号</th>
-            <th>毕业走向</th>
+            <th>毕业方向</th>
             <th>QQ或微信</th>
-            <th>就业公司</th>
-            <th>就业岗位</th>
-            <th>职能</th>
-            <th>就业建议</th>
-            <th>公司招聘</th>
+            <th>就业公司(学校)</th>
+            <th>就业岗位(专业)</th>
+            <th>职能(方向)</th>
+            <th>建议</th>
+            <th>公司(学校)招聘(生)</th>
             <th>操作</th>
           </tr>
           </thead>
