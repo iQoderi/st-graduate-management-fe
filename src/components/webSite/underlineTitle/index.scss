@@ -1,0 +1,11 @@
+.underlineTitle {
+  width: 100%;
+  margin-bottom: 15px;
+  border-bottom: #0A509F solid 2px;
+  .mainTitle {
+    display: inline-block;
+    color: #0A509F;
+    font-size: 22px;
+    line-height: 40px;
+  }
+}

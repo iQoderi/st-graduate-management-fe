@@ -5,6 +5,7 @@ import React, {Component} from 'react';
 import WTopBar from './wTopBar';
 import WLogo from './wLogo';
 import WNavigationBar from './WNavigationBar';
+import WHomepage from './wContent/homepage';
 import WFooter from './wFooter';
 
 import './index.css';
@@ -18,7 +19,7 @@ class WebSite extends Component {
           <WLogo/>
           <WNavigationBar/>
         </div>
-        {this.props.children}
+        {this.props.children||<WHomepage/>}
         <WFooter/>
       </div>
     )

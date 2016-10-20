@@ -38,7 +38,7 @@ const RouterApp = React.createClass({
     return (
       <Router history={hashHistory}>
         <Route path="/" component={App}>
-          <IndexRoute component={Home} onEnter={this.ifLogin}/>
+          <IndexRoute component={Website}/>
           <Route path="/auth" component={AuthBox}>
             <Route path="start" component={AuthStart}/>
             <Route path="login" component={AuthLogin}/>
