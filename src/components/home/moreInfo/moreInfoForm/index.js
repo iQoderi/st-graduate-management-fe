@@ -71,7 +71,9 @@ class MoreInfoForm extends Component {
             <MustInput/>毕业方向
           </Col>
           <Col sm={10}>
-            <select className="form-control" id="myRole">
+            <select
+              defaultValue={graduate.role}
+              className="form-control" id="myRole">
               <option>工作</option>
               <option>出国</option>
               <option>读研</option>
