@@ -80,7 +80,7 @@ const RegBox = React.createClass({
             </div>
             <div className="form-group">
               <input className="form-control"
-                     autocomplete="off"
+                     autoComplete="off"
                      ref="regPass"
                      placeholder="密码(6-16位数字字母下划线)"
                      type="password"/>

@@ -1,19 +1,23 @@
 /**
  * Created by qoder on 16-5-15.
  */
-import React from  'react';
+import React, {Component} from  'react';
+import WHeader from '../../containers/website/wheader.container';
+import WFooter from '../webSite/wFooter';
 require('./auth.css');
-const AuthPage = React.createClass({
-  render: function () {
+
+class AuthPage extends Component {
+  render() {
     return (
       <div className="wrapper">
+        <WHeader/>
         <div className="form-container">
           {this.props.children}
         </div>
-        <div className="copyright">&copy; 2016 东北大学秦皇岛分校数学与统计学院</div>
+        <WFooter/>
       </div>
     )
   }
-});
+}
 
 export default AuthPage;

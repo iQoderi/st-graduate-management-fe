@@ -5,6 +5,11 @@
   left: 0;
 }
 
+@media all and (max-width: 450px) {
+  .w-footer-wrapper{
+    display: none;
+  }
+}
 .comwidth {
   width: 1200px;
   margin: 0 auto;

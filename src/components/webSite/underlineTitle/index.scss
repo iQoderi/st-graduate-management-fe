@@ -9,3 +9,9 @@
     line-height: 40px;
   }
 }
+
+@media all and (max-width: 450px) {
+  .underlineTitle{
+    padding-left: 20px;
+  }
+}

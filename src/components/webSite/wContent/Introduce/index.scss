@@ -4,3 +4,10 @@
   padding-top: 30px;
   margin: 0 auto;
 }
+
+@media all and (max-width: 450px){
+  .w-intro-wrapper{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

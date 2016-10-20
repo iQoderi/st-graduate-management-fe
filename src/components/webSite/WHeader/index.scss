@@ -5,10 +5,20 @@
 }
 
 @media all and (min-width: 450px){
-  .website-wrapper {
-    min-width: 900px;
+  .wp-header{
+    display: none;
   }
+}
 
+
+@media all and (max-width: 450px) {
+  .w-header{
+    display: none;
+  }
+  .wp-header{
+    display: block;
+    margin-bottom: 40px;
+  }
 }
 
 

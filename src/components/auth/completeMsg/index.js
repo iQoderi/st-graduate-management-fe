@@ -116,7 +116,7 @@ const CompleteMsg = React.createClass({
               <div className="from-group">
                 <input placeholder="姓名(仅供教师查看)"
                        ref="c_name"
-                       autocomplete="off" type="text"/>
+                       autoComplete="off" type="text"/>
               </div>
             </div>
             <div className="control-group">
@@ -137,35 +137,35 @@ const CompleteMsg = React.createClass({
               <div className="from-group">
                 <input
                   ref="c_major"
-                  placeholder="专业" autocomplete="off" type="text"/>
+                  placeholder="专业" autoComplete="off" type="text"/>
               </div>
             </div>
             <div className="control-group">
               <div className="from-group">
                 <input
                   ref="c_class"
-                  placeholder="班级" autocomplete="off" type="text"/>
+                  placeholder="班级" autoComplete="off" type="text"/>
               </div>
             </div>
             <div className="control-group">
               <div className="from-group">
                 <input
                   ref="c_num"
-                  placeholder="学号" autocomplete="off" type="text"/>
+                  placeholder="学号" autoComplete="off" type="text"/>
               </div>
             </div>
             <div className="control-group">
               <div className="from-group">
                 <input
                   ref="c_qqNum"
-                  placeholder="QQ或者微信号(选填)" autocomplete="off" type="text"/>
+                  placeholder="QQ或者微信号(选填)" autoComplete="off" type="text"/>
               </div>
             </div>
             <div className="control-group">
               <div className="from-group">
                 <input
                   ref="c_phone"
-                  placeholder="手机号(仅供教师查看)" autocomplete="off" type="text"/>
+                  placeholder="手机号(仅供教师查看)" autoComplete="off" type="text"/>
               </div>
             </div>
             <div className="control-group radio-2">

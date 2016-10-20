@@ -4,13 +4,12 @@
 import  React from 'react';
 require('./start.css');
 import AuthTit from '../authTitle';
-import ReadMore from '../ReadMore';
 import {Link} from 'react-router';
 const AuthStart = React.createClass({
   render: function () {
     return (
       <div>
-        <AuthTit title="注册登陆"/>
+        <AuthTit title="注册登录"/>
         <div className="form-inner">
           <form className="form-float-label" accept-charset="UTF-8">
             <div className="form-group action">

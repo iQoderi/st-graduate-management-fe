@@ -47,3 +47,7 @@ export const GET_GRADUATE_FAIL = 'GET_GRADUATE_FAIL';
 //显示隐藏手机端dropmenu
 export const SHOW_PHONE_MENU = 'SHOW_PHONE_MENU';
 export const HIDE_PHONE_MENU = 'HIDE_PHONE_MENU';
+
+//显示隐藏官网手机端dropmenu
+export const SHOW_WPHONE_MENU = 'SHOW_WPHONE_MENU';
+export const HIDE_WPHONE_MENU = 'HIDE_WPHONE_MENU';

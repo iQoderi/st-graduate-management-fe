@@ -496,3 +496,20 @@ export function hidePhoneMenu() {
   }
 }
 
+/**
+ * 手机官网菜单
+ * @returns {{type}}
+ */
+export function showWPhoneMenu() {
+  return {
+    type: ACTIONS.SHOW_WPHONE_MENU
+  }
+}
+
+export function hideWPhoneMenu() {
+  return {
+    type: ACTIONS.HIDE_WPHONE_MENU
+  }
+}
+
+

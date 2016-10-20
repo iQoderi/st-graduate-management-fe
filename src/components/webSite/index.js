@@ -2,10 +2,8 @@
  * Created by qoder on 16-10-19.
  */
 import React, {Component} from 'react';
-import WTopBar from './wTopBar';
-import WLogo from './wLogo';
-import WNavigationBar from './WNavigationBar';
 import WHomepage from './wContent/homepage';
+import WHeader from '../../containers/website/wheader.container';
 import WFooter from './wFooter';
 
 import './index.css';
@@ -14,11 +12,7 @@ class WebSite extends Component {
   render() {
     return (
       <div className="website-wrapper">
-        <div className="w-header-wrapper">
-          <WTopBar/>
-          <WLogo/>
-          <WNavigationBar/>
-        </div>
+        <WHeader/>
         {this.props.children||<WHomepage/>}
         <WFooter/>
       </div>

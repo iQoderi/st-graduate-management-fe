@@ -82,7 +82,7 @@ const LoginBox = React.createClass({
   render: function () {
     return (
       <div>
-        <AuthTit title="登陆"/>
+        <AuthTit title="登录"/>
         <div className="form-inner">
           <form className="form-float-label" accept-charset="UTF-8">
             <div className="form-group">
@@ -95,7 +95,7 @@ const LoginBox = React.createClass({
             <div className="form-group">
               <input className="form-control"
                      ref="loginPass"
-                     autocomplete="off"
+                     autoComplete="off"
                      placeholder="密码(6-16位数字字母下划线)"
                      type="password"/>
             </div>
