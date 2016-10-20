@@ -18,13 +18,15 @@ class ExportSTForm extends Component {
     if (_$('eAcademy').value) {
       body.academy = _$('eAcademy').value;
     }
+    if (_$('eRole').value) {
+      body.role = _$('eRole').value;
+    }
     if (_$('eMajor').value) {
       body.major = _$('eMajor').value;
     }
     if (_$('eClass').value) {
       body.class = _$('eClass').value;
     }
-
     return body;
   }
 
@@ -50,6 +52,19 @@ class ExportSTForm extends Component {
               <option>语言学院</option>
               <option>数学与统计学院</option>
               <option>资源与材料学院</option>
+            </select>
+          </Col>
+        </FormGroup>
+        <FormGroup>
+          <Col componentClass={ControlLabel} sm={2}>
+            毕业方向
+          </Col>
+          <Col sm={10}>
+            <select className="form-control" id="eRole">
+              <option>全部</option>
+              <option>工作</option>
+              <option>出国</option>
+              <option>读研</option>
             </select>
           </Col>
         </FormGroup>

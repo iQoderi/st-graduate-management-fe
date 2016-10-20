@@ -20,9 +20,10 @@ class MoreInfoForm extends Component {
   verifyInformation() {
     const {ayncCloseTips}=this.props.action;
     const resource = {
+      role: _$('myRole').value,
       company: _$('myCompany').value,
       job: _$('myJob').value,
-      skill: _$('mySkill').value
+      skill: _$('mySkill').value,
     };
     if (!resource.company) {
       ayncCloseTips('请填写毕业生就职公司');
@@ -65,34 +66,46 @@ class MoreInfoForm extends Component {
     let graduate = this.props.graduate || {};
     return (
       <Form horizontal id="moreInfo-form">
+        <FormGroup>
+          <Col componentClass={ControlLabel} sm={2}>
+            <MustInput/>毕业方向
+          </Col>
+          <Col sm={10}>
+            <select className="form-control" id="myRole">
+              <option>工作</option>
+              <option>出国</option>
+              <option>读研</option>
+            </select>
+          </Col>
+        </FormGroup>
         <FormGroup controlId="myCompany">
           <Col componentClass={ControlLabel} sm={2}>
-            <MustInput/>公司
+            <MustInput/>公司(学校)
           </Col>
           <Col sm={10}>
             <FormControl
               defaultValue={graduate.company}
-              type="text" placeholder="请输入毕业生就业公司"/>
+              type="text" placeholder="请输入毕业生就业公司或读研,出国学校"/>
           </Col>
         </FormGroup>
         <FormGroup controlId="myJob">
           <Col componentClass={ControlLabel} sm={2}>
-            <MustInput/>岗位
+            <MustInput/>岗位(专业)
           </Col>
           <Col sm={10}>
             <FormControl
               defaultValue={graduate.job}
-              type="text" placeholder="请输入毕业生就业岗位"/>
+              type="text" placeholder="请输入毕业生就业岗位或者就读专业"/>
           </Col>
         </FormGroup>
         <FormGroup controlId="mySkill">
           <Col componentClass={ControlLabel} sm={2}>
-            <MustInput/>职能
+            <MustInput/>职能(方向)
           </Col>
           <Col sm={10}>
             <FormControl
               defaultValue={graduate.skill}
-              type="text" placeholder="请输入毕业生职能"/>
+              type="text" placeholder="请输入毕业生职能或者就读方向"/>
           </Col>
         </FormGroup>
 
@@ -114,14 +127,16 @@ class MoreInfoForm extends Component {
           <Col sm={10}>
             <FormControl
               defaultValue={graduate.recruit}
-              componentClass="textarea" placeholder="请输入毕业生就业公司的招聘信息"/>
+              componentClass="textarea" placeholder="请输入毕业生就业公司的招聘信息或者读研出国学校的最新招生信息"/>
           </Col>
         </FormGroup>
-        <span className="text-danger" style={{fontSize: '12px',marginLeft:'-200px'}}>
+        <span
+          id="moreInfo-tips"
+          className="text-danger" style={{fontSize: '12px'}}>
            *号为必填项
         </span>
         <FormGroup>
-          <Col smOffset={2} sm={10}>
+          <Col smOffset={0} sm={10}>
             <Button
               onClick={this.submitInfo}
               type="button" bsStyle="primary" className="normal-btn fr">

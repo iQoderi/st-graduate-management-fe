@@ -43,6 +43,7 @@ class AddGraduateForm extends Component {
     const resource = {
       name: _$('gName').value,
       academy: _$('gAcademy').value,
+      role: _$('gRole').value,
       major: _$('gMajor').value,
       class: _$('gClass').value,
       stuId: _$('gStuId').value,
@@ -51,6 +52,7 @@ class AddGraduateForm extends Component {
       skill: _$('gSkill').value,
       phone: _$('gPhone').value
     };
+    console.log(resource);
     if (!resource.name) {
       this.isTips('请填写毕业生姓名');
       return false;
@@ -154,6 +156,18 @@ class AddGraduateForm extends Component {
           <Col sm={10}>
             <FormControl
               type="text" placeholder="请输入毕业生姓名"/>
+          </Col>
+        </FormGroup>
+        <FormGroup>
+          <Col componentClass={ControlLabel} sm={2}>
+            <MustInput/>毕业方向
+          </Col>
+          <Col sm={10}>
+            <select className="form-control" id="gRole">
+              <option>工作</option>
+              <option>出国</option>
+              <option>读研</option>
+            </select>
           </Col>
         </FormGroup>
         <FormGroup>

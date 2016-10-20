@@ -12,8 +12,8 @@ class WNavigationBar extends Component {
         <ul className="com-width">
           <li><Link to="/website/homepage">首页</Link></li>
           <li><Link to="/website/introduce">平台简介</Link></li>
-          <li><Link to="/website/homepage">个人中心</Link></li>
-          <li><Link to="/website/homepage">就业查询</Link></li>
+          <li><Link to="/home/personal">个人中心</Link></li>
+          <li><Link to="/home/queryMsg">就业查询</Link></li>
           <li><Link to="/website/connectUs">联系方式</Link></li>
         </ul>
       </div>

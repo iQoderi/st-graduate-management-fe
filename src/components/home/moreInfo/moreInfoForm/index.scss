@@ -1,9 +1,24 @@
-#moreInfo-form{
-  width: 400px;
+#moreInfo-form {
+  width: 600px;
+}
+
+#moreInfo-tips {
+  margin-left: -320px;
+}
+
+@media all and (min-width: 780px) {
+  #moreInfo-form {
+    .form-control {
+      width: 390px;
+    }
+  }
 }
 
 @media all and (max-width: 420px) {
-  #moreInfo-form{
+  #moreInfo-form {
     width: 95%;
+  }
+  #moreInfo-tips {
+    margin-left: -230px;
   }
 }

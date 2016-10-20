@@ -15,7 +15,7 @@ const UseIntro = ()=> {
         学生通过注册邮箱和密码登录。
       </p>
       <strong>2.学生服务系统</strong>
-      <strong>（1）在校生</strong>
+      <p><strong>（1）在校生</strong></p>
       <p>
         主要包括以下内容：
       </p>

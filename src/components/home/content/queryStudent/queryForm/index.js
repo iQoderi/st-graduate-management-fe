@@ -13,7 +13,8 @@ const QuerySTForm = React.createClass({
     const body = {
       academy: _$('sAcademy').value,
       major: _$('sMajor').value,
-      stuId: _$('sStuId').value
+      stuId: _$('sStuId').value,
+      role: _$('sRole').value
     };
     this.props.action.searchStu(1, 15, body);
   },
@@ -49,6 +50,19 @@ const QuerySTForm = React.createClass({
               <option>语言学院</option>
               <option>数学与统计学院</option>
               <option>资源与材料学院</option>
+            </select>
+          </Col>
+        </FormGroup>
+        <FormGroup>
+          <Col componentClass={ControlLabel} sm={2}>
+            毕业方向
+          </Col>
+          <Col sm={10}>
+            <select className="form-control" id="sRole">
+              <option>全部</option>
+              <option>工作</option>
+              <option>出国</option>
+              <option>读研</option>
             </select>
           </Col>
         </FormGroup>

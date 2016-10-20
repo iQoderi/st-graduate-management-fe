@@ -31,6 +31,7 @@ class SearchResultTable extends Component {
           <td>{graduate.major}</td>
           <td>{graduate.class}</td>
           <td>{graduate.stuId}</td>
+          <td>{graduate.role}</td>
           <td>{graduate.qq}</td>
           <td>{graduate.company}</td>
           <td>{graduate.job}</td>
@@ -60,6 +61,7 @@ class SearchResultTable extends Component {
             <th>专业</th>
             <th>班级</th>
             <th>学号</th>
+            <th>毕业走向</th>
             <th>QQ或微信</th>
             <th>就业公司</th>
             <th>就业岗位</th>
