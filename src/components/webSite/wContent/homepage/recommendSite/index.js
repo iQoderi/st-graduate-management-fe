@@ -35,7 +35,7 @@ class RecommendSite extends Component {
 
     jobSites = jobSites.map((site, index)=> {
       return (
-        <li>
+        <li className="recommendSite-li" key={index}>
           <a href={site.link} title={site.title} target="_blank">
             <img src={site.imgSrc} border="0" width="278" height="69"/>
           </a>
