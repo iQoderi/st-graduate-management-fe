@@ -142,7 +142,7 @@ const ChanPassModal = React.createClass({
           <Modal.Footer>
             <Button
               bsStyle="primary"
-              style={{width:"80px",borderRadius:'5px'}}
+              className="edit-button-lg"
               onClick={this.changePass}>确认</Button>
           </Modal.Footer>
         </Modal>

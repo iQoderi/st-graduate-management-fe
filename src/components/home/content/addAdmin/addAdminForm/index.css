@@ -7,6 +7,10 @@
   #addAdminForm {
     width: 90%; }
     #addAdminForm #addAdmin-must-input {
-      margin-left: 0; } }
+      margin-left: 0; }
+    #addAdminForm button {
+      width: 100%;
+      height: 45px;
+      margin-top: 10px; } }
 
 /*# sourceMappingURL=index.css.map */

@@ -17,6 +17,11 @@
 @media all and (max-width: 420px) {
   #moreInfo-form {
     width: 95%;
+    button {
+      width: 100%;
+      height: 45px;
+      margin-top: 10px;
+    }
   }
   #moreInfo-tips {
     margin-left: -230px;

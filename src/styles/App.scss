@@ -1,0 +1,13 @@
+#app {
+  height: 100%;
+}
+
+.app-wrapper {
+  height: 100%;
+}
+
+@media all and (max-width: 420px) {
+  .form-control{
+    height: 40px;
+  }
+}

@@ -10,6 +10,9 @@ import MD5 from 'md5';
 import {logoutWithNoTips} from '../../../library/logout';
 import getToken from '../../../library/getToken';
 import _$ from '../../../library/getElement';
+import './index.css';
+
+
 const ChanAdminPass = React.createClass({
   timer:null,
   changePass: function () {
@@ -112,7 +115,7 @@ const ChanAdminPass = React.createClass({
           <Modal.Footer>
             <Button
               bsStyle="primary"
-              style={{width:"80px",borderRadius:'5px'}}
+              className="edit-button-lg"
               onClick={this.changePass}>确认</Button>
           </Modal.Footer>
         </Modal>

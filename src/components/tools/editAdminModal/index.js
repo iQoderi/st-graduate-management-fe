@@ -118,7 +118,10 @@ const EditAdmin = React.createClass({
             <EditAdminForm data={this.props.data.data}/>
           </Modal.Body>
           <Modal.Footer>
-            <Button bsStyle='primary' style={{width:'80px'}} onClick={this.handEditAdmin}>确认编辑</Button>
+            <Button
+              className="edit-button"
+              bsStyle='primary'
+              onClick={this.handEditAdmin}>确认编辑</Button>
           </Modal.Footer>
         </Modal>
       </div>

@@ -5,7 +5,6 @@ const banner1 = require('../../../../../images/website/banner/banner1.jpg');
 const banner2 = require('../../../../../images/website/banner/banner2.jpg');
 const banner3 = require('../../../../../images/website/banner/banner3.jpg');
 const banner4 = require('../../../../../images/website/banner/banner4.jpg');
-const banner5 = require('../../../../../images/website/banner/banner5.jpg');
 
 class WBanner extends Component {
   componentDidMount() {
@@ -36,10 +35,6 @@ class WBanner extends Component {
             <div className="swiper-slide">
               <img src={banner4}/>
             </div>
-            <div className="swiper-slide">
-              <img src={banner5}/>
-            </div>
-
           </div>
           <div className="swiper-pagination"></div>
           <div className="swiper-button-prev"></div>

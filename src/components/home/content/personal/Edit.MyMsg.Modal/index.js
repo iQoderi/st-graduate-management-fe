@@ -10,9 +10,10 @@ import AdminForm from './adminForm';
 import StuForm from './studentForm';
 import API from '../../../../../api/requsetConfig';
 import 'whatwg-fetch';
-import {verifyPass, verifyEmail, verifyPhone} from '../../../../../library/verify';
+import {verifyPhone} from '../../../../../library/verify';
 import _$ from '../../../../../library/getElement';
 import getToken from '../../../../../library/getToken';
+import './index.css';
 class EditMyMsg extends Component {
   // 构造
   constructor(props) {
@@ -125,7 +126,7 @@ class EditMyMsg extends Component {
       class: _$('MStuClass').value,
       QQNumber: _$('MStuQQNum').value
     };
-    
+
     if (!options.name) {
       _this.isTips('请填写用户名', time);
       return false;
@@ -167,9 +168,9 @@ class EditMyMsg extends Component {
         </Modal.Body>
         <Modal.Footer>
           <Button
+            className="edit-button"
             onClick={this.confirmEdit.bind(this)}
-            type="button" bsStyle="primary"
-            style={{width:"80px",borderRadius:'5px'}}>
+            type="button" bsStyle="primary">
             确认修改
           </Button>
         </Modal.Footer>

@@ -17,6 +17,15 @@
 @media all and (max-width: 420px) {
   #search-student-form{
     width: 90%;
+    .form-control {
+      width: 100%
+    }
+    button {
+      width: 100%;
+      height: 45px;
+      margin-top: 10px;
+      float: left;
+    }
     #queryStudent-must-input{
       margin-left:0;
       font-size: 12px;
