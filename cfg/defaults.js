@@ -9,7 +9,7 @@
 const path = require('path');
 const srcPath = path.join(__dirname, '/../src');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-const dfltPort = 8000;
+const dfltPort = 8001;
 /**
  * Get the default modules object for webpack
  * @return {Object}
