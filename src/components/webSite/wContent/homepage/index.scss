@@ -36,3 +36,14 @@
     }
   }
 }
+
+@media all and (max-width: 450px) {
+  .w-homepage {
+    .slider{
+      height: 400px;
+    }
+    .swiper-container {
+      height: 400px;
+    }
+  }
+}

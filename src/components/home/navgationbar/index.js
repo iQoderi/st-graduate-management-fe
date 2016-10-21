@@ -2,6 +2,7 @@
  * Created by qoder on 16-6-4.
  */
 import React, {Component} from 'react';
+import {Link} from 'react-router';
 import {logout, gotoLogin, gotoReg} from '../../../library/logout';
 require('./index.css');
 
@@ -34,8 +35,15 @@ class NavgationBar extends Component {
     return (
       <div className="border-bottom">
         <nav className="navbar navbar-static-top" role="navigation" style={{marginBottom: 0}}>
-          <div className="navbar-header"><a className="navbar-minimalize minimalize-styl-2 btn btn-primary ">
-            <i className="fa fa-bars"/></a>
+          <div className="navbar-header">
+            <a
+              href="javascript:;"
+              className="navbar-minimalize minimalize-styl-2 btn btn-primary ">
+              <i className="fa fa-bars"/>
+            </a>
+            <Link to="/" className="homepage-link">
+              NEUQ大学生就业择业数据平台
+            </Link>
           </div>
           <ul className="nav navbar-top-links navbar-right">
             <li className="dropdown">
@@ -65,7 +73,11 @@ class NavgationBar extends Component {
           </ul>
         </nav>
         <nav className="nav-phone">
-          <span style={{paddingLeft: '10px'}}>NEUQ大学生就业择业数据平台</span>
+          <span style={{paddingLeft: '10px'}}>
+             <Link to="/">
+               NEUQ大学生就业择业数据平台
+             </Link>
+          </span>
           <i className="fa fa-navicon close-icon" onClick={this.handleDropMenu}/>
         </nav>
       </div>

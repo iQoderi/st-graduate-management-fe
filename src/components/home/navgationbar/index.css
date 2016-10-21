@@ -1,5 +1,10 @@
 .navbar-header {
   width: 60%; }
+  .navbar-header a.homepage-link {
+    color: #666666;
+    padding-left: 15px;
+    display: inline-block;
+    padding-top: 18px; }
 
 @media all and (max-width: 780px) {
   .row {
@@ -19,6 +24,8 @@
     width: 100%;
     border-bottom: 1px solid #f2f2f2;
     box-shadow: 0 0 5px #f2f2f2; }
+    .border-bottom .nav-phone a {
+      color: #666666; }
     .border-bottom .nav-phone .close-icon {
       float: right;
       margin: 10px 10px 10px 0;

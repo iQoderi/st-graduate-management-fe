@@ -4,16 +4,22 @@
   overflow: hidden;
 }
 
-@media all and (min-width: 450px){
-  .website-wrapper {
-    min-width: 900px;
-  }
-
-}
-
 
 .website-wrapper {
   min-height: 100%;
   position: relative;
   padding-bottom: 225px;
+}
+
+
+@media all and (min-width: 450px){
+  .website-wrapper {
+    min-width: 900px;
+  }
+}
+
+@media all and (max-width: 450px) {
+  .website-wrapper{
+    padding-bottom: 50px;
+  }
 }
