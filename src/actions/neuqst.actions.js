@@ -241,28 +241,17 @@ export function searchStu(start = 1, per = 15, body) {
  */
 export function exportStu(body) {
   return (dispatch)=> {
-    dispatch(showLoading());
     const token = getToken();
-    return fetch(API.testExcel, {
-      method: 'POST',
-      headers: {
-        "Content-Type": "application/json",
-        "Token": token
-      },
-      body: JSON.stringify(body)
-    })
-      .then((res)=> {
-        dispatch(hideLoading());
-        return res.blob();
-      }).then((blob)=> {
-        var a = document.createElement('a');
-        var url = window.URL.createObjectURL(blob);
-        var filename = `东北大学秦皇岛分校大学生毕业生择业就业表.xlsx`;
-        a.href = url;
-        a.download = filename;
-        a.click();
-        window.URL.revokeObjectURL(url);
-      })
+    var a = document.createElement('a');
+    var url =`${API.testExcel}?Token=${token}`;
+    for(var item in body){
+      if(body[item]){
+        url+=`&${item}=${body[item]}`;
+      }
+    }
+    a.href = url;
+    a.target='_blank';
+    a.click();
   }
 }
 

@@ -71,7 +71,7 @@ class AddAdminForm extends Component{
         if (json.code === 10000) {
           _this.isTips('添加管理员成功', 1500);
         } else {
-          _this.isTips(json.data.Msg, 1500);
+          _this.isTips(json.data.msg, 1500);
         }
       })
   }

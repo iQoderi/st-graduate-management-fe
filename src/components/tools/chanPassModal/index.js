@@ -56,11 +56,11 @@ const ChanPassModal = React.createClass({
           _this.isTips('修改密码成功', 1500);
         }
         if (json.code === 10013) {
-          _this.isTips(json.data.Msg, 1500);
+          _this.isTips(json.data.msg, 1500);
         }
 
         if (json.code !== 10000 && json.code !== 10013) {
-          _this.isTips(json.data.Msg, 1500);
+          _this.isTips(json.data.msg, 1500);
           logoutWithNoTips();
         }
       })

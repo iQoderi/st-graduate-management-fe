@@ -47,10 +47,10 @@ const ResetPass = React.createClass({
         .then(function (json) {
           _this.loaded();
           if(json.code===10000){
-            _this.isTips(json.data.Msg+',请登陆',2000);
+            _this.isTips(json.data.msg+',请登陆',2000);
             goto('/auth/login',1000);
           }else{
-            _this.isTips(json.data.Msg,2000);
+            _this.isTips(json.data.msg,2000);
           }
         })
     }

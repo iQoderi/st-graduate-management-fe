@@ -35,7 +35,7 @@ const CompleteMsg = React.createClass({
             myEmail: json.data.users.email
           })
         } else {
-          _this.isTips(json.data.Msg, 1500);
+          _this.isTips(json.data.msg, 1500);
         }
       })
   },
@@ -76,7 +76,7 @@ const CompleteMsg = React.createClass({
             _this.isTips('保存信息完成', 1000);
             goto('/home', 1500);
           } else {
-            _this.isTips(json.data.Msg, 1500);
+            _this.isTips(json.data.msg, 1500);
           }
         })
     } else {

@@ -33,10 +33,10 @@ const ForgetPassBox = React.createClass({
         .then(function (json) {
           _this.loaded();
           if(json.code===10000||json.code===10002){
-            _this.isTips(json.data.Msg,2000);
+            _this.isTips(json.data.msg,2000);
             _this.refs.forgetPassEm.value="";
           }else{
-            _this.isTips(json.data.Msg,2000);
+            _this.isTips(json.data.msg,2000);
           }
         })
     }

@@ -69,7 +69,7 @@ const SideBar = React.createClass({
               goto('/user/CompleteMsg', 1000)
             }
           } else {
-            _this.isTips(json.data.Msg, 1500);
+            _this.isTips(json.data.msg, 1500);
             logoutWithNoTips();
           }
         })

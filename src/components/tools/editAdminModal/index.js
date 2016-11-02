@@ -67,7 +67,7 @@ const EditAdmin = React.createClass({
           const per = 15;
           this.readPage(curPage,per);
         } else {
-          this.isTips(json.data.Msg, time);
+          this.isTips(json.data.msg, time);
         }
       })
   },
@@ -88,7 +88,7 @@ const EditAdmin = React.createClass({
         if (json.code === 10000) {
           changePageSucc(json.data.pages, start, json.data.count)
         } else {
-          this.isTips(json.data.Msg, 10000);
+          this.isTips(json.data.msg, 10000);
         }
       })
   },

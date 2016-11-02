@@ -51,11 +51,11 @@ const ChanAdminPass = React.createClass({
           _this.isTips('修改用户密码成功', time);
         }
         if (json.code === 10013) {
-          _this.isTips(json.data.Msg, time);
+          _this.isTips(json.data.msg, time);
         }
 
         if (json.code !== 10000 && json.code !== 10013) {
-          _this.isTips(json.data.Msg, time);
+          _this.isTips(json.data.msg, time);
           logoutWithNoTips();
         }
       })

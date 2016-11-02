@@ -32,7 +32,7 @@ const Confirm = React.createClass({
         if (json.code === 10000) {
           changePageSucc(json.data.pages, start, json.data.count)
         } else {
-          this.isTips(json.data.Msg, 1000);
+          this.isTips(json.data.msg, 1000);
         }
       })
   },
@@ -58,7 +58,7 @@ const Confirm = React.createClass({
           page.length > 1 && this.readPage(curPage, per);
           page.length <= 1 && this.readPage(curPage - 1, per);
         } else {
-          this.isTips(json.data.Msg, 1500)
+          this.isTips(json.data.msg, 1500)
         }
       })
   },
