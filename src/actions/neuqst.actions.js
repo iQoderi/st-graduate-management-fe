@@ -6,7 +6,6 @@ import 'whatwg-fetch';
 import API from '../api/requsetConfig';
 import getToken from '../library/getToken';
 import goto from '../library/changeHash';
-import 'whatwg-fetch';
 
 window.timer = null;
 
@@ -501,4 +500,53 @@ export function hideWPhoneMenu() {
   }
 }
 
+export function getStudentsSucc(page,size,count,students,academy='全部',major='',isBlock='全部') {
+  return{
+    type:ACTIONS.GET_GRADUATE_SUCC,
+    page,
+    size,
+    count,
+    students,
+    academy,
+    major,
+    isBlock
+  }
+}
 
+
+export function getStudentsFail() {
+  return{
+    type:ACTIONS.GET_GRADUATE_FAIL
+  }
+}
+
+export function getStudents(page,size,body) {
+  return (dispatch,state)=>{
+    var url=`${API.getStudents}?start=${page}&pageSize=${size}`;
+    for (var item in body){
+      if(body[item]&&body[item]!=='全部'){
+        url+=`&${item}=${body[item]}`
+      }
+    }
+    const token=getToken();
+    dispatch(showLoading());
+    return fetch(url,{
+      method:"GET",
+      headers:{
+        "Accept":"application/json",
+        "Content-Type":'application/json',
+        "token":token
+      }
+    }).then((res)=>{return res.json()}).then((json)=>{
+      dispatch(hideLoading());
+      if(json.code===10000){
+        const {count,pages}=json.data;
+        const {academy,major,isBlock}=body;
+        dispatch(getStudentsSucc(page,size,count,pages,academy,major,isBlock));
+      }else{
+        dispatch(ayncCloseTips(json.data.msg));
+        dispatch(getStudentsFail());
+      }
+    })
+  }
+}

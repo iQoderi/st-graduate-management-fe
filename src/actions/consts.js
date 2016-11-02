@@ -51,3 +51,7 @@ export const HIDE_PHONE_MENU = 'HIDE_PHONE_MENU';
 //显示隐藏官网手机端dropmenu
 export const SHOW_WPHONE_MENU = 'SHOW_WPHONE_MENU';
 export const HIDE_WPHONE_MENU = 'HIDE_WPHONE_MENU';
+
+//获取学生列表
+export const GET_STUDENTS_SUCCESS = 'GET_STUDENTS_SUCCESS';
+export const GET_STUDENTS_FAIL = 'GET_STUDENTS_FAIL';

@@ -21,7 +21,8 @@ const API = {
   searchGraduate: apiMaker('/home/searchGraduate'),
   testExcel: apiMaker('/home/excel'),
   uploadExcel: apiMaker('/home/uploadExcel'),
-  graduate: apiMaker('/home/graduate')
+  graduate: apiMaker('/home/graduate'),
+  getStudents:apiMaker('/home/getStudents')
 };
 
 export  default API;
