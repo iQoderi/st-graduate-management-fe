@@ -12,6 +12,7 @@ import AddAdminItem from '../sideBarItem/addAdmin';
 import DropMenu from '../dropmenu';
 import AdminListItem from '../sideBarItem/adminList';
 import AddGraduate from '../sideBarItem/addGraduate';
+import StuListItem from '../sideBarItem/studentList';
 import 'whatwg-fetch';
 import API from '../../../api/requsetConfig';
 import goto from '../../../library/changeHash';
@@ -59,7 +60,7 @@ const SideBar = React.createClass({
                 _this.setState({
                   role: json.data.users.role,
                   email: json.data.users.email,
-                  sideItems: [<PersonalItem/>, < AddAdminItem/>, <AdminListItem/>, <AddGraduate/>, < SearchItem/>,
+                  sideItems: [<PersonalItem/>, < AddAdminItem/>, <AdminListItem/>,<StuListItem/>,<AddGraduate/>, < SearchItem/>,
                     <ImportExcelItem/>,
                     < ExportExcelItem/>]
                 });

@@ -40,6 +40,10 @@ class PhoneDropMenu extends Component {
           name: '管理员列表'
         },
         {
+          path: '/home/students',
+          name: '学生列表'
+        },
+        {
           path: '/home/addGraduate',
           name: '添加毕业生'
         },
