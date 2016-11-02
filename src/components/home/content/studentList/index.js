@@ -3,6 +3,7 @@
  */
 import React,{Component} from 'react';
 import ListTable from './ListTable'
+import QueryStuForm from './queryStuForm'
 import {Pagination} from 'react-bootstrap';
 import './index.css';
 
@@ -11,6 +12,7 @@ class StudentList extends Component{
   render(){
     return (
       <div className="adminList-wrapper">
+        <QueryStuForm/>
         <ListTable/>
         <div className="pager">
           <Pagination
