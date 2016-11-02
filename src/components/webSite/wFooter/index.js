@@ -1,9 +1,10 @@
 'use strict';
 
 import React from 'react';
-import './index.css';
+import {Link} from 'react-router';
 import Logo from '../../../images/website/wLogo.png';
 import stLogo from '../../../images/website/stLogo.jpg';
+import './index.css';
 
 const WFooter = ()=> {
   let friendLinks = [
@@ -44,8 +45,8 @@ const WFooter = ()=> {
       link: 'http://tyb.neuq.edu.cn/'
     }
   ];
-  friendLinks=friendLinks.map((link,index)=>{
-    return(
+  friendLinks = friendLinks.map((link, index)=> {
+    return (
       <li className="fl"><a href={link.link} target="_blank">{link.title}</a></li>
     )
   });
@@ -60,10 +61,14 @@ const WFooter = ()=> {
             </ul>
           </div>
           <div className="footerc fl">
-            <img src={Logo} alt=""/>
+            <Link to="/">
+              <img src={Logo} alt="东北大学秦皇岛分校就业择业数据平台"/>
+            </Link>
           </div>
           <div className="footerr fl">
-            <img src={stLogo} alt=""/>
+            <a href="http://stxy.neuq.edu.cn/" target="_blank">
+              <img src={stLogo} alt=""/>
+            </a>
           </div>
         </div>
       </div>
