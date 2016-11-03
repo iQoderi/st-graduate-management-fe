@@ -22,7 +22,8 @@ const API = {
   testExcel: apiMaker('/home/excel'),
   uploadExcel: apiMaker('/home/uploadExcel'),
   graduate: apiMaker('/home/graduate'),
-  getStudents:apiMaker('/home/getStudents')
+  getStudents:apiMaker('/home/getStudents'),
+  blockAccount:apiMaker('/home/blockAccount')
 };
 
 export  default API;

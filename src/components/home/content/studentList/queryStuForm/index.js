@@ -1,12 +1,27 @@
 import React, {Component} from 'react';
 import {Form,FormControl,FormGroup,ControlLabel,Button} from 'react-bootstrap';
+import _$ from '../../../../../library/getElement';
 import './index.css';
 
 class QueryStuForm extends Component {
-    render() {
+      constructor(props) {
+        super(props);
+        this.handleSearch=this.handleSearch.bind(this);
+      }
+
+      handleSearch(){
+        const {getStudents}=this.props.action;
+        const payload={};
+        payload.academy=_$("QSAcademy").value;
+        payload.major=_$("QSMajor").value;
+        payload.isBlock=_$("QSIsBlock").value;
+        getStudents(1,15,payload);
+      };
+
+      render() {
         return (
           <Form inline className="search-stu-form">
-            <FormGroup controlId="formInlineName">
+            <FormGroup>
               <ControlLabel>学院:</ControlLabel>
               {' '}
               <select className="form-control" id="QSAcademy">
@@ -27,11 +42,11 @@ class QueryStuForm extends Component {
               {' '}
               <FormControl type="text" placeholder="请输入专业名称" />
             </FormGroup>
-            <FormGroup controlId="QSIsBlock">
+            <FormGroup>
               &nbsp;&nbsp;&nbsp;
               <ControlLabel>账户是否被冻结:</ControlLabel>
               {' '}
-              <select className="form-control" id="QAcdemy">
+              <select className="form-control" id="QSIsBlock">
                 <option>全部</option>
                 <option>正常</option>
                 <option>冻结</option>
@@ -40,6 +55,7 @@ class QueryStuForm extends Component {
             {' '}
             <Button type="button"
                     id="searchBtn"
+                    onClick={this.handleSearch}
                     bsStyle="primary" className="normal-btn">
               搜索
             </Button>

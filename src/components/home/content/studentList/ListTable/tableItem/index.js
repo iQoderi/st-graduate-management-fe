@@ -8,22 +8,30 @@ class Tr extends Component{
 
   }
   render() {
+    const {id,index,name,academy,major,studentId,role,phone,email,QQNumber,isBlock}=this.props.student;
+    const {blockAccount}=this.props;
     return (
       <tr>
-        <td>31231</td>
-        <td>31231</td>
-        <td>31231</td>
-        <td>31231</td>
-        <td>31231</td>
-        <td>31231</td>
-        <td>31231</td>
-        <td>31231</td>
-        <td>31231</td>
-        <td>31231</td>
-        <td>31231</td>
+        <td>{index}</td>
+        <td>{name}</td>
+        <td>{academy}</td>
+        <td>{major}</td>
+        <td>{this.props.student.class}</td>
+        <td>{studentId}</td>
+        <td>{role}</td>
+        <td>{phone}</td>
+        <td>{email}</td>
+        <td>{QQNumber}</td>
+        <td>{isBlock?"冻结中":"使用正常"}</td>
         <td className="opr-admin">
-          <span className="edit-admin" onClick={this.editAdmin}>解冻账户</span>
-          <span className="text-danger" onClick={this.rmAdmin}>冻结账户</span>
+          <span
+            style={{display:!isBlock?'none':'inline-block'}}
+            className="edit-admin"
+            onClick={()=>{blockAccount(id,1)}}>解冻账户</span>
+          <span
+            style={{display:isBlock?'none':'inline-block'}}
+            className="text-danger"
+            onClick={()=>{blockAccount(id,0)}}>冻结账户</span>
         </td>
       </tr>
     )

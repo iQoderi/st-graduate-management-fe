@@ -500,9 +500,20 @@ export function hideWPhoneMenu() {
   }
 }
 
+/**
+ * 获取学生列表
+ * @param page
+ * @param size
+ * @param count
+ * @param students
+ * @param academy
+ * @param major
+ * @param isBlock
+ * @returns {{type, page: *, size: *, count: *, students: *, academy: string, major: string, isBlock: string}}
+ */
 export function getStudentsSucc(page,size,count,students,academy='全部',major='',isBlock='全部') {
   return{
-    type:ACTIONS.GET_GRADUATE_SUCC,
+    type:ACTIONS.GET_STUDENTS_SUCCESS,
     page,
     size,
     count,
@@ -516,15 +527,17 @@ export function getStudentsSucc(page,size,count,students,academy='全部',major=
 
 export function getStudentsFail() {
   return{
-    type:ACTIONS.GET_GRADUATE_FAIL
+    type:ACTIONS.GET_STUDENTS_FAIL
   }
 }
 
 export function getStudents(page,size,body) {
-  return (dispatch,state)=>{
+  return (dispatch)=>{
     var url=`${API.getStudents}?start=${page}&pageSize=${size}`;
+    if(body.isBlock==='正常'){body.isBlock=false;}
+    if(body.isBlock==='冻结'){body.isBlock=true;}
     for (var item in body){
-      if(body[item]&&body[item]!=='全部'){
+      if(body[item]!==""&&body[item]!=='全部'){
         url+=`&${item}=${body[item]}`
       }
     }
@@ -546,6 +559,35 @@ export function getStudents(page,size,body) {
       }else{
         dispatch(ayncCloseTips(json.data.msg));
         dispatch(getStudentsFail());
+      }
+    })
+  }
+}
+
+
+export function blockAccount(userId,type){
+  return (dispatch,getState)=>{
+    dispatch(showLoading());
+    const token=getToken();
+    const body={userId,type};
+    return fetch(API.blockAccount,{
+      method:'POST',
+      headers:{
+        'Accept':'application/json',
+        'Content-Type':'application/json',
+        'token':token
+      },
+      body:JSON.stringify(body)
+    }).then((res)=>{return res.json()}).then((json)=>{
+      if(json.code===10000){
+        const {page,size,academy,major}=getState().students;
+        const payload={academy,major,class:getState().students.class};
+        dispatch(getStudents(page,size,payload));
+        dispatch(hideLoading());
+        dispatch(ayncCloseTips("操作成功"));
+      }else{
+        dispatch(hideLoading());
+        dispatch(ayncCloseTips(json.data.msg));
       }
     })
   }

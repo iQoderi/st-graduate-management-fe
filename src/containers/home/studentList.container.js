@@ -4,7 +4,7 @@
 import StudentList from  '../../components/home/content/studentList';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {getStudents} from  '../../actions/neuqst.actions.js';
+import {getStudents,blockAccount} from  '../../actions/neuqst.actions.js';
 
 function mapStateToProps(state) {
   return {
@@ -15,7 +15,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   var actionMap = {
     action: bindActionCreators({
-      getStudents
+      getStudents,blockAccount
     }, dispatch)
   };
   return actionMap;
