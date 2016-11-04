@@ -392,7 +392,8 @@ export function getGraduate(isJump) {
     }).then((res)=> {
       return res.json();
     }).then((json)=> {
-      if (json.code === 0) {
+      console.log(json);
+      if (json.code === 10000) {
         dispatch(getGraduateSucc(json.data.graduate));
         if (isJump) {
           goto('/moreInfo');

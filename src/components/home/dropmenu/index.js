@@ -18,7 +18,7 @@ const DropMenu = React.createClass({
         <li><a href="javascript:;" onClick={this.props.showChanPass}>修改密码</a>
         </li>
         {myMsg.role != '毕业生' ? "" : (<li
-          onClick={this.props.getGraduate}
+          onClick={()=>{this.props.getGraduate(true)}}
         ><a href="javascript:;">更多资料</a></li>)}
         <li className="divider"/>
         <li><a href="javascript:;" onClick={logout}>安全退出</a>
