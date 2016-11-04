@@ -392,7 +392,6 @@ export function getGraduate(isJump) {
     }).then((res)=> {
       return res.json();
     }).then((json)=> {
-      console.log(json);
       if (json.code === 10000) {
         dispatch(getGraduateSucc(json.data.graduate));
         if (isJump) {
@@ -512,7 +511,7 @@ export function hideWPhoneMenu() {
  * @param isBlock
  * @returns {{type, page: *, size: *, count: *, students: *, academy: string, major: string, isBlock: string}}
  */
-export function getStudentsSucc(page,size,count,students,academy='全部',major='',isBlock='全部') {
+export function getStudentsSucc(page,size,count,students,academy='全部',major='',stuClass='',isBlock='全部') {
   return{
     type:ACTIONS.GET_STUDENTS_SUCCESS,
     page,
@@ -521,6 +520,7 @@ export function getStudentsSucc(page,size,count,students,academy='全部',major=
     students,
     academy,
     major,
+    stuClass,
     isBlock
   }
 }
@@ -556,7 +556,7 @@ export function getStudents(page,size,body) {
       if(json.code===10000){
         const {count,pages}=json.data;
         const {academy,major,isBlock}=body;
-        dispatch(getStudentsSucc(page,size,count,pages,academy,major,isBlock));
+        dispatch(getStudentsSucc(page,size,count,pages,academy,major,body.class,isBlock));
       }else{
         dispatch(ayncCloseTips(json.data.msg));
         dispatch(getStudentsFail());
@@ -581,8 +581,8 @@ export function blockAccount(userId,type){
       body:JSON.stringify(body)
     }).then((res)=>{return res.json()}).then((json)=>{
       if(json.code===10000){
-        const {page,size,academy,major}=getState().students;
-        const payload={academy,major,class:getState().students.class};
+        const {page,size,academy,major,isBlock}=getState().students;
+        const payload={academy,major,class:getState().students.class,isBlock};
         dispatch(getStudents(page,size,payload));
         dispatch(hideLoading());
         dispatch(ayncCloseTips("操作成功"));

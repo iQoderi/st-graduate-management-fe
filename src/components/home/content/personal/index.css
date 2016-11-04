@@ -8,7 +8,8 @@
 @media all and (max-width: 420px) {
   .personal-wrapper button {
     width: 100%;
-    height: 45px; } }
+    height: 45px;
+    margin-left: -5px; } }
 .personal-item-detail {
   margin-left: 10px; }
 

@@ -8,3 +8,16 @@
   width: 85px;
   line-height: 10px;
 }
+
+@media all and (max-width:800px ) {
+  #searchBtn{
+    margin-left: 0;
+  }
+}
+
+@media all and (max-width:450px ) {
+  #searchBtn{
+    width: 100%;
+    height: 45px;
+  }
+}

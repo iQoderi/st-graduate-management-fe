@@ -14,6 +14,7 @@ class QueryStuForm extends Component {
         const payload={};
         payload.academy=_$("QSAcademy").value;
         payload.major=_$("QSMajor").value;
+        payload.class=_$("QSClass").value;
         payload.isBlock=_$("QSIsBlock").value;
         getStudents(1,15,payload);
       };
@@ -41,6 +42,12 @@ class QueryStuForm extends Component {
               <ControlLabel>专业:</ControlLabel>
               {' '}
               <FormControl type="text" placeholder="请输入专业名称" />
+            </FormGroup>
+            <FormGroup controlId="QSClass">
+              &nbsp;&nbsp;&nbsp;
+              <ControlLabel>班级:</ControlLabel>
+              {' '}
+              <FormControl type="text" placeholder="请输入班级名称" />
             </FormGroup>
             <FormGroup>
               &nbsp;&nbsp;&nbsp;

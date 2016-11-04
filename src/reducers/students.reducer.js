@@ -10,6 +10,7 @@ const initialState={
   academy:"全部",
   students:[],
   major:"",
+  class:"",
   isBlock:'全部'
 }
 
@@ -23,8 +24,10 @@ export default function students(state = initialState, action) {
         academy:action.academy,
         students:action.students,
         major:action.major,
+        class:action.stuClass,
         isBlock:action.isBlock
       }
+
     case GET_GRADUATE_FAIL:
       return initialState;
     default:
