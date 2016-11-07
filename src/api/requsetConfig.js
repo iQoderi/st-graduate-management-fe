@@ -13,6 +13,7 @@ const API = {
   forgetPass: apiMaker('/users/forgetPass'),
   resetPass: apiMaker('/users/passNew'),
   BaseMsg: apiMaker('/users/BaseMsg'),
+  verifyCode:apiMaker('/users/verifyCode'),
   my: apiMaker('/home/my'),
   changePass: apiMaker('/home/changePass'),
   admin: apiMaker('/home/admin'),
