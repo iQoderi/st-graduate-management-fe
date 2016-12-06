@@ -46,7 +46,7 @@ const EditAdmin = React.createClass({
     const token = getToken();
     this.loading();
     this.close();
-    fetch(`${API.admin}?id=${this.props.data.data.id}`, {
+    fetch(`${API.admin}?aId=${this.props.data.data.id}`, {
       method: 'PUT',
       headers: {
         'Token': token,

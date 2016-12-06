@@ -42,7 +42,7 @@ const Confirm = React.createClass({
     const per = 15;
     this.cancelConfirm();
     this.loading();
-    fetch(`${API.admin}?id=${this.props.data.id}`, {
+    fetch(`${API.admin}?aId=${this.props.data.id}`, {
       method: 'DELETE',
       headers: {
         Token: token

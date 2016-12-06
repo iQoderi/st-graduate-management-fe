@@ -8,7 +8,6 @@ import RouterApp from  './Router/router';
 import configureStore from './stores';
 const store = configureStore();
 
-
 // Render the main component into the dom
 const rootElement = document.getElementById('app');
 ReactDOM.render(

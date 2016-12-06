@@ -33,7 +33,7 @@ const ChanAdminPass = React.createClass({
     const options = {
       password: MD5(_$('newPass2').value)
     };
-    fetch(`${API.changeAdminPass}?id=${this.props.data.id}`, {
+    fetch(`${API.changeAdminPass}?aId=${this.props.data.id}`, {
       method: 'PUT',
       headers: {
         'Token': token,
